@@ -1,0 +1,1199 @@
+{
+  "Veyora": {
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Header": "VeyoraHeader1",
+          "Footer": "VeyoraFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Banner",
+                "component": "VeyoraBanner1"
+              },
+              {
+                "key": "WhyChooseUs",
+                "component": "VeyoraWhyChooseUs1"
+              },
+              {
+                "key": "CoreFeatures",
+                "component": "VeyoraCoreFeatures1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "VeyoraTestimonial1"
+              },
+              {
+                "key": "Team",
+                "component": "VeyoraTeam1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "Header": {
+        "variants": {
+          "VeyoraHeader1": {
+            "logo": {
+              "image": "/logo/v-white-logos.webp",
+              "alt": "VEYORA"
+            },
+            "navigation": [
+              {
+                "label": "Home",
+                "href": "/"
+              },
+              {
+                "label": "About",
+                "href": "/about"
+              },
+              {
+                "label": "Services",
+                "href": "/services"
+              },
+              {
+                "label": "Gallery",
+                "href": "/gallery"
+              },
+              {
+                "label": "Blog",
+                "href": "/blog"
+              },
+              {
+                "label": "Contact",
+                "href": "/contact"
+              }
+            ],
+            "cta": {
+              "label": "Let's Talk",
+              "href": "/contact"
+            },
+            "mobile": {
+              "menuLabel": "Menu",
+              "closeLabel": "Close"
+            },
+            "theme": {
+              "background": "#202126",
+              "text": "#FFFFFF",
+              "mutedText": "#E5E5E5",
+              "accent": "#D8003F",
+              "ctaText": "#FFFFFF"
+            }
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "VeyoraBanner1": {
+            "brandTag": "Creative Brand Agency",
+            "logo": {
+              "image": "/logo/v-logo.webp",
+              "alt": "Veyora"
+            },
+            "heading": {
+              "line1": "Ideas that move",
+              "line2": "brands forward."
+            },
+            "description": "Strategy, identity and digital experiences built to make your brand impossible to ignore.",
+            "cta": {
+              "label": "Start a Project",
+              "href": "/contact"
+            },
+            "person": {
+              "image": "/hero-person.webp",
+              "alt": "Creative professional at Veyora agency"
+            },
+            "theme": {
+              "background": "#FAF8F8",
+              "accent": "#D8003F",
+              "circle": "#FBEAEC",
+              "triangle": "#FBEAEC",
+              "dots": "#F2B8C2",
+              "headingText": "#161925",
+              "bodyText": "#4B5563"
+            }
+          }
+        }
+      },
+      "WhyChooseUs": {
+        "variants": {
+          "VeyoraWhyChooseUs1": {
+            "badge": "Why Veyora",
+            "heading": {
+              "line1": "Why Ambitious",
+              "line2": "Brands",
+              "highlight": "Choose Us"
+            },
+            "description": "We pair sharp strategy with fearless creativity to build brands that lead, connect, and last.",
+            "tabs": {
+              "Clarity": {
+                "image": "/about/about-3.webp",
+                "points": [
+                  "Strategy before aesthetics",
+                  "Ideas built around your audience",
+                  "Clear thinking at every stage",
+                  "A team that works as yours"
+                ]
+              },
+              "Creativity": {
+                "image": "/about/about-1.webp",
+                "points": [
+                  "Distinctive ideas with purpose",
+                  "Creative systems built to scale",
+                  "Visuals that make brands memorable",
+                  "Design that creates connection"
+                ]
+              },
+              "Partnership": {
+                "image": "/about/about-2.webp",
+                "points": [
+                  "Close collaboration from day one",
+                  "Transparent communication throughout",
+                  "Flexible process built around you",
+                  "A team invested in your success"
+                ]
+              }
+            },
+            "metrics": [
+              {
+                "label": "Client Satisfaction",
+                "percentage": 96
+              },
+              {
+                "label": "Projects Delivered On Time",
+                "percentage": 92
+              }
+            ],
+            "card": {
+              "reasons": [
+                {
+                  "number": "01",
+                  "title": "Strategic by Design",
+                  "description": "Every creative decision supports a real business goal."
+                },
+                {
+                  "number": "02",
+                  "title": "Senior Creative Team",
+                  "description": "Experienced thinkers stay close from start to finish."
+                },
+                {
+                  "number": "03",
+                  "title": "Built to Make Impact",
+                  "description": "Distinctive work designed for relevance and growth."
+                }
+              ],
+              "cta": {
+                "label": "Start a Project",
+                "href": "/contact"
+              }
+            }
+          }
+        }
+      },
+      "CoreFeatures": {
+        "variants": {
+          "VeyoraCoreFeatures1": {
+            "badge": "Core Features",
+            "heading": {
+              "line1": "Everything Your Brand",
+              "line2": "Needs to",
+              "highlight": "Stand Out"
+            },
+            "description": "One focused team, connecting strategy, identity, and digital experience.",
+            "centerImage": "/about/about-2.webp",
+            "features": [
+              {
+                "title": "Brand Strategy",
+                "description": "Positioning, purpose, and a clear path to growth.",
+                "icon": "Goal"
+              },
+              {
+                "title": "Digital Experience",
+                "description": "Web experiences that feel intuitive and alive.",
+                "icon": "UnicursalHexagram"
+              },
+              {
+                "title": "Visual Identity",
+                "description": "Distinctive systems designed to be remembered.",
+                "icon": "Gem"
+              },
+              {
+                "title": "Campaign Design",
+                "description": "Bold creative that turns attention into action.",
+                "icon": "Megaphone"
+              }
+            ]
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "VeyoraTestimonial1": {
+            "badge": "Client Stories",
+            "heading": {
+              "line1": "Trusted by Brands",
+              "highlight": "Ready to Grow"
+            },
+            "description": "Real partnerships. Clear thinking. Work that creates lasting momentum.",
+            "items": [
+              {
+                "id": 1,
+                "quote": "Veyora gave us the clarity and confidence to show up as the brand we always wanted to be.",
+                "name": "Maya Kapoor",
+                "role": "Founder, Noura",
+                "image": "/testimonials/maya.webp"
+              },
+              {
+                "id": 2,
+                "quote": "They turned complex ideas into a bold identity our team and customers connected with instantly.",
+                "name": "Daniel Brooks",
+                "role": "CEO, Northline",
+                "image": "/testimonials/daniel.webp"
+              },
+              {
+                "id": 3,
+                "quote": "Strategic, collaborative, and genuinely invested, the result exceeded every expectation.",
+                "name": "Sofia Mendes",
+                "role": "Marketing Director, Aster",
+                "image": "/testimonials/sofia.webp"
+              },
+              {
+                "id": 4,
+                "quote": "The team understood our vision quickly and transformed it into something much stronger than we imagined.",
+                "name": "Arjun Mehta",
+                "role": "Founder, Forma",
+                "image": "/testimonials/arjun.webp"
+              },
+              {
+                "id": 5,
+                "quote": "From strategy to execution, every detail felt intentional and connected to our business goals.",
+                "name": "Olivia Carter",
+                "role": "Brand Director, Luma",
+                "image": "/testimonials/olivia.webp"
+              }
+            ]
+          }
+        }
+      },
+      "Team": {
+        "variants": {
+          "VeyoraTeam1": {
+            "badge": "Our Team",
+            "heading": {
+              "line1": "Meet the Minds",
+              "highlight": "Behind Veyora"
+            },
+            "description": "A close-knit team of strategists, designers, and storytellers building brands with purpose.",
+            "members": [
+              {
+                "name": "Amara Reed",
+                "role": "Brand Strategist",
+                "image": "/team/amara.webp",
+                "socials": {
+                  "facebook": "https://facebook.com",
+                  "twitter": "https://twitter.com"
+                }
+              },
+              {
+                "name": "Noah Bennett",
+                "role": "Creative Director",
+                "image": "/team/noah.webp",
+                "socials": {
+                  "facebook": "https://facebook.com",
+                  "twitter": "https://twitter.com"
+                }
+              },
+              {
+                "name": "Sofia Kim",
+                "role": "Lead Designer",
+                "image": "/team/sofia.webp",
+                "socials": {
+                  "facebook": "https://facebook.com",
+                  "twitter": "https://twitter.com"
+                }
+              },
+              {
+                "name": "Elias Morgan",
+                "role": "Digital Director",
+                "image": "/team/elias.webp",
+                "socials": {
+                  "facebook": "https://facebook.com",
+                  "twitter": "https://twitter.com"
+                }
+              }
+            ],
+            "theme": {
+              "background": "#ffffff",
+              "accent": "#d8003f"
+            }
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "VeyoraFooter1": {
+            "brand": {
+              "logo": "/logo/v-white-logos.webp",
+              "alt": "VEYORA",
+              "href": "/",
+              "tagline": "We build bold brand identities and digital experiences that move people and grow businesses."
+            },
+            "contact": {
+              "email": "info@xyz.com",
+              "phone": "+1 00000 00000",
+              "phoneTel": "+1 0000000000"
+            },
+            "columns": [
+              {
+                "title": "Explore",
+                "links": [
+                  {
+                    "label": "Home",
+                    "href": "/"
+                  },
+                  {
+                    "label": "About",
+                    "href": "/about"
+                  },
+                  {
+                    "label": "Services",
+                    "href": "/services"
+                  },
+                  {
+                    "label": "Gallery",
+                    "href": "/gallery"
+                  },
+                  {
+                    "label": "Blog",
+                    "href": "/blog"
+                  },
+                  {
+                    "label": "Contact",
+                    "href": "/contact"
+                  }
+                ]
+              },
+              {
+                "title": "Services",
+                "links": [
+                  {
+                    "label": "Brand Strategy",
+                    "href": "/services/brand-strategy"
+                  },
+                  {
+                    "label": "Visual Identity",
+                    "href": "/services/visual-identity"
+                  },
+                  {
+                    "label": "Digital Experience",
+                    "href": "/services/digital-experience"
+                  },
+                  {
+                    "label": "Campaign Design",
+                    "href": "/services/campaign-design"
+                  }
+                ]
+              },
+              {
+                "title": "Follow",
+                "links": [
+                  {
+                    "label": "Instagram",
+                    "href": "https://instagram.com"
+                  },
+                  {
+                    "label": "LinkedIn",
+                    "href": "https://linkedin.com"
+                  },
+                  {
+                    "label": "Behance",
+                    "href": "https://behance.net"
+                  },
+                  {
+                    "label": "Dribbble",
+                    "href": "https://dribbble.com"
+                  }
+                ]
+              }
+            ],
+            "legal": {
+              "copyright": "Veyora Studio. All rights reserved.",
+              "links": [
+                {
+                  "label": "Terms of Use",
+                  "href": "/terms"
+                },
+                {
+                  "label": "Privacy Policy",
+                  "href": "/privacy"
+                }
+              ]
+            },
+            "theme": {
+              "background": "#08090d",
+              "accent": "#d8003f"
+            }
+          }
+        }
+      },
+      "BlogDetail": {
+        "variants": {
+          "VeyoraBlogDetail1": {
+            "categories": [
+              "HR & Workforce",
+              "Leadership",
+              "Training & Development",
+              "Corporate Programs",
+              "Industry Insights",
+              "Workplace Culture",
+              "Staff Management"
+            ],
+            "recentPosts": [
+              {
+                "id": "stronger-workforce",
+                "title": "How to Build a Stronger Workforce",
+                "date": "24 Aug 2025",
+                "image": "/blogs/blog-1.webp"
+              },
+              {
+                "id": "leadership-training",
+                "title": "The Importance of Leadership Training",
+                "date": "18 Aug 2025",
+                "image": "/blogs/blog-2.webp"
+              },
+              {
+                "id": "hr-business-growth",
+                "title": "HR Strategies for Business Growth",
+                "date": "12 Aug 2025",
+                "image": "/blogs/blog-3.webp"
+              },
+              {
+                "id": "positive-workplace",
+                "title": "Creating a Positive Workplace Culture",
+                "date": "05 Aug 2025",
+                "image": "/blogs/blog-1.webp"
+              }
+            ],
+            "articleSections": [
+              {
+                "number": "01",
+                "title": "Understand Your Business Needs",
+                "description": "The first step in building a stronger workforce is to clearly understand your business goals and workforce requirements. Identify the roles, skills, and competencies needed to achieve your objectives."
+              },
+              {
+                "number": "02",
+                "title": "Attract the Right Talent",
+                "description": "Finding the right people can make a huge difference. Use a strategic hiring process, including clear job descriptions, targeted outreach, and thorough screening, to attract candidates who fit your culture and goals."
+              },
+              {
+                "number": "03",
+                "title": "Invest in Training & Development",
+                "description": "Continuous learning helps employees stay updated with industry trends and improves their performance. Offer training programs, leadership development, and skill enhancement opportunities to help your team grow."
+              },
+              {
+                "number": "04",
+                "title": "Foster a Positive Work Culture",
+                "description": "A supportive and inclusive work environment increases employee satisfaction and retention. Encourage open communication, recognize achievements, and create opportunities for collaboration."
+              }
+            ],
+            "header": {
+              "image": "/blogs/blog-1.webp",
+              "imageAlt": "How to Build a Stronger Workforce",
+              "titleStart": "How to Build a Stronger Workforce ",
+              "titleHighlight": "for a Successful Business",
+              "description": "A strong workforce is the foundation of every successful organization. In today's competitive business environment, companies need the right people, the right skills, and the right strategies to stay ahead. Building a high-performing team not only improves productivity but also drives innovation and long-term growth.",
+              "meta": [
+                {
+                  "icon": "CalendarDays",
+                  "text": "24 August 2025"
+                },
+                {
+                  "icon": "Users",
+                  "text": "Admin"
+                },
+                {
+                  "icon": "FolderOpen",
+                  "text": "HR & Workforce"
+                },
+                {
+                  "icon": "Eye",
+                  "text": "356 Views"
+                }
+              ]
+            },
+            "quote": {
+              "text": "A strong workforce is not just about hiring people, but about empowering them to grow, perform, and succeed together.",
+              "authorStart": "— Team ",
+              "authorHighlight": "Veyora"
+            },
+            "sidebarCTA": {
+              "title": "Need Expert Guidance?",
+              "description": "Our team is here to help you with customized HR and staffing solutions.",
+              "buttonText": "Talk to Our Experts",
+              "buttonLink": "/contact"
+            },
+            "sidebarHeadings": {
+              "categories": "Categories",
+              "recentPosts": "Recent Posts"
+            }
+          }
+        }
+      },
+      "Gallery": {
+        "variants": {
+          "VeyoraGallery1": {
+            "badge": "Gallery",
+            "headingStart": "A Gallery of Ideas ",
+            "headingHighlight": "Brought to Life",
+            "description": "Explore the moments, details, and creative work behind every project.",
+            "galleryItems": [
+              {
+                "title": "Brand Identity",
+                "image": "/about/about-1.webp"
+              },
+              {
+                "title": "Packaging Design",
+                "image": "/about/about-2.webp"
+              },
+              {
+                "title": "Digital Experience",
+                "image": "/about/about-3.webp"
+              },
+              {
+                "title": "Campaign Creative",
+                "image": "/about/about-1.webp"
+              },
+              {
+                "title": "Brand Guidelines",
+                "image": "/about/about-2.webp"
+              },
+              {
+                "title": "Creative Direction",
+                "image": "/about/about-3.webp"
+              },
+              {
+                "title": "Social Campaign",
+                "image": "/about/about-1.webp"
+              },
+              {
+                "title": "Environmental Design",
+                "image": "/about/about-2.webp"
+              },
+              {
+                "title": "Editorial Design",
+                "image": "/about/about-3.webp"
+              }
+            ]
+          }
+        }
+      },
+      "Insights": {
+        "variants": {
+          "VeyoraInsights1": {
+            "badge": "Insights & Ideas",
+            "headingStart": "Thinking Behind ",
+            "headingHighlight": "the Work",
+            "buttonText": "View All Insights",
+            "insights": [
+              {
+                "id": "distinctive-brands",
+                "category": "Brand Strategy",
+                "date": "12 Sep 2026",
+                "title": "How Distinctive Brands Earn Attention—and Keep It",
+                "image": "/blogs/blog-1.webp"
+              },
+              {
+                "id": "flexible-identity-systems",
+                "category": "Design",
+                "date": "04 Sep 2026",
+                "title": "Why Flexible Identity Systems Win in a Fast-Moving World",
+                "image": "/blogs/blog-2.webp"
+              },
+              {
+                "id": "creative-partnerships",
+                "category": "Culture",
+                "date": "28 Aug 2026",
+                "title": "Building Creative Partnerships That Produce Better Work",
+                "image": "/blogs/blog-3.webp"
+              },
+              {
+                "id": "brand-experience",
+                "category": "Brand Experience",
+                "date": "20 Aug 2026",
+                "title": "Why Brand Experience Matters More Than Ever",
+                "image": "/blogs/blog-1.webp"
+              },
+              {
+                "id": "creative-strategy",
+                "category": "Strategy",
+                "date": "14 Aug 2026",
+                "title": "Turning Creative Strategy Into Meaningful Business Growth",
+                "image": "/blogs/blog-2.webp"
+              },
+              {
+                "id": "future-of-design",
+                "category": "Design",
+                "date": "08 Aug 2026",
+                "title": "The Future of Design Is Built Around Flexible Thinking",
+                "image": "/blogs/blog-3.webp"
+              },
+              {
+                "id": "modern-branding",
+                "category": "Branding",
+                "date": "01 Aug 2026",
+                "title": "Modern Branding Is More Than a Logo",
+                "image": "/blogs/blog-1.webp"
+              },
+              {
+                "id": "creative-culture",
+                "category": "Culture",
+                "date": "26 Jul 2026",
+                "title": "Creating a Culture Where Better Ideas Can Grow",
+                "image": "/blogs/blog-2.webp"
+              },
+              {
+                "id": "design-systems",
+                "category": "Design",
+                "date": "19 Jul 2026",
+                "title": "Design Systems That Keep Brands Consistent and Flexible",
+                "image": "/blogs/blog-3.webp"
+              },
+              {
+                "id": "brand-storytelling",
+                "category": "Storytelling",
+                "date": "12 Jul 2026",
+                "title": "How Brand Storytelling Creates Lasting Connections",
+                "image": "/blogs/blog-1.webp"
+              },
+              {
+                "id": "creative-thinking",
+                "category": "Creative Thinking",
+                "date": "05 Jul 2026",
+                "title": "Creative Thinking That Moves Brands Forward",
+                "image": "/blogs/blog-2.webp"
+              },
+              {
+                "id": "digital-identities",
+                "category": "Digital",
+                "date": "28 Jun 2026",
+                "title": "Building Digital Identities for a Changing World",
+                "image": "/blogs/blog-3.webp"
+              }
+            ]
+          }
+        }
+      },
+      "OurApproach": {
+        "variants": {
+          "VeyoraOurApproach1": {
+            "approaches": {
+              "Discover": {
+                "description": "We uncover what makes your brand valuable, shape a clear direction, and turn that strategy into a distinctive experience built to grow.",
+                "points": [
+                  "Research that reveals opportunity",
+                  "A strategy your team can use",
+                  "Design grounded in purpose",
+                  "Clear support from start to launch"
+                ]
+              },
+              "Define": {
+                "description": "We define the ideas, positioning, and creative direction that give your brand a clear voice and a meaningful place in the market.",
+                "points": [
+                  "Clear positioning and direction",
+                  "A distinctive brand foundation",
+                  "Design systems built with purpose",
+                  "A focused path from idea to execution"
+                ]
+              },
+              "Deliver": {
+                "description": "We turn strategy into practical creative experiences that connect with people, support your team, and create lasting business value.",
+                "points": [
+                  "Creative work built for growth",
+                  "Digital experiences that connect",
+                  "Practical tools for your team",
+                  "Support from launch and beyond"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "Services": {
+        "variants": {
+          "VeyoraServices1": {
+            "badge": "WHAT WE DO",
+            "headingStart": "Creative Services Built for\n",
+            "headingHighlight": "Bold Brands",
+            "button": {
+              "text": "Explore All Services",
+              "link": "/services"
+            },
+            "images": {
+              "main": "/about/about-1.webp",
+              "secondary": "/service.webp"
+            },
+            "services": [
+              {
+                "title": "Brand Strategy",
+                "description": "Building strong foundations for your brand.",
+                "icon": "Target",
+                "image": "/about/about-2.webp",
+                "link": "/services/brand-strategy"
+              },
+              {
+                "title": "UI/UX Design",
+                "description": "Creating intuitive digital experiences.",
+                "icon": "Gem",
+                "image": "/about/about-3.webp",
+                "link": "/services/ui-ux"
+              },
+              {
+                "title": "Marketing",
+                "description": "Reaching your audience effectively.",
+                "icon": "Megaphone",
+                "image": "/about/about-1.webp",
+                "link": "/services/marketing"
+              },
+              {
+                "title": "Premium Identity",
+                "description": "Crafting distinctive visual identities.",
+                "icon": "Megaphone",
+                "image": "/about/about-2.webp",
+                "link": "/services/identity"
+              }
+            ]
+          }
+        }
+      },
+      "ServicesOverview": {
+        "variants": {
+          "VeyoraServicesOverview1": {
+            "badge": "Service",
+            "headingStart": "From First Idea to a Brand ",
+            "headingHighlight": "Built for Growth",
+            "description": "We bring strategy, identity, and digital thinking into one connected process, giving your brand the clarity to lead and the tools to keep moving.",
+            "button1": {
+              "text": "Explore Our Services",
+              "link": "/services"
+            },
+            "button2": {
+              "text": "View Selected Work",
+              "link": "/projects"
+            },
+            "services": [
+              {
+                "number": "01",
+                "title": "Strategy & Positioning",
+                "description": "Find the space your brand can truly own.",
+                "features": [
+                  "Market Research",
+                  "Brand Positioning",
+                  "Identity Systems"
+                ]
+              },
+              {
+                "number": "02",
+                "title": "Digital Product Design",
+                "description": "Interfaces that look beautiful and work flawlessly.",
+                "features": [
+                  "UI/UX Design",
+                  "Prototyping",
+                  "Design Systems"
+                ]
+              },
+              {
+                "number": "03",
+                "title": "Web Development",
+                "description": "High-performance websites built for scale.",
+                "features": [
+                  "Front-end Dev",
+                  "CMS Integration",
+                  "E-Commerce"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "AboutSection": {
+        "variants": {
+          "VeyoraAboutSection1": {
+            "images": {
+              "main": "/about/about-1.webp",
+              "top": "/about/about-2.webp",
+              "bottom": "/about/about-3.webp"
+            },
+            "badge": "ABOUT VEYORA",
+            "titleStart": "We Shape Brands\nThat ",
+            "titleHighlight": "Move People",
+            "description": "We blend strategy, design, and storytelling to build bold identities that connect, inspire, and grow.",
+            "features": [
+              {
+                "title": "Brand Strategy",
+                "icon": "Database"
+              },
+              {
+                "title": "Creative Direction",
+                "icon": "ShieldCheck"
+              }
+            ],
+            "stats": {
+              "target": 8,
+              "suffix": "+",
+              "label": "Years of Creative Impact"
+            },
+            "cta": {
+              "text": "Discover More",
+              "link": "/about"
+            }
+          }
+        }
+      },
+      "AboutVeyora": {
+        "variants": {
+          "VeyoraAboutVeyora1": {
+            "images": {
+              "main": "/about/about-1.webp",
+              "small1": "/about/about-1.webp",
+              "small2": "/about/about-2.webp",
+              "small3": "/about/about-3.webp"
+            },
+            "badge": "About Veyora",
+            "titleStart": "We Turn Bold Ideas\nInto ",
+            "titleHighlight": "Brands That Matter",
+            "description": "Veyora is an independent creative agency blending strategy, design, and storytelling to create brands people choose and remember.",
+            "points": [
+              "Strategy rooted in real insight",
+              "Distinctive design with purpose",
+              "A collaborative, transparent process"
+            ],
+            "testimonial": {
+              "quote": "Veyora gave our vision clarity, confidence, and a brand we're proud to lead with.",
+              "authorName": "Maya Chen",
+              "authorTitle": "Founder, North & Co.",
+              "authorImage": "/testimonials/maya.webp"
+            }
+          }
+        }
+      },
+      "ContactSection": {
+        "variants": {
+          "VeyoraContact1": {
+            "badge": "Get In Touch",
+            "headingStart": "Big Idea? Let's\n",
+            "headingHighlight": "Make It Happen.",
+            "description": "Whether you're launching, evolving, or starting again, we'd love to hear what's next.",
+            "contactInfo": [
+              {
+                "icon": "Mail",
+                "text": "Email — info@xyz.com"
+              },
+              {
+                "icon": "Smartphone",
+                "text": "Call — +1 000-000-000"
+              },
+              {
+                "icon": "MapPin",
+                "text": "Veyora — New York Manhattan, New York, USA"
+              }
+            ],
+            "bookingText": "Now booking projects for Q4 2026",
+            "formHeadingStart": "Tell Us About Your\n",
+            "formHeadingHighlight": "Project",
+            "formDescription": "A few details are enough to get the conversation started.",
+            "services": [
+              "Brand Strategy",
+              "Brand Identity",
+              "Web Design",
+              "Web Development",
+              "Digital Marketing",
+              "Graphic Design",
+              "Other"
+            ],
+            "formFields": {
+              "name": {
+                "label": "Name",
+                "placeholder": "Name"
+              },
+              "email": {
+                "label": "Email",
+                "placeholder": "Email"
+              },
+              "company": {
+                "label": "Company",
+                "placeholder": "Company"
+              },
+              "phone": {
+                "label": "Phone",
+                "placeholder": "Phone"
+              },
+              "service": {
+                "label": "Service Needed",
+                "placeholder": "Choose a service"
+              },
+              "details": {
+                "label": "Project Details",
+                "placeholder": "What are you hoping to create or change?"
+              }
+            },
+            "formButtons": {
+              "submit": "Send Project Brief",
+              "submitted": "Project Brief Sent"
+            },
+            "formFooterText": "We reply within 2 business days.",
+            "popup": {
+              "title": "Message Sent!",
+              "description": "Thank you for reaching out. We have received your project brief and will get back to you within 2 business days.",
+              "buttonText": "Close Window"
+            }
+          }
+        }
+      },
+      "ServiceDetail": {
+        "variants": {
+          "VeyoraServiceDetail1": {
+            "badge": "Staffing Solutions",
+            "headingStart": "Finding the Right People\n",
+            "headingHighlight": "for a Brighter Tomorrow",
+            "description": "At Veyora, we provide customized staffing solutions that help businesses find, hire, and retain the right talent. Whether you need temporary staff, permanent hires, or specialized professionals, we connect you with skilled talent that fits your business goals and culture.",
+            "benefitsHeading": "Why Choose Our Staffing Solutions ?",
+            "benefits": [
+              {
+                "icon": "Users",
+                "title": "Access to Skilled Talent",
+                "description": "Connect with pre-screened and qualified candidates across industries."
+              },
+              {
+                "icon": "Target",
+                "title": "Industry-Specific Expertise",
+                "description": "Get talent with the right skills and industry experience."
+              },
+              {
+                "icon": "Clock3",
+                "title": "Faster Hiring Process",
+                "description": "Reduce time-to-hire with our efficient recruitment approach."
+              },
+              {
+                "icon": "Star",
+                "title": "Quality & Reliability",
+                "description": "Thorough screening and assessment for the best fit."
+              },
+              {
+                "icon": "ShieldCheck",
+                "title": "Flexible Hiring Models",
+                "description": "Temporary, permanent, contract, and project-based staffing options."
+              },
+              {
+                "icon": "Headphones",
+                "title": "Ongoing Support",
+                "description": "Continuous assistance to ensure long-term success."
+              }
+            ],
+            "approachImage": "/about/about-1.webp",
+            "approachHeading": "Our Approach",
+            "approachDescription": "We follow a structured and transparent process to ensure that you get the right talent quickly and efficiently.",
+            "approach": [
+              {
+                "number": "01",
+                "title": "Understanding Your Needs",
+                "description": "We analyze your business requirements and role expectations."
+              },
+              {
+                "number": "02",
+                "title": "Sourcing & Screening",
+                "description": "Our team identifies, screens, and shortlists the best candidates."
+              },
+              {
+                "number": "03",
+                "title": "Interview & Selection",
+                "description": "We coordinate interviews and help you select the right fit."
+              },
+              {
+                "number": "04",
+                "title": "Onboarding Support",
+                "description": "We assist with a smooth onboarding process for long-term success."
+              }
+            ],
+            "servicesTitle": "Our Services",
+            "services": [
+              "Staffing Solutions",
+              "HR Consulting",
+              "Leadership Training",
+              "Corporate Programs",
+              "Tech Resources",
+              "Staff Management"
+            ],
+            "helpCardTitle": "Need Help Finding The Right Talent?",
+            "helpCardDescription": "Let our experts help you with customized staffing solutions for your business.",
+            "openingHoursTitle": "Opening Hours",
+            "hours": [
+              [
+                "Monday - Friday",
+                "09:00 - 18:00"
+              ],
+              [
+                "Saturday",
+                "10:00 - 16:00"
+              ],
+              [
+                "Sunday",
+                "Closed"
+              ]
+            ],
+            "relatedServicesTitle": "Related Services",
+            "relatedServices": [
+              {
+                "title": "Leadership Training",
+                "image": "/services/leadership-training.webp"
+              },
+              {
+                "title": "HR Consulting",
+                "image": "/services/hr-consulting.webp"
+              }
+            ]
+          }
+        }
+      },
+      "AboutHero": {
+        "variants": {
+          "VeyoraAboutHero1": {
+            "title": "About Us",
+            "breadcrumb": "About Us",
+            "backgroundImage": "/about/about-hero.webp"
+          }
+        }
+      },
+      "PageHeroes": {
+        "variants": {
+          "/about": {
+            "title": "About Us",
+            "breadcrumb": "About Us",
+            "backgroundImage": "/about/about-hero.webp"
+          },
+          "/contact": {
+            "title": "Contact Us",
+            "breadcrumb": "Contact",
+            "backgroundImage": "/about/about-hero.webp"
+          },
+          "/gallery": {
+            "title": "Our Gallery",
+            "breadcrumb": "Gallery",
+            "backgroundImage": "/about/about-hero.webp"
+          },
+          "/services": {
+            "title": "Our Services",
+            "breadcrumb": "Services",
+            "backgroundImage": "/about/about-hero.webp"
+          },
+          "/blog": {
+            "title": "Our Blog",
+            "breadcrumb": "Blog",
+            "backgroundImage": "/about/about-hero.webp"
+          },
+          "default": {
+            "title": "Veyora",
+            "breadcrumb": "Page",
+            "backgroundImage": "/about/about-hero.webp"
+          }
+        }
+      },
+      "Stats": {
+        "variants": {
+          "VeyoraStats1": {
+            "items": [
+              {
+                "value": 12,
+                "suffix": "+",
+                "label": "Years Experience",
+                "icon": "Star"
+              },
+              {
+                "value": 150,
+                "suffix": "+",
+                "label": "Projects Delivered",
+                "icon": "Trophy"
+              },
+              {
+                "value": 50,
+                "suffix": "+",
+                "label": "Team Experts",
+                "icon": "Users"
+              },
+              {
+                "value": 99,
+                "suffix": "%",
+                "label": "Client Satisfaction",
+                "icon": "PieChart"
+              }
+            ]
+          }
+        }
+      },
+      "LocationSection": {
+        "variants": {
+          "VeyoraLocation1": {
+            "latitude": 40.7128,
+            "longitude": -74.006,
+            "title": "Veyora — New York",
+            "address": "Manhattan, New York, USA"
+          }
+        }
+      },
+      "ProcessSection": {
+        "variants": {
+          "VeyoraProcess1": {
+            "badge": "How it work",
+            "headingStart": "A Clear Process From First\nConversation to",
+            "headingHighlight": "Final Launch",
+            "description": "Simple steps, open collaboration, and no surprises along the way.",
+            "steps": [
+              {
+                "number": "01",
+                "title": "Discover",
+                "description": "We dive deep to understand your goals, audience, and market.",
+                "icon": "Search"
+              },
+              {
+                "number": "02",
+                "title": "Strategy",
+                "description": "Mapping out a clear, actionable plan for success.",
+                "icon": "Crosshair"
+              },
+              {
+                "number": "03",
+                "title": "Design",
+                "description": "Creating beautiful, user-centric experiences.",
+                "icon": "Layers3"
+              },
+              {
+                "number": "04",
+                "title": "Launch",
+                "description": "Bringing your vision to life and beyond.",
+                "icon": "Plane"
+              }
+            ],
+            "ctaText": "Have a project in mind?",
+            "ctaButtonText": "Start the Process",
+            "ctaButtonLink": "/contact"
+          }
+        }
+      },
+      "ProjectCTA": {
+        "variants": {
+          "VeyoraProjectCTA1": {
+            "badge": "Let's Build Something Bold",
+            "headingStart": "Ready to Make Your ",
+            "headingHighlight": "Brand Unforgettable",
+            "description": "We're here to help you turn your vision into a reality that demands attention and drives growth.",
+            "buttonText": "Start a Project",
+            "buttonLink": "/contact"
+          }
+        }
+      }
+    }
+  }
+}

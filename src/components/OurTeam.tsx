@@ -1,0 +1,238 @@
+"use client";
+
+import Image from "next/image";
+import { motion } from "motion/react";
+import contentData from "@/src/data";
+import type { ContentData, OurTeamMember } from "@/src/types/content";
+
+export default function OurTeam() {
+  const teamData = (contentData as ContentData).ourTeam || {
+    badge: "Our Team",
+    heading: {
+      line1: "Meet the Minds",
+      highlight: "Behind Veyora",
+    },
+    description:
+      "A close-knit team of strategists, designers, and storytellers building brands with purpose.",
+    members: [
+      {
+        name: "Amara Reed",
+        role: "Brand Strategist",
+        image: "/team/amara.webp",
+        socials: {
+          facebook: "https://facebook.com",
+          twitter: "https://twitter.com",
+        },
+      },
+      {
+        name: "Noah Bennett",
+        role: "Creative Director",
+        image: "/team/noah.webp",
+        socials: {
+          facebook: "https://facebook.com",
+          twitter: "https://twitter.com",
+        },
+      },
+      {
+        name: "Sofia Kim",
+        role: "Lead Designer",
+        image: "/team/sofia.webp",
+        socials: {
+          facebook: "https://facebook.com",
+          twitter: "https://twitter.com",
+        },
+      },
+      {
+        name: "Elias Morgan",
+        role: "Digital Director",
+        image: "/team/elias.webp",
+        socials: {
+          facebook: "https://facebook.com",
+          twitter: "https://twitter.com",
+        },
+      },
+    ],
+    theme: {
+      background: "#ffffff",
+      accent: "#d8003f",
+    },
+  };
+
+  return (
+    <section className="relative overflow-hidden bg-white px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-12 lg:py-28 xl:px-16">
+      <div className="mx-auto max-w-[1450px]">
+        {/* Header */}
+        <Header
+          badge={teamData.badge}
+          heading={teamData.heading}
+          description={teamData.description}
+        />
+
+        {/* 4 Cards Grid */}
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-14 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 sm:gap-6 lg:gap-6 xl:gap-7">
+          {teamData.members.map((member, index) => (
+            <TeamCard key={member.name} member={member} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Header({
+  badge,
+  heading,
+  description,
+}: {
+  badge: string;
+  heading: { line1: string; highlight: string };
+  description: string;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className="mx-auto max-w-[950px] text-center"
+    >
+      {/* Pill Badge */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="inline-flex items-center justify-center rounded-full border border-[#d8003f] px-5 py-1 sm:px-6 sm:py-1.5"
+      >
+        <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#d8003f] sm:text-sm">
+          {badge}
+        </span>
+      </motion.div>
+
+      {/* Main Heading */}
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.7,
+          delay: 0.1,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="mt-5 text-[clamp(2.2rem,4.5vw,3.8rem)] font-extrabold leading-[1.08] tracking-[-0.03em] text-[#11151c] sm:mt-6"
+      >
+        {heading.line1}{" "}
+        <span className="text-[#c9003b]">{heading.highlight}</span>
+      </motion.h2>
+
+      {/* Subtitle */}
+      <motion.p
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="mx-auto mt-3.5 max-w-[800px] text-base leading-relaxed text-[#374151] sm:mt-4 sm:text-lg md:text-xl"
+      >
+        {description}
+      </motion.p>
+    </motion.div>
+  );
+}
+
+function TeamCard({
+  member,
+  index,
+}: {
+  member: OurTeamMember;
+  index: number;
+}) {
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 35 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{
+        duration: 0.6,
+        delay: 0.08 + index * 0.08,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+      className="group flex flex-col overflow-hidden rounded-[14px] border border-[#e5e7eb] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_14px_34px_rgba(0,0,0,0.08)]"
+    >
+      {/* Card Image */}
+      <div className="relative aspect-[1/1.03] w-full overflow-hidden bg-[#f3f4f6]">
+        <Image
+          src={member.image}
+          alt={member.name}
+          fill
+          className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+          sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
+        />
+      </div>
+
+      {/* Crimson Red Dividing Strip */}
+      <div className="h-[2.5px] w-full bg-[#d8003f]" aria-hidden="true" />
+
+      {/* Info & Socials Section */}
+      <div className="flex flex-1 flex-col justify-between p-4.5 sm:p-5">
+        <div>
+          <h3 className="text-lg font-bold tracking-tight text-[#111827] sm:text-[19px]">
+            {member.name}
+          </h3>
+
+          <p className="mt-0.5 text-sm font-semibold text-[#d8003f] sm:text-[15px]">
+            {member.role}
+          </p>
+        </div>
+
+        {/* Social Icons (Facebook & Twitter) */}
+        <div className="mt-4 flex items-center justify-end gap-2">
+          <a
+            href={member.socials?.facebook || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${member.name} on Facebook`}
+            className="flex h-6 w-6 items-center justify-center rounded-full border border-[#111827] text-[#111827] transition-all duration-200 hover:border-[#d8003f] hover:bg-[#d8003f] hover:text-white sm:h-6.5 sm:w-6.5"
+          >
+            <FacebookIcon className="h-3 w-3" />
+          </a>
+
+          <a
+            href={member.socials?.twitter || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${member.name} on Twitter`}
+            className="flex h-6 w-6 items-center justify-center rounded-full border border-[#111827] text-[#111827] transition-all duration-200 hover:border-[#d8003f] hover:bg-[#d8003f] hover:text-white sm:h-6.5 sm:w-6.5"
+          >
+            <TwitterIcon className="h-3 w-3" />
+          </a>
+        </div>
+      </div>
+    </motion.article>
+  );
+}
+
+function FacebookIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+    </svg>
+  );
+}
+
+function TwitterIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+    </svg>
+  );
+}
