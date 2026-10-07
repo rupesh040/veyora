@@ -305,8 +305,8 @@ export default function WhyVeyora() {
             <div className="mb-8 flex items-center justify-between">
               <div className="relative h-16 w-16 sm:h-20 sm:w-20">
                 <Image
-                  src="/logo/v-logo.webp"
-                  alt="Veyora backdrop"
+                  src={whyData.card.logos.backdrop}
+                  alt={whyData.card.logos.backdropAlt}
                   fill
                   className="object-contain grayscale opacity-25"
                   sizes="80px"
@@ -315,8 +315,8 @@ export default function WhyVeyora() {
 
               <div className="relative h-16 w-16 sm:h-20 sm:w-20">
                 <Image
-                  src="/logo/v-logo.webp"
-                  alt="Veyora primary"
+                  src={whyData.card.logos.primary}
+                  alt={whyData.card.logos.primaryAlt}
                   fill
                   className="object-contain drop-shadow-[0_8px_24px_rgba(216,0,63,0.35)]"
                   sizes="80px"

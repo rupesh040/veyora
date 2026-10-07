@@ -35,7 +35,6 @@ export default function ContactSection() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSubmitted(true);
-    // Modal will be closed manually by the user
   };
 
   return (

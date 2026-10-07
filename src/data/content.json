@@ -189,6 +189,12 @@
               "cta": {
                 "label": "Start a Project",
                 "href": "/contact"
+              },
+              "logos": {
+                "backdrop": "/logo/v-logo.webp",
+                "backdropAlt": "Veyora backdrop",
+                "primary": "/logo/v-logo.webp",
+                "primaryAlt": "Veyora primary"
               }
             }
           }
@@ -1017,7 +1023,14 @@
                   "Support from launch and beyond"
                 ]
               }
-            }
+            },
+            "image": "/about/about-1.webp",
+            "imageAlt": "Veyora creative team working together",
+            "tag": "Our Approach",
+            "headingStart": "Your Strategic Partner",
+            "headingBr": "for ",
+            "headingHighlight": "Meaningful Growth",
+            "subHeading": "What you can expect from Veyora"
           }
         }
       },
@@ -1509,7 +1522,7 @@
             "badge": "Let's Build Something Bold",
             "headingStart": "Ready to Make Your ",
             "headingHighlight": "Brand Unforgettable",
-            "description": "We're here to help you turn your vision into a reality that demands attention and drives growth.",
+            "description": "Let's turn your next big idea into a brand people remember.",
             "buttonText": "Start a Project",
             "buttonLink": "/contact"
           }

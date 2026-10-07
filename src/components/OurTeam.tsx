@@ -13,14 +13,11 @@ export default function OurTeam() {
   return (
     <section className="relative overflow-hidden bg-white px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-12 lg:py-28 xl:px-16">
       <div className="mx-auto max-w-[1450px]">
-        {/* Header */}
         <Header
           badge={teamData.badge}
           heading={teamData.heading}
           description={teamData.description}
         />
-
-        {/* 4 Cards Grid */}
         <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-14 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 sm:gap-6 lg:gap-6 xl:gap-7">
           {teamData.members.map((member, index) => (
             <TeamCard key={member.name} member={member} index={index} />
@@ -48,7 +45,6 @@ function Header({
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className="mx-auto max-w-[950px] text-center"
     >
-      {/* Pill Badge */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -60,8 +56,6 @@ function Header({
           {badge}
         </span>
       </motion.div>
-
-      {/* Main Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -76,8 +70,6 @@ function Header({
         {heading.line1}{" "}
         <span className="text-[#c9003b]">{heading.highlight}</span>
       </motion.h2>
-
-      {/* Subtitle */}
       <motion.p
         initial={{ opacity: 0, y: 15 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +102,6 @@ function TeamCard({
       }}
       className="group flex flex-col overflow-hidden rounded-[14px] border border-[#e5e7eb] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_14px_34px_rgba(0,0,0,0.08)]"
     >
-      {/* Card Image */}
       <div className="relative aspect-[1/1.03] w-full overflow-hidden bg-[#f3f4f6]">
         <Image
           src={member.image}
@@ -120,11 +111,7 @@ function TeamCard({
           sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 25vw"
         />
       </div>
-
-      {/* Crimson Red Dividing Strip */}
       <div className="h-[2.5px] w-full bg-[#d8003f]" aria-hidden="true" />
-
-      {/* Info & Socials Section */}
       <div className="flex flex-1 flex-col justify-between p-4.5 sm:p-5">
         <div>
           <h3 className="text-lg font-bold tracking-tight text-[#111827] sm:text-[19px]">
@@ -135,8 +122,6 @@ function TeamCard({
             {member.role}
           </p>
         </div>
-
-        {/* Social Icons (Facebook & Twitter) */}
         <div className="mt-4 flex items-center justify-end gap-2">
           <a
             href={member.socials?.facebook || "#"}

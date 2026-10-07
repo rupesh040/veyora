@@ -116,6 +116,12 @@ export interface WhyVeyoraData {
   tabs: Record<string, WhyVeyoraTab>;
   metrics: WhyVeyoraMetric[];
   card: {
+    logos: {
+      backdrop: string;
+      backdropAlt: string;
+      primary: string;
+      primaryAlt: string;
+    };
     reasons: WhyVeyoraReason[];
     cta: {
       label: string;

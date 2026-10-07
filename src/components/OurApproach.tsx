@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { Check } from "lucide-react";
 
 import content from '../data';
-const { approaches } = content.ourApproach;
+const { approaches, image, imageAlt, tag, headingStart, headingBr, headingHighlight, subHeading } = content.ourApproach;
 
 type ApproachTab = keyof typeof approaches;
 
@@ -49,8 +49,8 @@ function ImagePanel() {
       className="relative min-h-[430px] overflow-hidden sm:min-h-[520px] lg:min-h-[700px]"
     >
       <Image
-        src="/about/about-1.webp"
-        alt="Veyora creative team working together"
+        src={image}
+        alt={imageAlt}
         fill
         priority
         className="object-cover object-center"
@@ -119,17 +119,11 @@ function ContentPanel({
         >
           <div className="inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7">
             <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
-              Our Approach
-            </span>
+              {tag}</span>
           </div>
 
           <h2 className="mt-6 text-[clamp(2.45rem,5vw,4.8rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]">
-            Your Strategic Partner
-            <br />
-            for{" "}
-            <span className="text-[#d8003f]">
-              Meaningful Growth
-            </span>
+            {headingStart}<br />{headingBr}<span className="text-[#d8003f]">{headingHighlight}</span>
           </h2>
         </motion.div>
 
@@ -222,8 +216,7 @@ function ContentPanel({
               }}
               className="mt-10 text-2xl font-bold tracking-[-0.03em] text-[#101522] sm:text-3xl"
             >
-              What you can expect from Veyora
-            </motion.h3>
+              {subHeading}</motion.h3>
 
             <div className="mt-7 grid gap-x-8 gap-y-5 sm:grid-cols-2">
               {activeContent.points.map((point, index) => (
@@ -262,3 +255,4 @@ function ContentPanel({
     </div>
   );
 }
+

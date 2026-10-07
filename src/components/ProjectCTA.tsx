@@ -57,7 +57,7 @@ export default function ProjectCTA() {
             }}
             className="mt-3 text-sm leading-relaxed text-white/90 sm:mt-4 sm:text-base md:text-lg"
           >
-            Let&apos;s turn your next big idea into a brand people remember.
+            {data.description}
           </motion.p>
         </motion.div>
 
