@@ -642,7 +642,7 @@ export default function Hero() {
         </motion.div>
 
         <div className="relative z-10 grid min-h-[calc(100vh-80px)] grid-cols-1 items-center lg:grid-cols-[50%_50%] xl:grid-cols-[52%_48%]">
-          <div className="order-1 relative flex w-full items-end justify-center pt-8 sm:pt-10 lg:order-2 lg:h-full lg:pt-0">
+          <div className="order-1 relative flex w-full items-end justify-center  sm:pt-10 lg:order-2 lg:h-full lg:pt-0">
             <div className="relative w-full max-w-[330px] sm:max-w-[420px] md:max-w-[480px] lg:w-full lg:max-w-[680px] xl:max-w-[740px]">
               <motion.div
                 suppressHydrationWarning

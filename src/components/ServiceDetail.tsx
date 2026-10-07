@@ -251,7 +251,7 @@ function Approach() {
           transition={{
             duration: 0.75,
           }}
-          className="relative aspect-[1.05/1.4] overflow-hidden rounded-[6px]"
+          className="relative aspect-[1.05/1.1] overflow-hidden rounded-[6px]"
         >
           <Image
             src={data.approachImage}
