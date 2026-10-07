@@ -25,7 +25,7 @@ export default function Services() {
 
   return (
     <>
-      <section className="relative w-full overflow-hidden bg-[#faf9f7] px-5 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20 lg:px-12 lg:py-24 xl:px-16 xl:py-28">
+      <section className="relative w-full overflow-hidden bg-[#faf9f7] px-5 py-2 px-18 lg:px-22">
         <div className="relative z-10 mx-auto grid max-w-[1500px] grid-cols-1 items-start gap-12 lg:grid-cols-[58%_42%] lg:gap-8 lg:pr-8 xl:gap-12 xl:pr-12">
           <div className="relative z-10">
             <motion.div
@@ -58,7 +58,7 @@ export default function Services() {
               <span className="text-[#d8003f]">{data.headingHighlight}</span>
             </motion.h2>
 
-            <div className="mt-9 grid grid-cols-1 gap-x-8 gap-y-8 sm:mt-12 sm:grid-cols-2 sm:gap-y-10 lg:mt-14">
+            <div className="mt-9 grid grid-cols-1 gap-x-8 gap-y-6 sm:mt-10 sm:grid-cols-2 sm:gap-y-8 lg:mt-12 lg:gap-y-10">
               {services.map((service: any, index: number) => {
                 const Icon = (service.icon && iconMap[service.icon]) || Target;
 
@@ -82,7 +82,7 @@ export default function Services() {
                       delay: index * 0.1,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="group flex gap-4 sm:gap-5"
+                    className="group flex gap-3 sm:gap-4"
                   >
                     <div className="flex h-12 w-12 shrink-0 items-center justify-center sm:h-14 sm:w-14">
                       {service.iconSvg ? (
@@ -237,14 +237,14 @@ function ServicesVisual({
         }}
         className="relative z-10"
       >
-        <div className="relative ml-auto w-full overflow-hidden rounded-[16px] shadow-[0_20px_45px_rgba(0,0,0,0.13)] sm:w-[88%]">
-          <div className="relative aspect-[0.88/1] w-full">
+        <div className="relative ml-auto w-full overflow-hidden rounded-[16px] shadow-[0_20px_45px_rgba(0,0,0,0.13)] sm:w-[88%] lg:w-[78%]">
+          <div className="relative aspect-[0.88/1] w-full ">
             <Image
               src={images.main}
               alt="VEYORA creative team"
               fill
-              className="object-cover"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 36vw"
+              className="object-cover "
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 36vw "
             />
 
             <div className="absolute inset-0 bg-black/10" />
@@ -288,7 +288,7 @@ function ServicesVisual({
           delay: 0.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="relative z-20 -mt-16 ml-auto w-[62%] overflow-hidden rounded-[16px] border-[4px] border-[#faf9f7] shadow-[0_20px_45px_rgba(0,0,0,0.16)] sm:-mt-32 sm:w-[56%] sm:border-[5px]"
+        className="relative z-20 -mt-16 ml-auto w-[62%] overflow-hidden rounded-[16px] border-[4px] border-[#faf9f7] shadow-[0_20px_45px_rgba(0,0,0,0.16)] sm:-mt-32 sm:w-[56%] sm:border-[5px] lg:w-[42%]"
       >
         <div className="relative aspect-[0.92/1] w-full">
           <Image
