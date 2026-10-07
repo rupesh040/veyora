@@ -9,8 +9,8 @@ const { images, badge, titleStart, titleHighlight, description, points, testimon
 
 export default function AboutVeyora() {
   return (
-    <section className="relative overflow-hidden bg-[#fcfaf8] px-5 py-16 sm:px-8 sm:py-20 md:px-10 md:py-24 lg:px-12 lg:py-28 xl:px-16">
-      <div className="mx-auto grid max-w-[1450px] items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-20">
+    <section className="relative overflow-hidden bg-[#fcfaf8] px-5 py-6 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-16 xl:px-16">
+      <div className="mx-auto grid max-w-[1450px] items-start gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-20">
         <ImageCollage />
         <Content />
       </div>
@@ -167,7 +167,7 @@ function Content() {
         duration: 0.9,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="relative z-10"
+      className="relative z-10 lg:pt-12 xl:pt-16"
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}

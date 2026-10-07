@@ -26,7 +26,7 @@ export default function Services() {
   return (
     <>
       <section className="relative w-full overflow-hidden bg-[#faf9f7] px-5 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20 lg:px-12 lg:py-24 xl:px-16 xl:py-28">
-        <div className="relative z-10 mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-12 lg:grid-cols-[58%_42%] lg:gap-8 xl:gap-12">
+        <div className="relative z-10 mx-auto grid max-w-[1500px] grid-cols-1 items-start gap-12 lg:grid-cols-[58%_42%] lg:gap-8 lg:pr-8 xl:gap-12 xl:pr-12">
           <div className="relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -343,7 +343,7 @@ function VideoModal({
           duration: 0.35,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="relative w-full max-w-5xl overflow-hidden rounded-2xl bg-black shadow-2xl"
+        className="relative w-full max-w-4xl overflow-hidden rounded-2xl bg-black shadow-2xl"
         onClick={(event) => event.stopPropagation()}
       >
         <button

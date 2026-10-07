@@ -26,7 +26,7 @@ export default function ProcessSection() {
         <Header data={data} />
 
         <div className="relative mt-14 sm:mt-16 lg:mt-20">
-          <DesktopProgressLine activeStep={activeStep} />
+          <ProgressLine activeStep={activeStep} />
 
           <div className="relative grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-3">
             {steps.map((step: any, index: number) => (
@@ -126,7 +126,7 @@ function Header({ data }: { data: any }) {
   );
 }
 
-function DesktopProgressLine({
+function ProgressLine({
   activeStep,
 }: {
   activeStep: number;
@@ -134,18 +134,35 @@ function DesktopProgressLine({
   const progress = `${(activeStep / (steps.length - 1)) * 100}%`;
 
   return (
-    <div className="pointer-events-none absolute left-[12.5%] right-[12.5%] top-[39px] hidden h-[3px] bg-[#d7d7d7] lg:block">
-      <motion.div
-        className="absolute left-0 top-0 h-full bg-[#d8003f]"
-        animate={{
-          width: progress,
-        }}
-        transition={{
-          duration: 0.7,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-      />
-    </div>
+    <>
+      {/* Horizontal Line for Large Screens */}
+      <div className="pointer-events-none absolute left-[12.5%] right-[12.5%] top-[37px] hidden h-[3px] bg-[#d7d7d7] lg:block">
+        <motion.div
+          className="absolute left-0 top-0 h-full bg-[#d8003f]"
+          animate={{
+            width: progress,
+          }}
+          transition={{
+            duration: 0.7,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        />
+      </div>
+
+      {/* Vertical Line for Mobile Screens (1 column) */}
+      <div className="pointer-events-none absolute bottom-[15%] left-[33px] top-[34px] block w-[2px] bg-[#d7d7d7] sm:hidden">
+        <motion.div
+          className="absolute left-0 top-0 w-full bg-[#d8003f]"
+          animate={{
+            height: progress,
+          }}
+          transition={{
+            duration: 0.7,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+        />
+      </div>
+    </>
   );
 }
 
