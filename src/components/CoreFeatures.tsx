@@ -129,7 +129,7 @@ function FeatureColumn({
   return (
     <div className="relative z-20 flex flex-col gap-4 sm:gap-5">
       {items.map((feature, index) => {
-        const Icon = iconMap[feature.icon] || Target;
+        const Icon = (feature.icon && iconMap[feature.icon]) || Target;
 
         return (
           <motion.div
@@ -155,11 +155,27 @@ function FeatureColumn({
           >
             <div className="flex w-full items-center gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center text-[#11151c] sm:h-14 sm:w-14">
-                <Icon
-                  size={38}
-                  strokeWidth={1.5}
-                  className="transition-transform duration-300 group-hover:scale-110"
-                />
+                {feature.iconSvg ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="38"
+                    height="38"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="transition-transform duration-300 group-hover:scale-110"
+                    dangerouslySetInnerHTML={{ __html: feature.iconSvg }}
+                  />
+                ) : (
+                  <Icon
+                    size={38}
+                    strokeWidth={1.5}
+                    className="transition-transform duration-300 group-hover:scale-110"
+                  />
+                )}
               </div>
 
               <div className="min-w-0 flex-1">

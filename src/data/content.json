@@ -215,7 +215,8 @@
               {
                 "title": "Brand Positioning",
                 "description": "Own a clear and meaningful place in the market.",
-                "icon": "Target"
+                "icon": "Target",
+                "iconSvg": "<path d=\"M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\"/><path d=\"M12 7a5 5 0 1 0 5 5\"/><path d=\"M13.004 3.055a9 9 0 1 0 7.941 7.945\"/><path d=\"M15 6v3h3l3 -3h-3v-3z\"/><path d=\"M15 9l-3 3\"/>"
               },
               {
                 "title": "Identity Systems",
@@ -1083,27 +1084,29 @@
             "services": [
               {
                 "title": "Brand Strategy",
-                "description": "Building strong foundations for your brand.",
+                "description": "Positioning, purpose, and a clear path to growth.",
                 "icon": "Target",
+                "iconSvg": "<path d=\"M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0\"/><path d=\"M12 7a5 5 0 1 0 5 5\"/><path d=\"M13.004 3.055a9 9 0 1 0 7.941 7.945\"/><path d=\"M15 6v3h3l3 -3h-3v-3z\"/><path d=\"M15 9l-3 3\"/>",
                 "image": "/about/about-2.webp",
                 "link": "/services/brand-strategy"
               },
               {
-                "title": "UI/UX Design",
+                "title": "visaul Identity",
                 "description": "Creating intuitive digital experiences.",
                 "icon": "Gem",
                 "image": "/about/about-3.webp",
                 "link": "/services/ui-ux"
               },
               {
-                "title": "Marketing",
-                "description": "Reaching your audience effectively.",
-                "icon": "Megaphone",
+                "title": "Digital Experience",
+                "description": "Web experiences that feel intuitive and alive.",
+                "icon": "PanelsTopLeft",
+                "iconSvg": "<path d=\"M2 12l6-8 4 8 4-8 6 8-6 8-4-8-4 8z\"/>",
                 "image": "/about/about-1.webp",
                 "link": "/services/marketing"
               },
               {
-                "title": "Premium Identity",
+                "title": "Campaign Design",
                 "description": "Crafting distinctive visual identities.",
                 "icon": "Megaphone",
                 "image": "/about/about-2.webp",

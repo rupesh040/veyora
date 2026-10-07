@@ -133,7 +133,8 @@ export interface WhyVeyoraData {
 export interface CoreFeatureItem {
   title: string;
   description: string;
-  icon: string;
+  icon?: string;
+  iconSvg?: string;
 }
 
 export interface CoreFeaturesData {

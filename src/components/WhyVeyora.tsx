@@ -152,16 +152,16 @@ export default function WhyVeyora() {
           </p>
 
           <div className="mt-8 max-w-[660px]">
-            <div className="grid grid-cols-3 overflow-hidden rounded-lg border border-black/[0.08] bg-[#f2eee9]/60 p-1">
+            <div className="grid grid-cols-3 border-b-2 border-[#ed1028]">
               {tabsList.map((tab) => (
                 <button
                   key={tab}
                   type="button"
                   onClick={() => setActiveTab(tab)}
-                  className={`relative cursor-pointer rounded-md px-3 py-2.5 text-sm font-bold transition-all duration-300 sm:px-5 sm:text-base ${
+                  className={`relative cursor-pointer px-3 py-3 text-sm font-bold transition-all duration-300 sm:px-5 sm:text-[17px] ${
                     activeTab === tab
-                      ? "bg-[#ed1028] text-white shadow-sm"
-                      : "text-[#16191f] hover:bg-black/[0.04]"
+                      ? "bg-[#ed1028] text-white"
+                      : "bg-transparent text-[#16191f] hover:text-[#ed1028]"
                   }`}
                 >
                   {tab}
@@ -295,20 +295,20 @@ export default function WhyVeyora() {
             delay: 0.15,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="relative overflow-hidden rounded-[18px] bg-[#101318] px-7 py-8 text-white shadow-2xl sm:px-9 sm:py-10 lg:px-10 lg:py-11 xl:px-11"
+          className="relative overflow-hidden rounded-[18px] bg-[#101318] px-7 py-8 text-white shadow-2xl self-start lg:sticky lg:top-32 sm:px-9 sm:py-10 lg:px-10 lg:py-11 xl:px-11"
         >
           <div className="pointer-events-none absolute inset-0 opacity-10 [background-image:linear-gradient(135deg,transparent_25%,rgba(255,255,255,0.15)_25%,rgba(255,255,255,0.15)_26%,transparent_26%,transparent_50%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0.1)_51%,transparent_51%)] [background-size:90px_90px]" />
 
           <div className="pointer-events-none absolute -right-12 -top-12 h-56 w-56 rounded-full border-[35px] border-white/[0.025]" />
 
           <div className="relative flex h-full flex-col">
-            <div className="mb-8 flex items-center justify-between">
-              <div className="relative h-16 w-16 sm:h-20 sm:w-20">
+            <div className="mb-8 flex items-center">
+              <div className="relative h-36 w-36 sm:h-40 sm:w-40">
                 <Image
                   src={whyData.card.logos.backdrop}
                   alt={whyData.card.logos.backdropAlt}
                   fill
-                  className="object-contain grayscale opacity-25"
+                  className="object-contain grayscale opacity-75"
                   sizes="80px"
                 />
               </div>
@@ -318,7 +318,7 @@ export default function WhyVeyora() {
                   src={whyData.card.logos.primary}
                   alt={whyData.card.logos.primaryAlt}
                   fill
-                  className="object-contain drop-shadow-[0_8px_24px_rgba(216,0,63,0.35)]"
+                  className="object-contain "
                   sizes="80px"
                 />
               </div>
