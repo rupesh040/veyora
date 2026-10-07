@@ -15,7 +15,8 @@ export default function ProjectCTA() {
       <div className="relative mx-auto flex max-w-[1450px] flex-col gap-6 pl-8 sm:pl-10 md:pl-12 lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:pl-14 xl:pl-16">
         <motion.div
           initial={{ opacity: 0, x: -35 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{
             duration: 0.8,
             ease: [0.22, 1, 0.36, 1],
@@ -24,7 +25,8 @@ export default function ProjectCTA() {
         >
           <motion.p
             initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{
               duration: 0.6,
               delay: 0.1,
@@ -36,7 +38,8 @@ export default function ProjectCTA() {
 
           <motion.h2
             initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{
               duration: 0.8,
               delay: 0.2,
@@ -50,7 +53,8 @@ export default function ProjectCTA() {
 
           <motion.p
             initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{
               duration: 0.7,
               delay: 0.35,
@@ -63,7 +67,6 @@ export default function ProjectCTA() {
 
         <motion.div
           initial={{ opacity: 0, x: 35, scale: 0.95 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{

@@ -11,7 +11,7 @@ const footerData = contentData.footer as FooterData;
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const theme = footerData.theme || {
-    background: "#08090d",
+    background: "#202126",
     accent: "#d8003f",
   };
 

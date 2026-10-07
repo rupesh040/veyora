@@ -35,6 +35,9 @@ export default function ContactSection() {
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSubmitted(true);
+    setService("");
+    setPhone("");
+    event.currentTarget.reset();
   };
 
   return (
