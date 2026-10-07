@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import {
   ArrowRight,
   Clock3,
@@ -362,6 +363,9 @@ function ServiceSidebar() {
 }
 
 function ServicesCard() {
+  const params = useParams();
+  const currentServiceId = params?.id;
+
   return (
     <motion.div
       initial={{
@@ -385,24 +389,27 @@ function ServicesCard() {
       </div>
 
       <div>
-        {services.map((service: any, index: number) => (
-          <Link
-            href={service.link}
-            key={service.title}
-            className={`group flex min-h-[45px] items-center justify-between gap-3 border-b border-[#edf0f3] px-5 text-sm font-semibold transition-all duration-300 last:border-b-0 sm:px-6 ${
-              index === 0
-                ? "bg-[#fff0f2] text-[#d8003f]"
-                : "text-[#243451] hover:bg-[#fff0f2] hover:text-[#d8003f]"
-            }`}
-          >
-            <span>{service.title}</span>
+        {services.map((service: any) => {
+          const isActive = currentServiceId && service.link.endsWith(`/${currentServiceId}`);
+          return (
+            <Link
+              href={service.link}
+              key={service.title}
+              className={`group flex min-h-[45px] items-center justify-between gap-3 border-b border-[#edf0f3] px-5 text-sm font-semibold transition-all duration-300 last:border-b-0 sm:px-6 ${
+                isActive
+                  ? "bg-[#fff0f2] text-[#d8003f]"
+                  : "text-[#243451] hover:bg-[#fff0f2] hover:text-[#d8003f]"
+              }`}
+            >
+              <span>{service.title}</span>
 
-            <ArrowRight
-              size={18}
-              className="shrink-0 transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </Link>
-        ))}
+              <ArrowRight
+                size={18}
+                className="shrink-0 transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </Link>
+          );
+        })}
       </div>
     </motion.div>
   );
@@ -519,30 +526,25 @@ function OpeningHours() {
 }
 
 function RelatedServices() {
+  const params = useParams();
+  const currentServiceId = params?.id;
+  const filteredServices = relatedServices.filter(
+    (service: any) => !(currentServiceId && service.link.endsWith(`/${currentServiceId}`))
+  );
+
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        y: 30,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.1,
-      }}
-      transition={{
-        duration: 0.7,
-      }}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.7 }}
     >
       <h2 className="text-xl font-bold tracking-[-0.025em] text-[#10234a] sm:text-2xl">
         {data.relatedServicesTitle}
       </h2>
 
       <div className="mt-4 space-y-5">
-        {relatedServices.map((service: any, index: number) => (
+        {filteredServices.map((service: any, index: number) => (
           <Link
             href={service.link}
             key={service.title}

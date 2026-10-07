@@ -431,7 +431,7 @@
               }
             ],
             "legal": {
-              "copyright": "Veyora Studio. All rights reserved.",
+              "copyright": "© 2026 All Rights Reserved. Powered by Lestow",
               "links": [
                 {
                   "label": "Terms of Use",
@@ -454,13 +454,34 @@
         "variants": {
           "VeyoraBlogDetail1": {
             "categories": [
-              "HR & Workforce",
-              "Leadership",
-              "Training & Development",
-              "Corporate Programs",
-              "Industry Insights",
-              "Workplace Culture",
-              "Staff Management"
+              {
+                "name": "HR & Workforce",
+                "link": "/blog/stronger-workforce"
+              },
+              {
+                "name": "Leadership",
+                "link": "/blog/leadership-training"
+              },
+              {
+                "name": "Training & Development",
+                "link": "/blog/training-development"
+              },
+              {
+                "name": "Corporate Programs",
+                "link": "/blog/hr-business-growth"
+              },
+              {
+                "name": "Industry Insights",
+                "link": "/blog/industry-insights"
+              },
+              {
+                "name": "Workplace Culture",
+                "link": "/blog/positive-workplace"
+              },
+              {
+                "name": "Staff Management",
+                "link": "/blog/staff-management"
+              }
             ],
             "recentPosts": [
               {
@@ -488,58 +509,6 @@
                 "image": "/blogs/blog-1.webp"
               }
             ],
-            "articleSections": [
-              {
-                "number": "01",
-                "title": "Understand Your Business Needs",
-                "description": "The first step in building a stronger workforce is to clearly understand your business goals and workforce requirements. Identify the roles, skills, and competencies needed to achieve your objectives."
-              },
-              {
-                "number": "02",
-                "title": "Attract the Right Talent",
-                "description": "Finding the right people can make a huge difference. Use a strategic hiring process, including clear job descriptions, targeted outreach, and thorough screening, to attract candidates who fit your culture and goals."
-              },
-              {
-                "number": "03",
-                "title": "Invest in Training & Development",
-                "description": "Continuous learning helps employees stay updated with industry trends and improves their performance. Offer training programs, leadership development, and skill enhancement opportunities to help your team grow."
-              },
-              {
-                "number": "04",
-                "title": "Foster a Positive Work Culture",
-                "description": "A supportive and inclusive work environment increases employee satisfaction and retention. Encourage open communication, recognize achievements, and create opportunities for collaboration."
-              }
-            ],
-            "header": {
-              "image": "/blogs/blog-1.webp",
-              "imageAlt": "How to Build a Stronger Workforce",
-              "titleStart": "How to Build a Stronger Workforce ",
-              "titleHighlight": "for a Successful Business",
-              "description": "A strong workforce is the foundation of every successful organization. In today's competitive business environment, companies need the right people, the right skills, and the right strategies to stay ahead. Building a high-performing team not only improves productivity but also drives innovation and long-term growth.",
-              "meta": [
-                {
-                  "icon": "CalendarDays",
-                  "text": "24 August 2025"
-                },
-                {
-                  "icon": "Users",
-                  "text": "Admin"
-                },
-                {
-                  "icon": "FolderOpen",
-                  "text": "HR & Workforce"
-                },
-                {
-                  "icon": "Eye",
-                  "text": "356 Views"
-                }
-              ]
-            },
-            "quote": {
-              "text": "A strong workforce is not just about hiring people, but about empowering them to grow, perform, and succeed together.",
-              "authorStart": "— Team ",
-              "authorHighlight": "Veyora"
-            },
             "sidebarCTA": {
               "title": "Need Expert Guidance?",
               "description": "Our team is here to help you with customized HR and staffing solutions.",
@@ -549,6 +518,326 @@
             "sidebarHeadings": {
               "categories": "Categories",
               "recentPosts": "Recent Posts"
+            },
+            "posts": {
+              "stronger-workforce": {
+                "header": {
+                  "image": "/blogs/blog-1.webp",
+                  "imageAlt": "How to Build a Stronger Workforce",
+                  "titleStart": "How to Build a Stronger Workforce ",
+                  "titleHighlight": "for a Successful Business",
+                  "description": "A strong workforce is the foundation of every successful organization. In today's competitive business environment, companies need the right people, the right skills, and the right strategies to stay ahead. Building a high-performing team not only improves productivity but also drives innovation and long-term growth.",
+                  "meta": [
+                    {
+                      "icon": "CalendarDays",
+                      "text": "24 August 2025"
+                    },
+                    {
+                      "icon": "Users",
+                      "text": "Admin"
+                    },
+                    {
+                      "icon": "FolderOpen",
+                      "text": "HR & Workforce"
+                    },
+                    {
+                      "icon": "Eye",
+                      "text": "356 Views"
+                    }
+                  ]
+                },
+                "articleSections": [
+                  {
+                    "number": "01",
+                    "title": "Understand Your Business Needs",
+                    "description": "The first step in building a stronger workforce is to clearly understand your business goals and workforce requirements. Identify the roles, skills, and competencies needed to achieve your objectives."
+                  },
+                  {
+                    "number": "02",
+                    "title": "Attract the Right Talent",
+                    "description": "Finding the right people can make a huge difference. Use a strategic hiring process, including clear job descriptions, targeted outreach, and thorough screening, to attract candidates who fit your culture and goals."
+                  },
+                  {
+                    "number": "03",
+                    "title": "Invest in Training & Development",
+                    "description": "Continuous learning helps employees stay updated with industry trends and improves their performance. Offer training programs, leadership development, and skill enhancement opportunities to help your team grow."
+                  },
+                  {
+                    "number": "04",
+                    "title": "Foster a Positive Work Culture",
+                    "description": "A supportive and inclusive work environment increases employee satisfaction and retention. Encourage open communication, recognize achievements, and create opportunities for collaboration."
+                  }
+                ],
+                "quote": {
+                  "text": "A strong workforce is not just about hiring people, but about empowering them to grow, perform, and succeed together.",
+                  "authorStart": "— Team ",
+                  "authorHighlight": "Veyora"
+                }
+              },
+              "leadership-training": {
+                "header": {
+                  "image": "/blogs/blog-2.webp",
+                  "imageAlt": "How to Build a Stronger Workforce",
+                  "titleStart": "The Importance of ",
+                  "titleHighlight": "Leadership Training",
+                  "description": "Effective leadership is the cornerstone of business success. Discover why training your leaders makes all the difference.",
+                  "meta": [
+                    {
+                      "icon": "CalendarDays",
+                      "text": "24 August 2025"
+                    },
+                    {
+                      "icon": "Users",
+                      "text": "Admin"
+                    },
+                    {
+                      "icon": "FolderOpen",
+                      "text": "HR & Workforce"
+                    },
+                    {
+                      "icon": "Eye",
+                      "text": "356 Views"
+                    }
+                  ]
+                },
+                "articleSections": [
+                  {
+                    "number": "01",
+                    "title": "Empower Decision Making",
+                    "description": "Leaders need the right tools and mindset to make tough decisions quickly."
+                  },
+                  {
+                    "number": "02",
+                    "title": "Boost Team Morale",
+                    "description": "A good leader inspires confidence and motivation in their team."
+                  }
+                ],
+                "quote": {
+                  "text": "Leadership is action, not position.",
+                  "authorStart": "— Donald ",
+                  "authorHighlight": "McGannon"
+                }
+              },
+              "hr-business-growth": {
+                "header": {
+                  "image": "/blogs/blog-3.webp",
+                  "imageAlt": "HR Strategies for Business Growth",
+                  "titleStart": "HR Strategies ",
+                  "titleHighlight": "for Business Growth",
+                  "description": "Strategic HR is the secret weapon for growing businesses. Learn how to scale your team while maintaining culture and efficiency.",
+                  "meta": [
+                    {
+                      "icon": "CalendarDays",
+                      "text": "10 Sept 2025"
+                    },
+                    {
+                      "icon": "Users",
+                      "text": "Admin"
+                    },
+                    {
+                      "icon": "FolderOpen",
+                      "text": "Insights"
+                    },
+                    {
+                      "icon": "Eye",
+                      "text": "420 Views"
+                    }
+                  ]
+                },
+                "articleSections": [
+                  {
+                    "number": "01",
+                    "title": "Align HR with Business Goals",
+                    "description": "Ensure your human resources strategy directly supports your company objectives."
+                  },
+                  {
+                    "number": "02",
+                    "title": "Scalable Processes",
+                    "description": "Implement systems that grow with your company, from onboarding to performance reviews."
+                  }
+                ],
+                "quote": {
+                  "text": "Human resources isn't a thing we do. It's the thing that runs our business.",
+                  "authorStart": "— Steve ",
+                  "authorHighlight": "Wynn"
+                }
+              },
+              "positive-workplace": {
+                "header": {
+                  "image": "/blogs/blog-1.webp",
+                  "imageAlt": "Creating a Positive Workplace Culture",
+                  "titleStart": "Creating a Positive ",
+                  "titleHighlight": "Workplace Culture",
+                  "description": "A thriving culture is not an accident. Discover the intentional steps to build a positive and productive environment.",
+                  "meta": [
+                    {
+                      "icon": "CalendarDays",
+                      "text": "10 Sept 2025"
+                    },
+                    {
+                      "icon": "Users",
+                      "text": "Admin"
+                    },
+                    {
+                      "icon": "FolderOpen",
+                      "text": "Insights"
+                    },
+                    {
+                      "icon": "Eye",
+                      "text": "420 Views"
+                    }
+                  ]
+                },
+                "articleSections": [
+                  {
+                    "number": "01",
+                    "title": "Lead by Example",
+                    "description": "Culture starts at the top. Leaders must embody the values they want to see."
+                  },
+                  {
+                    "number": "02",
+                    "title": "Encourage Open Feedback",
+                    "description": "Create safe spaces for employees to share their thoughts and ideas."
+                  }
+                ],
+                "quote": {
+                  "text": "Corporate culture matters. How management chooses to treat its people impacts everything.",
+                  "authorStart": "— Simon ",
+                  "authorHighlight": "Sinek"
+                }
+              },
+              "training-development": {
+                "header": {
+                  "image": "/blogs/blog-2.webp",
+                  "imageAlt": "Training & Development",
+                  "titleStart": "The Future of ",
+                  "titleHighlight": "Training & Development",
+                  "description": "Upskilling your workforce is no longer optional. Find out how to implement effective training programs that deliver ROI.",
+                  "meta": [
+                    {
+                      "icon": "CalendarDays",
+                      "text": "10 Sept 2025"
+                    },
+                    {
+                      "icon": "Users",
+                      "text": "Admin"
+                    },
+                    {
+                      "icon": "FolderOpen",
+                      "text": "Insights"
+                    },
+                    {
+                      "icon": "Eye",
+                      "text": "420 Views"
+                    }
+                  ]
+                },
+                "articleSections": [
+                  {
+                    "number": "01",
+                    "title": "Continuous Learning",
+                    "description": "Foster a culture where employees are always encouraged to learn and grow."
+                  },
+                  {
+                    "number": "02",
+                    "title": "Leveraging Technology",
+                    "description": "Use modern platforms to deliver targeted and engaging training."
+                  }
+                ],
+                "quote": {
+                  "text": "The only thing worse than training your employees and having them leave is not training them and having them stay.",
+                  "authorStart": "— Henry ",
+                  "authorHighlight": "Ford"
+                }
+              },
+              "industry-insights": {
+                "header": {
+                  "image": "/blogs/blog-3.webp",
+                  "imageAlt": "Industry Insights",
+                  "titleStart": "Navigating ",
+                  "titleHighlight": "Industry Insights",
+                  "description": "Stay ahead of the curve by understanding the latest trends and shifts in your industry landscape.",
+                  "meta": [
+                    {
+                      "icon": "CalendarDays",
+                      "text": "10 Sept 2025"
+                    },
+                    {
+                      "icon": "Users",
+                      "text": "Admin"
+                    },
+                    {
+                      "icon": "FolderOpen",
+                      "text": "Insights"
+                    },
+                    {
+                      "icon": "Eye",
+                      "text": "420 Views"
+                    }
+                  ]
+                },
+                "articleSections": [
+                  {
+                    "number": "01",
+                    "title": "Data-Driven Decisions",
+                    "description": "Utilize industry data to inform your strategic choices."
+                  },
+                  {
+                    "number": "02",
+                    "title": "Anticipating Change",
+                    "description": "Be proactive rather than reactive when market conditions shift."
+                  }
+                ],
+                "quote": {
+                  "text": "The goal is to turn data into information, and information into insight.",
+                  "authorStart": "— Carly ",
+                  "authorHighlight": "Fiorina"
+                }
+              },
+              "staff-management": {
+                "header": {
+                  "image": "/blogs/blog-1.webp",
+                  "imageAlt": "Staff Management",
+                  "titleStart": "Effective ",
+                  "titleHighlight": "Staff Management",
+                  "description": "Managing a team requires empathy, clarity, and consistency. Learn the best practices for modern staff management.",
+                  "meta": [
+                    {
+                      "icon": "CalendarDays",
+                      "text": "10 Sept 2025"
+                    },
+                    {
+                      "icon": "Users",
+                      "text": "Admin"
+                    },
+                    {
+                      "icon": "FolderOpen",
+                      "text": "Insights"
+                    },
+                    {
+                      "icon": "Eye",
+                      "text": "420 Views"
+                    }
+                  ]
+                },
+                "articleSections": [
+                  {
+                    "number": "01",
+                    "title": "Clear Communication",
+                    "description": "Ensure expectations and feedback are communicated clearly and regularly."
+                  },
+                  {
+                    "number": "02",
+                    "title": "Empower Your Team",
+                    "description": "Give your staff the autonomy they need to succeed and innovate."
+                  }
+                ],
+                "quote": {
+                  "text": "Management is doing things right; leadership is doing the right things.",
+                  "authorStart": "— Peter ",
+                  "authorHighlight": "Drucker"
+                }
+              }
             }
           }
         }
@@ -813,13 +1102,21 @@
                 "number": "02",
                 "title": "Digital Product Design",
                 "description": "Interfaces that look beautiful and work flawlessly.",
-                "features": ["UI/UX Design", "Prototyping", "Design Systems"]
+                "features": [
+                  "UI/UX Design",
+                  "Prototyping",
+                  "Design Systems"
+                ]
               },
               {
                 "number": "03",
                 "title": "Web Development",
                 "description": "High-performance websites built for scale.",
-                "features": ["Front-end Dev", "CMS Integration", "E-Commerce"]
+                "features": [
+                  "Front-end Dev",
+                  "CMS Integration",
+                  "E-Commerce"
+                ]
               }
             ]
           }
@@ -1027,12 +1324,30 @@
             ],
             "servicesTitle": "Our Services",
             "services": [
-              { "title": "Staffing Solutions", "link": "/services/staffing-solutions" },
-              { "title": "HR Consulting", "link": "/services/hr-consulting" },
-              { "title": "Leadership Training", "link": "/services/leadership-training" },
-              { "title": "Corporate Programs", "link": "/services/corporate-programs" },
-              { "title": "Tech Resources", "link": "/services/tech-resources" },
-              { "title": "Staff Management", "link": "/services/staff-management" }
+              {
+                "title": "Staffing Solutions",
+                "link": "/services/staffing-solutions"
+              },
+              {
+                "title": "HR Consulting",
+                "link": "/services/hr-consulting"
+              },
+              {
+                "title": "Leadership Training",
+                "link": "/services/leadership-training"
+              },
+              {
+                "title": "Corporate Programs",
+                "link": "/services/corporate-programs"
+              },
+              {
+                "title": "Tech Resources",
+                "link": "/services/tech-resources"
+              },
+              {
+                "title": "Staff Management",
+                "link": "/services/staff-management"
+              }
             ],
             "helpCardTitle": "Need Help Finding The Right Talent?",
             "helpCardDescription": "Let our experts help you with customized staffing solutions for your business.",
@@ -1040,9 +1355,18 @@
             "helpCardButtonLink": "/contact",
             "openingHoursTitle": "Opening Hours",
             "hours": [
-              ["Monday - Friday", "09:00 - 18:00"],
-              ["Saturday", "10:00 - 16:00"],
-              ["Sunday", "Closed"]
+              [
+                "Monday - Friday",
+                "09:00 - 18:00"
+              ],
+              [
+                "Saturday",
+                "10:00 - 16:00"
+              ],
+              [
+                "Sunday",
+                "Closed"
+              ]
             ],
             "relatedServicesTitle": "Related Services",
             "relatedServices": [

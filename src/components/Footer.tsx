@@ -118,7 +118,7 @@ export default function Footer() {
       <div className="relative border-t border-white/[0.08] bg-black/25">
         <div className="mx-auto flex max-w-[1400px] flex-col gap-5 px-6 py-6 text-[15px] text-white/70 sm:px-10 sm:flex-row sm:items-center sm:justify-between lg:px-16">
           <p>
-            © {currentYear} {footerData.legal.copyright}
+            {footerData.legal.copyright}
           </p>
 
           <div className="flex flex-wrap items-center gap-6 sm:gap-8">

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { motion } from "motion/react";
 import {
   ArrowRight,
@@ -12,19 +13,25 @@ import {
 } from "lucide-react";
 
 import content from '../data';
-const { categories, recentPosts, articleSections, header, quote, sidebarCTA, sidebarHeadings } = content.blogDetail;
+const { categories, recentPosts, sidebarCTA, sidebarHeadings, posts } = content.blogDetail;
 
 const iconMap: Record<string, any> = { CalendarDays, Eye, FolderOpen, Users };
 
 export default function BlogDetailPage() {
+  const params = useParams();
+  const currentPostId = (params?.id as string) || "stronger-workforce";
+  const postData = (posts as Record<string, any>)[currentPostId] || (posts as Record<string, any>)["stronger-workforce"];
+
   return (
     <main className="min-h-screen overflow-hidden bg-white text-[#111827]">
-      <BlogContent />
+      <BlogContent postData={postData} />
     </main>
   );
 }
 
-function BlogContent() {
+function BlogContent({ postData }: { postData: any }) {
+  const { header, articleSections, quote } = postData;
+
   return (
     <section className="relative bg-white px-5 py-12 sm:px-8 sm:py-16 md:px-10 md:py-20 lg:px-12 lg:py-24 xl:px-16">
       <div className="mx-auto grid max-w-[1350px] gap-10 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,1fr)_370px] xl:gap-14">
@@ -75,7 +82,7 @@ function BlogContent() {
             />
           </motion.div>
 
-          <BlogMeta />
+          <BlogMeta header={header} />
 
           <motion.h1
             initial={{
@@ -122,7 +129,7 @@ function BlogContent() {
           </motion.p>
 
           <div className="mt-10 space-y-8 sm:mt-12 sm:space-y-10">
-            {articleSections.map((section, index) => (
+            {articleSections.map((section: any, index: number) => (
               <ArticleSection
                 key={section.number}
                 section={section}
@@ -176,7 +183,7 @@ function BlogContent() {
   );
 }
 
-function BlogMeta() {
+function BlogMeta({ header }: { header: any }) {
   return (
     <motion.div
       initial={{
@@ -231,7 +238,7 @@ function ArticleSection({
   section,
   index,
 }: {
-  section: (typeof articleSections)[number];
+  section: any;
   index: number;
 }) {
   return (
@@ -277,6 +284,11 @@ function ArticleSection({
 }
 
 function BlogSidebar() {
+  const params = useParams();
+  const currentPostId = params?.id;
+  
+  const filteredRecentPosts = recentPosts.filter(post => post.id !== currentPostId);
+
   return (
     <aside className="space-y-6 lg:sticky lg:top-8 lg:self-start">
       <motion.div
@@ -300,24 +312,27 @@ function BlogSidebar() {
         <SidebarHeading title={sidebarHeadings.categories} />
 
         <div className="mt-4">
-          {categories.map((category, index) => (
-            <Link
-              key={category}
-              href="/blog"
-              className={`group flex items-center justify-between gap-4 border-b border-[#edf0f3] px-2 py-3.5 text-sm font-semibold text-[#243451] transition-all duration-300 last:border-b-0 hover:bg-[#fff0f2] hover:px-3 hover:text-[#d8003f] sm:text-base ${
-                index === 0
-                  ? "bg-[#fff0f2] text-[#d8003f]"
-                  : ""
-              }`}
-            >
-              <span>{category}</span>
+          {categories.map((category: any) => {
+            const isActive = currentPostId && category.link.endsWith(`/${currentPostId}`);
+            return (
+              <Link
+                key={category.name}
+                href={category.link}
+                className={`group flex items-center justify-between gap-4 border-b border-[#edf0f3] px-2 py-3.5 text-sm font-semibold text-[#243451] transition-all duration-300 last:border-b-0 hover:bg-[#fff0f2] hover:px-3 hover:text-[#d8003f] sm:text-base ${
+                  isActive
+                    ? "bg-[#fff0f2] text-[#d8003f]"
+                    : ""
+                }`}
+              >
+                <span>{category.name}</span>
 
-              <ArrowRight
-                size={17}
-                className="shrink-0 transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </Link>
-          ))}
+                <ArrowRight
+                  size={17}
+                  className="shrink-0 transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </Link>
+            );
+          })}
         </div>
       </motion.div>
 
@@ -343,7 +358,7 @@ function BlogSidebar() {
         <SidebarHeading title={sidebarHeadings.recentPosts} />
 
         <div className="mt-5 space-y-5">
-          {recentPosts.map((post) => (
+          {filteredRecentPosts.map((post) => (
             <Link
               key={post.id}
               href={`/blog/${post.id}`}
