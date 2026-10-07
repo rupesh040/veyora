@@ -5,18 +5,21 @@ import { ChevronRight } from "lucide-react";
 import content from "../data";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { Inter } from "next/font/google";
 
-interface AboutHeroProps {
+const inter = Inter({ subsets: ["latin"] });
+
+interface PageBannerProps {
   title?: string;
   breadcrumb?: string;
   backgroundImage?: string;
 }
 
-export default function AboutHero({
+export default function PageBanner({
   title,
   breadcrumb,
   backgroundImage,
-}: AboutHeroProps) {
+}: PageBannerProps) {
   const pathname = usePathname();
   const pathParts = pathname.split("/").filter(Boolean);
   const basePath = "/" + (pathParts[0] || "");
@@ -27,15 +30,12 @@ export default function AboutHero({
   const displayTitle = title || pageData.title;
   const displayBreadcrumb = breadcrumb || pageData.breadcrumb;
   const displayBackgroundImage = backgroundImage || pageData.backgroundImage;
-
-  // Generate breadcrumb path
   const breadcrumbItems = [{ label: "Home", href: "/" }];
   
   if (pathParts.length > 1) {
     for (let i = 0; i < pathParts.length - 1; i++) {
       const part = pathParts[i];
       let label = part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, " ");
-      // The user requested singular "Service" instead of "Services" for the sub-breadcrumb
       if (label.toLowerCase() === 'services') label = 'Service';
       if (label.toLowerCase() === 'blogs') label = 'Blog';
       
@@ -45,7 +45,7 @@ export default function AboutHero({
   }
 
   return (
-    <section className="relative flex min-h-[360px] w-full items-center justify-center overflow-hidden sm:min-h-[420px] md:min-h-[470px] lg:min-h-[500px]">
+    <section className={`relative flex min-h-[200px] w-full items-center justify-center overflow-hidden sm:min-h-[240px] md:min-h-[270px] lg:min-h-[300px] ${inter.className}`}>
       <motion.div
         initial={{ scale: 1.08 }}
         animate={{ scale: 1 }}
@@ -94,7 +94,7 @@ export default function AboutHero({
             delay: 0.4,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="text-[clamp(2.5rem,6vw,4.5rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white"
+          className="text-[clamp(2.2rem,4vw,4rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white"
         >
           {displayTitle}
         </motion.h1>

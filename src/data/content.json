@@ -207,24 +207,34 @@
             "centerImage": "/about/about-2.webp",
             "features": [
               {
-                "title": "Brand Strategy",
-                "description": "Positioning, purpose, and a clear path to growth.",
-                "icon": "Goal"
+                "title": "Brand Positioning",
+                "description": "Own a clear and meaningful place in the market.",
+                "icon": "Target"
               },
               {
-                "title": "Digital Experience",
-                "description": "Web experiences that feel intuitive and alive.",
-                "icon": "UnicursalHexagram"
-              },
-              {
-                "title": "Visual Identity",
-                "description": "Distinctive systems designed to be remembered.",
+                "title": "Identity Systems",
+                "description": "Build a distinctive look made to stay consistent.",
                 "icon": "Gem"
               },
               {
-                "title": "Campaign Design",
-                "description": "Bold creative that turns attention into action.",
-                "icon": "Megaphone"
+                "title": "Audience Insight",
+                "description": "Turn real customer understanding into direction.",
+                "icon": "User"
+              },
+              {
+                "title": "Digital Design",
+                "description": "Create intuitive experiences across every screen.",
+                "icon": "LayoutTemplate"
+              },
+              {
+                "title": "Content Direction",
+                "description": "Shape a voice that people recognize and trust.",
+                "icon": "PenLine"
+              },
+              {
+                "title": "Scalable Toolkits",
+                "description": "Give your team practical assets built for growth.",
+                "icon": "Briefcase"
               }
             ]
           }
@@ -295,7 +305,7 @@
                 "image": "/team/amara.webp",
                 "socials": {
                   "facebook": "https://facebook.com",
-                  "twitter": "https://twitter.com"
+                  "x": "https://x.com"
                 }
               },
               {
@@ -304,7 +314,7 @@
                 "image": "/team/noah.webp",
                 "socials": {
                   "facebook": "https://facebook.com",
-                  "twitter": "https://twitter.com"
+                  "x": "https://x.com"
                 }
               },
               {
@@ -313,7 +323,7 @@
                 "image": "/team/sofia.webp",
                 "socials": {
                   "facebook": "https://facebook.com",
-                  "twitter": "https://twitter.com"
+                  "x": "https://x.com"
                 }
               },
               {
@@ -322,7 +332,7 @@
                 "image": "/team/elias.webp",
                 "socials": {
                   "facebook": "https://facebook.com",
-                  "twitter": "https://twitter.com"
+                  "x": "https://x.com"
                 }
               }
             ],
@@ -730,7 +740,7 @@
             "headingHighlight": "Bold Brands",
             "button": {
               "text": "Explore All Services",
-              "link": "/services"
+              "link": "/services/brand-strategy"
             },
             "images": {
               "main": "/about/about-1.webp",
@@ -773,16 +783,20 @@
         "variants": {
           "VeyoraServicesOverview1": {
             "badge": "Service",
+            "images": {
+              "main": "/about/about-1.webp",
+              "secondary": "/about/about-2.webp"
+            },
             "headingStart": "From First Idea to a Brand ",
             "headingHighlight": "Built for Growth",
             "description": "We bring strategy, identity, and digital thinking into one connected process, giving your brand the clarity to lead and the tools to keep moving.",
             "button1": {
               "text": "Explore Our Services",
-              "link": "/services"
+              "link": "/services/brand-strategy"
             },
             "button2": {
               "text": "View Selected Work",
-              "link": "/projects"
+              "link": "/services/brand-strategy"
             },
             "services": [
               {
@@ -799,21 +813,13 @@
                 "number": "02",
                 "title": "Digital Product Design",
                 "description": "Interfaces that look beautiful and work flawlessly.",
-                "features": [
-                  "UI/UX Design",
-                  "Prototyping",
-                  "Design Systems"
-                ]
+                "features": ["UI/UX Design", "Prototyping", "Design Systems"]
               },
               {
                 "number": "03",
                 "title": "Web Development",
                 "description": "High-performance websites built for scale.",
-                "features": [
-                  "Front-end Dev",
-                  "CMS Integration",
-                  "E-Commerce"
-                ]
+                "features": ["Front-end Dev", "CMS Integration", "E-Commerce"]
               }
             ]
           }
@@ -858,12 +864,12 @@
           "VeyoraAboutVeyora1": {
             "images": {
               "main": "/about/about-1.webp",
-              "small1": "/about/about-1.webp",
-              "small2": "/about/about-2.webp",
-              "small3": "/about/about-3.webp"
+              "small1": "/about/about-6.webp",
+              "small2": "/about/about-4.webp",
+              "small3": "/about/about-7.webp"
             },
             "badge": "About Veyora",
-            "titleStart": "We Turn Bold Ideas\nInto ",
+            "titleStart": "We Turn Bold Ideas Into ",
             "titleHighlight": "Brands That Matter",
             "description": "Veyora is an independent creative agency blending strategy, design, and storytelling to create brands people choose and remember.",
             "points": [
@@ -959,6 +965,7 @@
             "badge": "Staffing Solutions",
             "headingStart": "Finding the Right People\n",
             "headingHighlight": "for a Brighter Tomorrow",
+            "introImage": "/services/service-1.webp",
             "description": "At Veyora, we provide customized staffing solutions that help businesses find, hire, and retain the right talent. Whether you need temporary staff, permanent hires, or specialized professionals, we connect you with skilled talent that fits your business goals and culture.",
             "benefitsHeading": "Why Choose Our Staffing Solutions ?",
             "benefits": [
@@ -1020,39 +1027,29 @@
             ],
             "servicesTitle": "Our Services",
             "services": [
-              "Staffing Solutions",
-              "HR Consulting",
-              "Leadership Training",
-              "Corporate Programs",
-              "Tech Resources",
-              "Staff Management"
+              { "title": "Staffing Solutions", "link": "/services/staffing-solutions" },
+              { "title": "HR Consulting", "link": "/services/hr-consulting" },
+              { "title": "Leadership Training", "link": "/services/leadership-training" },
+              { "title": "Corporate Programs", "link": "/services/corporate-programs" },
+              { "title": "Tech Resources", "link": "/services/tech-resources" },
+              { "title": "Staff Management", "link": "/services/staff-management" }
             ],
             "helpCardTitle": "Need Help Finding The Right Talent?",
             "helpCardDescription": "Let our experts help you with customized staffing solutions for your business.",
+            "helpCardButtonText": "Talk to Our Experts",
+            "helpCardButtonLink": "/contact",
             "openingHoursTitle": "Opening Hours",
             "hours": [
-              [
-                "Monday - Friday",
-                "09:00 - 18:00"
-              ],
-              [
-                "Saturday",
-                "10:00 - 16:00"
-              ],
-              [
-                "Sunday",
-                "Closed"
-              ]
+              ["Monday - Friday", "09:00 - 18:00"],
+              ["Saturday", "10:00 - 16:00"],
+              ["Sunday", "Closed"]
             ],
             "relatedServicesTitle": "Related Services",
             "relatedServices": [
               {
                 "title": "Leadership Training",
-                "image": "/services/leadership-training.webp"
-              },
-              {
-                "title": "HR Consulting",
-                "image": "/services/hr-consulting.webp"
+                "image": "/services/leadership-trainning.webp",
+                "link": "/services/leadership-training"
               }
             ]
           }
@@ -1161,7 +1158,7 @@
                 "number": "02",
                 "title": "Strategy",
                 "description": "Mapping out a clear, actionable plan for success.",
-                "icon": "Crosshair"
+                "icon": "Target"
               },
               {
                 "number": "03",
@@ -1173,7 +1170,7 @@
                 "number": "04",
                 "title": "Launch",
                 "description": "Bringing your vision to life and beyond.",
-                "icon": "Plane"
+                "icon": "Send"
               }
             ],
             "ctaText": "Have a project in mind?",

@@ -7,60 +7,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import contentData from "@/src/data";
 import type { TestimonialsData, TestimonialItem } from "@/src/types/content";
 
-const defaultData: TestimonialsData = {
-  badge: "Client Stories",
-  heading: {
-    line1: "Trusted by Brands",
-    highlight: "Ready to Grow",
-  },
-  description:
-    "Real partnerships. Clear thinking. Work that creates lasting momentum.",
-  items: [
-    {
-      id: 1,
-      quote:
-        "Veyora gave us the clarity and confidence to show up as the brand we always wanted to be.",
-      name: "Maya Kapoor",
-      role: "Founder, Noura",
-      image: "/testimonials/maya.webp",
-    },
-    {
-      id: 2,
-      quote:
-        "They turned complex ideas into a bold identity our team and customers connected with instantly.",
-      name: "Daniel Brooks",
-      role: "CEO, Northline",
-      image: "/testimonials/daniel.webp",
-    },
-    {
-      id: 3,
-      quote:
-        "Strategic, collaborative, and genuinely invested, the result exceeded every expectation.",
-      name: "Sofia Mendes",
-      role: "Marketing Director, Aster",
-      image: "/testimonials/sofia.webp",
-    },
-    {
-      id: 4,
-      quote:
-        "The team understood our vision quickly and transformed it into something much stronger than we imagined.",
-      name: "Arjun Mehta",
-      role: "Founder, Forma",
-      image: "/testimonials/arjun.webp",
-    },
-    {
-      id: 5,
-      quote:
-        "From strategy to execution, every detail felt intentional and connected to our business goals.",
-      name: "Olivia Carter",
-      role: "Brand Director, Luma",
-      image: "/testimonials/olivia.webp",
-    },
-  ],
-};
-
-const testimonialsData =
-  (contentData.testimonials as TestimonialsData) || defaultData;
+const testimonialsData = contentData.testimonials as TestimonialsData;
 const testimonials = testimonialsData.items;
 
 export default function Testimonials() {
@@ -123,7 +70,6 @@ export default function Testimonials() {
           }}
           className="mt-8 sm:mt-12 lg:mt-14"
         >
-          {/* Desktop 3-column Grid */}
           <div className="hidden grid-cols-3 gap-6 lg:grid xl:gap-8">
             {visibleTestimonials.map((testimonial) => (
               <TestimonialCard
@@ -134,7 +80,6 @@ export default function Testimonials() {
             ))}
           </div>
 
-          {/* Tablet 2-column Grid */}
           <div className="hidden gap-6 sm:grid sm:grid-cols-2 lg:hidden">
             {visibleTestimonials.slice(0, 2).map((testimonial) => (
               <TestimonialCard
@@ -144,8 +89,6 @@ export default function Testimonials() {
               />
             ))}
           </div>
-
-          {/* Mobile Single Card with Swipe & Smooth Slide Transition */}
           <div className="overflow-hidden sm:hidden">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
@@ -190,8 +133,6 @@ export default function Testimonials() {
             </AnimatePresence>
           </div>
         </motion.div>
-
-        {/* Bottom Navigation: Arrows ALWAYS shown on small devices flanking pagination */}
         <div className="mt-7 flex items-center justify-center gap-3 sm:mt-10 sm:gap-5">
           <CarouselButton
             direction="left"
@@ -250,8 +191,6 @@ function Header({
       <p className="mx-auto mt-3.5 max-w-[750px] text-base leading-relaxed text-[#17191f]/85 sm:mt-5 sm:text-lg md:text-xl">
         {data.description}
       </p>
-
-      {/* Desktop Navigation Arrows (hidden on mobile, shown on desktop header) */}
       <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 items-center gap-3 md:flex">
         <CarouselButton
           direction="left"

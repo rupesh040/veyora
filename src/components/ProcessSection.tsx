@@ -5,13 +5,13 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import {
   ArrowRight,
-  Crosshair,
+  Target,
   Layers3,
-  Plane,
+  Send,
   Search,
 } from "lucide-react";
 
-const iconMap: Record<string, any> = { Search, Crosshair, Layers3, Plane };
+const iconMap: Record<string, any> = { Search, Target, Layers3, Send };
 
 import content from '../data';
 const data = content.processSection;

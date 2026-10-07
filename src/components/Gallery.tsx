@@ -269,7 +269,7 @@ function GalleryHeader({ data }: { data: any }) {
             delay: 0.18,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mt-3 max-w-[1000px] text-[clamp(2.4rem,5vw,4.8rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]"
+          className="mt-3 max-w-[1000px] text-[clamp(2rem,4.5vw,4.2rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]"
         >
           {data.headingStart}{" "}
           <span className="text-[#c9003b]">
@@ -291,7 +291,7 @@ function GalleryHeader({ data }: { data: any }) {
           duration: 0.7,
           delay: 0.3,
         }}
-        className="max-w-[360px] text-base leading-[1.45] text-[#20242c] sm:text-lg lg:pb-2 lg:text-right"
+        className="max-w-[320px] text-base leading-[1.45] text-gray-500 sm:text-lg lg:pb-2 lg:text-right"
       >
         {data.description}
       </motion.p>

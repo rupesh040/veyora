@@ -4,42 +4,29 @@ import Image from "next/image";
 import { motion } from "motion/react";
 import {
   ArrowRight,
-  Goal,
+  Target,
   Gem,
-  Megaphone,
+  User,
+  LayoutTemplate,
+  PenLine,
+  Briefcase,
   type LucideIcon,
 } from "lucide-react";
 import contentData from "@/src/data";
 import type { CoreFeaturesData, CoreFeatureItem } from "@/src/types/content";
 
-const UnicursalHexagram = ({ size = 24, strokeWidth = 2, className = "", ...props }: any) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth={strokeWidth}
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-    {...props}
-  >
-    <path d="M 12 2 L 22 17.5 L 2 6.5 L 12 22 L 22 6.5 L 2 17.5 Z" />
-  </svg>
-);
-
 const iconMap: Record<string, any> = {
-  Goal,
-  UnicursalHexagram,
+  Target,
   Gem,
-  Megaphone,
+  User,
+  LayoutTemplate,
+  PenLine,
+  Briefcase,
 };
 
 const coreData = contentData.coreFeatures as CoreFeaturesData;
-const leftFeatures = coreData.features.slice(0, 2);
-const rightFeatures = coreData.features.slice(2);
+const leftFeatures = coreData.features.slice(0, 3);
+const rightFeatures = coreData.features.slice(3, 6);
 
 const cardVariants = {
   hidden: {
@@ -140,9 +127,9 @@ function FeatureColumn({
   side: "left" | "right";
 }) {
   return (
-    <div className="relative z-20 flex flex-col gap-6 sm:gap-7">
+    <div className="relative z-20 flex flex-col gap-4 sm:gap-5">
       {items.map((feature, index) => {
-        const Icon = iconMap[feature.icon] || Goal;
+        const Icon = iconMap[feature.icon] || Target;
 
         return (
           <motion.div
@@ -160,35 +147,35 @@ function FeatureColumn({
                 duration: 0.25,
               },
             }}
-            className={`group relative flex min-h-[145px] items-center rounded-[15px] border border-black/[0.04] bg-white px-6 py-6 shadow-[0_12px_35px_rgba(16,21,34,0.09)] transition-shadow duration-300 hover:shadow-[0_18px_45px_rgba(16,21,34,0.14)] sm:min-h-[150px] sm:px-7 lg:px-8 ${
+            className={`group relative flex min-h-[120px] items-center rounded-[15px] border border-black/[0.04] bg-white px-5 py-5 shadow-[0_12px_35px_rgba(16,21,34,0.09)] transition-shadow duration-300 hover:shadow-[0_18px_45px_rgba(16,21,34,0.14)] sm:min-h-[130px] sm:px-6 lg:px-6 ${
               side === "left"
                 ? "lg:translate-x-1"
                 : "lg:-translate-x-1"
             }`}
           >
-            <div className="flex w-full items-center gap-5">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center text-[#11151c] sm:h-16 sm:w-16">
+            <div className="flex w-full items-center gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center text-[#11151c] sm:h-14 sm:w-14">
                 <Icon
-                  size={48}
+                  size={38}
                   strokeWidth={1.5}
                   className="transition-transform duration-300 group-hover:scale-110"
                 />
               </div>
 
               <div className="min-w-0 flex-1">
-                <h3 className="text-base font-bold leading-tight tracking-[-0.02em] text-[#11151c] sm:text-lg md:text-xl">
+                <h3 className="text-base font-bold leading-tight tracking-[-0.02em] text-[#11151c] md:text-lg">
                   {feature.title}
                 </h3>
 
-                <p className="mt-2 max-w-[320px] pr-6 text-sm leading-[1.4] text-[#17191f] sm:text-base">
+                <p className="mt-1.5 max-w-[320px] pr-6 text-sm leading-[1.4] text-[#17191f]">
                   {feature.description}
                 </p>
               </div>
 
               <ArrowRight
-                size={23}
+                size={20}
                 strokeWidth={1.7}
-                className="absolute bottom-5 right-5 text-[#17191f] transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#d8003f]"
+                className="absolute bottom-4 right-4 text-[#17191f] transition-transform duration-300 group-hover:translate-x-1 group-hover:text-[#d8003f]"
               />
             </div>
           </motion.div>

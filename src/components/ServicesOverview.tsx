@@ -34,7 +34,7 @@ function ImagePanel() {
     >
       <div className="absolute left-[5%] top-[5%] z-10 h-[70%] w-[76%] overflow-hidden rounded-[18px] sm:left-[8%] sm:w-[74%] lg:left-[9%] lg:w-[75%]">
         <Image
-          src="/about/about-1.webp"
+          src={data.images.main}
           alt="Veyora creative team"
           fill
           priority
@@ -55,7 +55,7 @@ function ImagePanel() {
         className="absolute bottom-[5%] right-[7%] z-20 h-[39%] w-[47%] overflow-hidden rounded-[18px] border-[5px] border-[#fcfaf8] bg-white shadow-[0_18px_40px_rgba(0,0,0,0.12)] sm:right-[7%] sm:w-[46%]"
       >
         <Image
-          src="/about/about-2.webp"
+          src={data.images.secondary}
           alt="Veyora brand identity"
           fill
           className="object-cover object-center transition-transform duration-700 hover:scale-105"

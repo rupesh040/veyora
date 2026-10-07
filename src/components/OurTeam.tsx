@@ -6,57 +6,9 @@ import contentData from "@/src/data";
 import type { ContentData, OurTeamMember } from "@/src/types/content";
 
 export default function OurTeam() {
-  const teamData = (contentData as ContentData).ourTeam || {
-    badge: "Our Team",
-    heading: {
-      line1: "Meet the Minds",
-      highlight: "Behind Veyora",
-    },
-    description:
-      "A close-knit team of strategists, designers, and storytellers building brands with purpose.",
-    members: [
-      {
-        name: "Amara Reed",
-        role: "Brand Strategist",
-        image: "/team/amara.webp",
-        socials: {
-          facebook: "https://facebook.com",
-          twitter: "https://twitter.com",
-        },
-      },
-      {
-        name: "Noah Bennett",
-        role: "Creative Director",
-        image: "/team/noah.webp",
-        socials: {
-          facebook: "https://facebook.com",
-          twitter: "https://twitter.com",
-        },
-      },
-      {
-        name: "Sofia Kim",
-        role: "Lead Designer",
-        image: "/team/sofia.webp",
-        socials: {
-          facebook: "https://facebook.com",
-          twitter: "https://twitter.com",
-        },
-      },
-      {
-        name: "Elias Morgan",
-        role: "Digital Director",
-        image: "/team/elias.webp",
-        socials: {
-          facebook: "https://facebook.com",
-          twitter: "https://twitter.com",
-        },
-      },
-    ],
-    theme: {
-      background: "#ffffff",
-      accent: "#d8003f",
-    },
-  };
+  const teamData = (contentData as ContentData).ourTeam!;
+
+  if (!teamData) return null;
 
   return (
     <section className="relative overflow-hidden bg-white px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-12 lg:py-28 xl:px-16">
@@ -197,13 +149,13 @@ function TeamCard({
           </a>
 
           <a
-            href={member.socials?.twitter || "#"}
+            href={member.socials?.x || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`${member.name} on Twitter`}
+            aria-label={`${member.name} on X`}
             className="flex h-6 w-6 items-center justify-center rounded-full border border-[#111827] text-[#111827] transition-all duration-200 hover:border-[#d8003f] hover:bg-[#d8003f] hover:text-white sm:h-6.5 sm:w-6.5"
           >
-            <TwitterIcon className="h-3 w-3" />
+            <XIcon className="h-3 w-3" />
           </a>
         </div>
       </div>
@@ -224,7 +176,7 @@ function FacebookIcon({ className }: { className?: string }) {
   );
 }
 
-function TwitterIcon({ className }: { className?: string }) {
+function XIcon({ className }: { className?: string }) {
   return (
     <svg
       className={className}
@@ -232,7 +184,7 @@ function TwitterIcon({ className }: { className?: string }) {
       fill="currentColor"
       aria-hidden="true"
     >
-      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
     </svg>
   );
 }

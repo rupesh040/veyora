@@ -82,7 +82,7 @@ function ServiceIntroduction() {
             delay: 0.12,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mt-5 text-[clamp(2.3rem,4.5vw,4rem)] font-bold leading-[1.05] tracking-[-0.045em] text-[#10234a]"
+          className="mt-5 text-[42px] font-bold leading-[1.05] tracking-[-0.045em] text-[#10234a]"
         >
           {data.headingStart}
           <span className="block text-[#d8003f]">
@@ -103,7 +103,7 @@ function ServiceIntroduction() {
             duration: 0.7,
             delay: 0.28,
           }}
-          className="mt-6 max-w-[690px] text-sm leading-[1.7] text-[#687388] sm:text-base lg:text-[17px]"
+          className="mt-6 max-w-[690px] text-sm leading-[1.7] text-[#687388] sm:text-base lg:text-[15px]"
         >
           {data.description}
         </motion.p>
@@ -125,11 +125,11 @@ function ServiceIntroduction() {
           delay: 0.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="relative aspect-[1.25/1] overflow-hidden rounded-[6px]"
+        className="relative aspect-[2/1.5] mt-2 overflow-hidden rounded-[6px]"
       >
         <Image
-          src="/services/staffing-solutions.webp"
-          alt="Staffing solutions"
+          src={data.introImage}
+          alt={data.badge}
           fill
           priority
           className="object-cover transition-transform duration-700 hover:scale-[1.03]"
@@ -159,7 +159,7 @@ function Benefits() {
         transition={{
           duration: 0.7,
         }}
-        className="text-[clamp(1.7rem,3vw,2.4rem)] font-bold tracking-[-0.035em] text-[#10234a]"
+        className="text-2xl font-bold tracking-[-0.035em] text-[#10234a]"
       >
         {data.benefitsHeading}
       </motion.h2>
@@ -210,9 +210,9 @@ function BenefitCard({
       }}
       className="group flex gap-4 sm:gap-5"
     >
-      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#fff0f2] text-[#d8003f] transition-all duration-300 group-hover:bg-[#d8003f] group-hover:text-white sm:h-16 sm:w-16">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#fff0f2] text-[#d8003f] transition-all duration-300 group-hover:bg-[#d8003f] group-hover:text-white sm:h-16 sm:w-16">
         <Icon
-          size={26}
+          size={24}
           strokeWidth={1.8}
         />
       </div>
@@ -233,7 +233,7 @@ function BenefitCard({
 function Approach() {
   return (
     <section className="mt-12 sm:mt-14 lg:mt-16">
-      <div className="grid gap-8 lg:grid-cols-[minmax(300px,0.82fr)_minmax(0,1.18fr)] xl:gap-10">
+      <div className="grid gap-4 lg:grid-cols-[minmax(300px,0.82fr)_minmax(0,1.18fr)] xl:gap-8">
         <motion.div
           initial={{
             opacity: 0,
@@ -250,7 +250,7 @@ function Approach() {
           transition={{
             duration: 0.75,
           }}
-          className="relative aspect-[1.05/1] overflow-hidden rounded-[6px]"
+          className="relative aspect-[1.05/1.4] overflow-hidden rounded-[6px]"
         >
           <Image
             src={data.approachImage}
@@ -339,7 +339,7 @@ function ApproachItem({
           {item.title}
         </h3>
 
-        <p className="mt-1 text-xs leading-[1.55] text-[#737d8f] sm:text-sm">
+        <p className="mt-1 text-xs leading-[1.55] text-[#737d8f] sm:text-xs">
           {item.description}
         </p>
       </div>
@@ -387,15 +387,15 @@ function ServicesCard() {
       <div>
         {services.map((service: any, index: number) => (
           <Link
-            href="/services"
-            key={service}
+            href={service.link}
+            key={service.title}
             className={`group flex min-h-[45px] items-center justify-between gap-3 border-b border-[#edf0f3] px-5 text-sm font-semibold transition-all duration-300 last:border-b-0 sm:px-6 ${
               index === 0
                 ? "bg-[#fff0f2] text-[#d8003f]"
                 : "text-[#243451] hover:bg-[#fff0f2] hover:text-[#d8003f]"
             }`}
           >
-            <span>{service}</span>
+            <span>{service.title}</span>
 
             <ArrowRight
               size={18}
@@ -445,10 +445,10 @@ function HelpCard() {
       </div>
 
       <Link
-        href="/contact"
+        href={data.helpCardButtonLink}
         className="group mt-5 inline-flex items-center gap-3 rounded-md bg-[#d8003f] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b90036]"
       >
-        Talk to Our Experts
+        {data.helpCardButtonText}
 
         <ArrowRight
           size={18}
@@ -544,7 +544,7 @@ function RelatedServices() {
       <div className="mt-4 space-y-5">
         {relatedServices.map((service: any, index: number) => (
           <Link
-            href="/services"
+            href={service.link}
             key={service.title}
             className="group block"
           >

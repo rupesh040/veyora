@@ -22,7 +22,7 @@ export const aboutVeyora = sections.AboutVeyora.variants.VeyoraAboutVeyora1;
 export const contactSection = sections.ContactSection.variants.VeyoraContact1;
 export const serviceDetail = sections.ServiceDetail.variants.VeyoraServiceDetail1;
 export const pageHeroes = sections.PageHeroes.variants;
-export const aboutHero = sections.AboutHero.variants.VeyoraAboutHero1;
+export const pageBanner = sections.AboutHero.variants.VeyoraAboutHero1;
 export const processSection = sections.ProcessSection.variants.VeyoraProcess1;
 export const locationSection = sections.LocationSection.variants.VeyoraLocation1;
 export const stats = sections.Stats.variants.VeyoraStats1;
@@ -47,7 +47,7 @@ const content = {
   contactSection,
   serviceDetail,
   pageHeroes,
-  aboutHero,
+  pageBanner,
   processSection,
   locationSection,
   stats,

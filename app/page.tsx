@@ -7,7 +7,7 @@ import Stats from "@/src/components/Stats";
 import Testimonials from "@/src/components/Testimonials";
 import WhyVeyora from "@/src/components/WhyVeyora";
 import Insights from "@/src/components/Insights";
-import AboutHero from "@/src/components/AboutHero";
+import PageBanner from "@/src/components/PageBanner";
 
 export default function Home() {
   return (

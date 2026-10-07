@@ -1,11 +1,22 @@
-import AboutHero from "@/src/components/AboutHero";
+import PageBanner from "@/src/components/PageBanner";
 import ServiceDetail from "@/src/components/ServiceDetail";
 
+export default async function services({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  
+  const formatTitle = (str: string) => {
+    if (!str) return "Service Detail";
+    return str
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  };
 
-export default function services() {
+  const titleName = formatTitle(id);
+
   return (
     <main className="flex flex-1 flex-col">
-      <AboutHero/>
+      <PageBanner title={titleName} breadcrumb={titleName} />
       <ServiceDetail/>
     </main>
   );

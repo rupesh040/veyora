@@ -69,7 +69,7 @@ function ImageCollage() {
           delay: 0.1,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="absolute left-[8%] top-[5%] z-10 h-[58%] w-[48%] overflow-hidden rounded-[24px] bg-white shadow-[0_15px_35px_rgba(0,0,0,0.1)] sm:rounded-[28px]"
+        className="absolute left-[8%] top-[10%] z-10 h-[42%] w-[48%] overflow-hidden rounded-[24px] bg-white shadow-[0_15px_35px_rgba(0,0,0,0.1)] sm:rounded-[28px]"
       >
         <Image
           src={images.main}
@@ -90,7 +90,7 @@ function ImageCollage() {
           delay: 0.25,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="absolute right-[9%] top-[9%] z-20 h-[39%] w-[38%] overflow-hidden rounded-[19px] bg-white shadow-[0_12px_30px_rgba(0,0,0,0.1)] sm:rounded-[22px]"
+        className="absolute right-[3%] top-[14%] z-20 h-[30%] w-[38%] overflow-hidden rounded-[19px] bg-white shadow-[0_12px_30px_rgba(0,0,0,0.1)] sm:rounded-[22px]"
       >
         <Image
           src={images.small1}
@@ -110,7 +110,7 @@ function ImageCollage() {
           delay: 0.4,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="absolute bottom-[5%] left-[21%] z-20 h-[30%] w-[37%] overflow-hidden rounded-[18px] bg-white shadow-[0_12px_30px_rgba(0,0,0,0.1)] sm:rounded-[22px]"
+        className="absolute bottom-[18%] left-[18%] z-20 h-[28%] w-[36%] overflow-hidden rounded-[18px] bg-white shadow-[0_12px_30px_rgba(0,0,0,0.1)] sm:rounded-[22px]"
       >
         <Image
           src={images.small2}
@@ -130,7 +130,7 @@ function ImageCollage() {
           delay: 0.5,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="absolute bottom-[2%] right-[6%] z-10 h-[43%] w-[43%] overflow-hidden rounded-[20px] bg-white shadow-[0_15px_35px_rgba(0,0,0,0.1)] sm:rounded-[25px]"
+        className="absolute bottom-[15%] right-[0%] z-10 h-[38%] w-[42%] overflow-hidden rounded-[20px] bg-white shadow-[0_15px_35px_rgba(0,0,0,0.1)] sm:rounded-[25px]"
       >
         <Image
           src={images.small3}
@@ -193,11 +193,9 @@ function Content() {
           delay: 0.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="mt-6 max-w-[800px] text-[clamp(2.35rem,5vw,4.7rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]"
+        className="mt-6 max-w-[800px] text-[clamp(2.1rem,4.7vw,4.4rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]"
       >
-        {titleStart.split('\n').map((line, i) => <span key={i}>{line}<br/></span>)}
-
-
+        <span>{titleStart}</span>
         <span className="text-[#d8003f]">
           {titleHighlight}
         </span>
@@ -271,7 +269,7 @@ function Testimonial() {
       }}
       className="relative mt-9 overflow-hidden rounded-[4px] border-2 border-[#d8003f]/65 bg-white"
     >
-      <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center bg-[#d8003f] text-2xl font-bold text-white">
+      <div className="absolute left-0 top-0 flex h-6 w-8 items-center justify-center bg-[#d8003f] text-2xl font-bold text-white">
         &quot;
       </div>
 

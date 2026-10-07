@@ -166,7 +166,7 @@ export interface OurTeamMember {
   image: string;
   socials?: {
     facebook?: string;
-    twitter?: string;
+    x?: string;
     linkedin?: string;
     instagram?: string;
   };
