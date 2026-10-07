@@ -17,7 +17,7 @@ export default function OurApproach() {
   const activeContent = approaches[activeTab];
 
   return (
-    <section className="relative overflow-hidden bg-[#fcfaf8]">
+    <section className="relative overflow-hidden bg-white">
       <div className="grid min-h-[700px] grid-cols-1 lg:grid-cols-2">
         <ImagePanel />
 
@@ -57,13 +57,13 @@ function ImagePanel() {
         sizes="(max-width: 1023px) 100vw, 50vw"
       />
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#fcfaf8] via-[#fcfaf8]/35 to-transparent lg:hidden" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-white via-white/35 to-transparent lg:hidden" />
 
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-[#fcfaf8] via-[#fcfaf8]/55 to-transparent lg:hidden" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-white via-white/55 to-transparent lg:hidden" />
 
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] bg-gradient-to-r from-transparent via-[#fcfaf8]/25 to-[#fcfaf8] lg:block" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[52%] bg-gradient-to-r from-transparent via-white/25 to-white lg:block" />
 
-      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[30%] bg-gradient-to-r from-transparent to-[#fcfaf8]/75 lg:block" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[30%] bg-gradient-to-r from-transparent to-white/75 lg:block" />
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/[0.04]" />
 
@@ -97,7 +97,7 @@ function ContentPanel({
   activeContent: (typeof approaches)[ApproachTab];
 }) {
   return (
-    <div className="relative flex items-center bg-[#fcfaf8] px-5 py-14 sm:px-8 sm:py-16 md:px-10 lg:px-12 lg:py-20 xl:px-16">
+    <div className="relative flex items-center bg-white px-5 py-14 sm:px-8 sm:py-16 md:px-10 lg:px-12 lg:py-20 xl:px-16">
       <div className="w-full max-w-[760px]">
         <motion.div
           initial={{
@@ -255,4 +255,6 @@ function ContentPanel({
     </div>
   );
 }
+
+
 
