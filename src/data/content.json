@@ -1148,20 +1148,22 @@
                 "number": "02",
                 "title": "Digital Product Design",
                 "description": "Interfaces that look beautiful and work flawlessly.",
-                "features": [
-                  "UI/UX Design",
-                  "Prototyping",
-                  "Design Systems"
-                ]
+                "features": ["UI/UX Design", "Prototyping", "Design Systems"]
               },
               {
                 "number": "03",
                 "title": "Web Development",
                 "description": "High-performance websites built for scale.",
+                "features": ["Front-end Dev", "CMS Integration", "E-Commerce"]
+              },
+              {
+                "number": "04",
+                "title": "Campaigns & Content",
+                "description": "Bring ideas to market with energy and consistency.",
                 "features": [
-                  "Front-end Dev",
-                  "CMS Integration",
-                  "E-Commerce"
+                  "Content Marketing",
+                  "Social Media Marketing",
+                  "Campaign Strategy"
                 ]
               }
             ]
@@ -1401,18 +1403,9 @@
             "helpCardButtonLink": "/contact",
             "openingHoursTitle": "Opening Hours",
             "hours": [
-              [
-                "Monday - Friday",
-                "09:00 - 18:00"
-              ],
-              [
-                "Saturday",
-                "10:00 - 16:00"
-              ],
-              [
-                "Sunday",
-                "Closed"
-              ]
+              ["Monday - Friday", "09:00 - 18:00"],
+              ["Saturday", "10:00 - 16:00"],
+              ["Sunday", "Closed"]
             ],
             "relatedServicesTitle": "Related Services",
             "relatedServices": [

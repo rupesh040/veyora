@@ -83,7 +83,7 @@ function ServiceIntroduction() {
             delay: 0.12,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mt-5 text-[42px] font-bold leading-[1.05] tracking-[-0.045em] text-[#10234a]"
+          className="mt-5 text-[48px] font-bold leading-[1.05] tracking-[-0.045em] text-[#10234a]"
         >
           {data.headingStart}
           <span className="block text-[#d8003f]">
