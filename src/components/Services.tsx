@@ -55,7 +55,6 @@ export default function Services() {
               className="max-w-[850px] text-[clamp(2.5rem,7vw,5rem)] font-bold leading-[1.02] tracking-[-0.045em] text-[#101522]"
             >
               {data.headingStart}
-              <br />
               <span className="text-[#d8003f]">{data.headingHighlight}</span>
             </motion.h2>
 
