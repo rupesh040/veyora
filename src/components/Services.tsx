@@ -142,7 +142,7 @@ export default function Services() {
 
       <AnimatePresence>
         {isVideoOpen && (
-          <VideoModal onClose={() => setIsVideoOpen(false)} />
+          <VideoModal onClose={() => setIsVideoOpen(false)} videoUrl={data.videoUrl} />
         )}
       </AnimatePresence>
     </>
@@ -311,8 +311,10 @@ function ServicesVisual({
 
 function VideoModal({
   onClose,
+  videoUrl,
 }: {
   onClose: () => void;
+  videoUrl?: string;
 }) {
   return (
     <motion.div
@@ -357,7 +359,7 @@ function VideoModal({
 
         <div className="relative aspect-video w-full">
           <iframe
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1"
+            src={videoUrl || "https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1"}
             title="VEYORA Creative Services"
             className="absolute inset-0 h-full w-full"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

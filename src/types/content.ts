@@ -171,11 +171,10 @@ export interface OurTeamMember {
   role: string;
   image: string;
   socials?: {
-    facebook?: string;
-    x?: string;
-    linkedin?: string;
-    instagram?: string;
-  };
+    platform: string;
+    url: string;
+    iconSvg: string;
+  }[];
 }
 
 export interface OurTeamData {
