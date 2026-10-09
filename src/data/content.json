@@ -938,88 +938,53 @@
             "buttonText": "View All Insights",
             "insights": [
               {
-                "id": "distinctive-brands",
-                "category": "Brand Strategy",
-                "date": "12 Sep 2026",
-                "title": "How Distinctive Brands Earn Attention—and Keep It",
+                "id": "stronger-workforce",
+                "category": "HR & Workforce",
+                "date": "24 Aug 2025",
+                "title": "How to Build a Stronger Workforce for a Successful Business",
                 "image": "/blogs/blog-1.webp"
               },
               {
-                "id": "flexible-identity-systems",
-                "category": "Design",
-                "date": "04 Sep 2026",
-                "title": "Why Flexible Identity Systems Win in a Fast-Moving World",
+                "id": "leadership-training",
+                "category": "Leadership",
+                "date": "18 Aug 2025",
+                "title": "The Importance of Leadership Training",
                 "image": "/blogs/blog-2.webp"
               },
               {
-                "id": "creative-partnerships",
-                "category": "Culture",
-                "date": "28 Aug 2026",
-                "title": "Building Creative Partnerships That Produce Better Work",
+                "id": "hr-business-growth",
+                "category": "Corporate Programs",
+                "date": "12 Aug 2025",
+                "title": "HR Strategies for Business Growth",
                 "image": "/blogs/blog-3.webp"
               },
               {
-                "id": "brand-experience",
-                "category": "Brand Experience",
-                "date": "20 Aug 2026",
-                "title": "Why Brand Experience Matters More Than Ever",
+                "id": "positive-workplace",
+                "category": "Workplace Culture",
+                "date": "05 Aug 2025",
+                "title": "Creating a Positive Workplace Culture",
                 "image": "/blogs/blog-1.webp"
               },
               {
-                "id": "creative-strategy",
-                "category": "Strategy",
-                "date": "14 Aug 2026",
-                "title": "Turning Creative Strategy Into Meaningful Business Growth",
+                "id": "training-development",
+                "category": "Training & Development",
+                "date": "29 Jul 2025",
+                "title": "The Importance of Training & Development",
                 "image": "/blogs/blog-2.webp"
               },
               {
-                "id": "future-of-design",
-                "category": "Design",
-                "date": "08 Aug 2026",
-                "title": "The Future of Design Is Built Around Flexible Thinking",
+                "id": "industry-insights",
+                "category": "Industry Insights",
+                "date": "22 Jul 2025",
+                "title": "Latest Industry Insights",
                 "image": "/blogs/blog-3.webp"
               },
               {
-                "id": "modern-branding",
-                "category": "Branding",
-                "date": "01 Aug 2026",
-                "title": "Modern Branding Is More Than a Logo",
+                "id": "staff-management",
+                "category": "Staff Management",
+                "date": "15 Jul 2025",
+                "title": "Effective Staff Management",
                 "image": "/blogs/blog-1.webp"
-              },
-              {
-                "id": "creative-culture",
-                "category": "Culture",
-                "date": "26 Jul 2026",
-                "title": "Creating a Culture Where Better Ideas Can Grow",
-                "image": "/blogs/blog-2.webp"
-              },
-              {
-                "id": "design-systems",
-                "category": "Design",
-                "date": "19 Jul 2026",
-                "title": "Design Systems That Keep Brands Consistent and Flexible",
-                "image": "/blogs/blog-3.webp"
-              },
-              {
-                "id": "brand-storytelling",
-                "category": "Storytelling",
-                "date": "12 Jul 2026",
-                "title": "How Brand Storytelling Creates Lasting Connections",
-                "image": "/blogs/blog-1.webp"
-              },
-              {
-                "id": "creative-thinking",
-                "category": "Creative Thinking",
-                "date": "05 Jul 2026",
-                "title": "Creative Thinking That Moves Brands Forward",
-                "image": "/blogs/blog-2.webp"
-              },
-              {
-                "id": "digital-identities",
-                "category": "Digital",
-                "date": "28 Jun 2026",
-                "title": "Building Digital Identities for a Changing World",
-                "image": "/blogs/blog-3.webp"
               }
             ]
           }
@@ -1077,6 +1042,10 @@
               "text": "Explore All Services",
               "link": "/services/brand-strategy"
             },
+            "cardHeadingStart": "Our ",
+            "cardHeadingHighlight": "Services",
+            "cardDescription": "Explore the specialized services we offer to help your brand grow, engage audiences, and build lasting impressions.",
+            "cardButtonText": "View Details",
             "images": {
               "main": "/about/about-1.webp",
               "secondary": "/service.webp"
@@ -1091,7 +1060,7 @@
                 "link": "/services/brand-strategy"
               },
               {
-                "title": "visaul Identity",
+                "title": "Visual Identity",
                 "description": "Creating intuitive digital experiences.",
                 "icon": "Gem",
                 "image": "/about/about-3.webp",
@@ -1111,6 +1080,30 @@
                 "icon": "Megaphone",
                 "image": "/about/about-2.webp",
                 "link": "/services/identity"
+              },
+              {
+                "title": "Content Creation",
+                "description": "Engaging storytelling and compelling copy.",
+                "image": "/about/about-3.webp",
+                "link": "/services/content-creation"
+              },
+              {
+                "title": "Web Development",
+                "description": "Building robust and scalable web applications.",
+                "image": "/about/about-1.webp",
+                "link": "/services/web-development"
+              },
+              {
+                "title": "SEO & Analytics",
+                "description": "Data-driven strategies for search visibility.",
+                "image": "/about/about-2.webp",
+                "link": "/services/seo-analytics"
+              },
+              {
+                "title": "Social Media",
+                "description": "Building communities and driving engagement.",
+                "image": "/about/about-3.webp",
+                "link": "/services/social-media"
               }
             ],
             "videoUrl": "https://www.youtube.com/embed/LXb3EKWsInQ?autoplay=1"
@@ -1295,8 +1288,8 @@
               }
             },
             "formButtons": {
-              "submit": "Send Project Brief",
-              "submitted": "Project Brief Sent"
+              "submit": "Send",
+              "submitted": "Sent"
             },
             "formFooterText": "We reply within 2 business days.",
             "popup": {
@@ -1376,28 +1369,36 @@
             "servicesTitle": "Our Services",
             "services": [
               {
-                "title": "Staffing Solutions",
-                "link": "/services/staffing-solutions"
+                "title": "Brand Strategy",
+                "link": "/services/brand-strategy"
               },
               {
-                "title": "HR Consulting",
-                "link": "/services/hr-consulting"
+                "title": "Visual Identity",
+                "link": "/services/ui-ux"
               },
               {
-                "title": "Leadership Training",
-                "link": "/services/leadership-training"
+                "title": "Digital Experience",
+                "link": "/services/marketing"
               },
               {
-                "title": "Corporate Programs",
-                "link": "/services/corporate-programs"
+                "title": "Campaign Design",
+                "link": "/services/identity"
               },
               {
-                "title": "Tech Resources",
-                "link": "/services/tech-resources"
+                "title": "Content Creation",
+                "link": "/services/content-creation"
               },
               {
-                "title": "Staff Management",
-                "link": "/services/staff-management"
+                "title": "Web Development",
+                "link": "/services/web-development"
+              },
+              {
+                "title": "SEO & Analytics",
+                "link": "/services/seo-analytics"
+              },
+              {
+                "title": "Social Media",
+                "link": "/services/social-media"
               }
             ],
             "helpCardTitle": "Need Help Finding The Right Talent?",

@@ -18,7 +18,7 @@ const { items: stats } = content.stats;
 
 export default function Stats() {
   return (
-    <section className="px-4 py-8 sm:px-6 sm:py-10 md:px-8 lg:px-10 xl:px-12">
+    <section className="px-4 py-4 sm:px-6 sm:py-6 md:px-8 lg:px-10 xl:px-12">
       <div className="relative mx-auto max-w-[1500px] overflow-hidden rounded-[14px] bg-[#101114] px-5 py-10 shadow-[0_15px_50px_rgba(0,0,0,0.15)] sm:px-8 sm:py-12 md:px-10 md:py-14 lg:px-12 lg:py-16">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.025),transparent_65%)]" />
 

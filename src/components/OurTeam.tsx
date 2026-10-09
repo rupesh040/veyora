@@ -65,7 +65,7 @@ function Header({
           delay: 0.1,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="mt-5 text-[clamp(2.2rem,4.5vw,3.8rem)] font-extrabold leading-[1.08] tracking-[-0.03em] text-[#11151c] sm:mt-6"
+        className="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.08] tracking-[-0.03em] text-[#11151c] sm:mt-6"
       >
         {heading.line1}{" "}
         <span className="text-[#c9003b]">{heading.highlight}</span>

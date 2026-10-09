@@ -456,15 +456,6 @@ function Pagination({
           />
         </button>
       </div>
-
-      <div className="text-sm font-medium text-[#17191f]/50">
-        Page{" "}
-        <span className="text-[#d8003f]">
-          {String(currentPage).padStart(2, "0")}
-        </span>{" "}
-        of{" "}
-        {String(totalPages).padStart(2, "0")}
-      </div>
     </motion.div>
   );
 }

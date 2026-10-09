@@ -21,8 +21,8 @@ export default function ProcessSection() {
   const [activeStep, setActiveStep] = useState(2);
 
   return (
-    <section className="relative overflow-hidden bg-[#fcfaf8] px-5 py-16 sm:px-8 sm:py-20 md:px-10 md:py-24 lg:px-12 lg:py-28 xl:px-16">
-      <div className="mx-auto max-w-[1400px]">
+    <section className="relative overflow-hidden bg-[#fcfaf8] px-5 py-12 sm:px-8 sm:py-16 md:px-10 lg:px-12 lg:py-20 xl:px-16">
+      <div className="mx-auto max-w-[1200px]">
         <Header data={data} />
 
         <div className="relative mt-14 sm:mt-16 lg:mt-20">
@@ -40,8 +40,6 @@ export default function ProcessSection() {
             ))}
           </div>
         </div>
-
-        <BottomCTA data={data} />
       </div>
     </section>
   );
@@ -203,6 +201,8 @@ function ProcessStep({
     >
       <button
         type="button"
+        onMouseEnter={onSelect}
+        onFocus={onSelect}
         onClick={onSelect}
         className="group block w-full cursor-pointer text-left lg:text-center"
       >
@@ -231,7 +231,7 @@ function ProcessStep({
           transition={{
             duration: 0.3,
           }}
-          className={`relative mt-6 overflow-hidden rounded-[20px] px-5 py-6 transition-all duration-500 sm:px-7 sm:py-7 lg:min-h-[350px] lg:px-6 ${
+          className={`relative mt-6 overflow-hidden rounded-[20px] px-5 py-6 transition-all duration-500 sm:px-7 sm:py-7 lg:min-h-[280px] lg:px-6 ${
             isActive
               ? "bg-[#191b1f] text-white shadow-[0_20px_45px_rgba(0,0,0,0.14)]"
               : "bg-transparent text-[#101522] hover:bg-white/70"
@@ -285,45 +285,6 @@ function ProcessStep({
           </div>
         </motion.div>
       </button>
-    </motion.div>
-  );
-}
-
-function BottomCTA({ data }: { data: any }) {
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: 30,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-      }}
-      transition={{
-        duration: 0.7,
-        delay: 0.2,
-      }}
-      className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5 lg:mt-8"
-    >
-      <span className="text-base font-medium text-[#11151c] sm:text-lg">
-        {data.ctaText}
-      </span>
-
-      <Link
-        href={data.ctaButtonLink}
-        className="group inline-flex items-center justify-center gap-5 rounded-full bg-[#d8003f] px-7 py-3.5 text-base font-semibold text-white shadow-[0_10px_25px_rgba(216,0,63,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#c00037] sm:px-8 sm:text-lg"
-      >
-        <span>{data.ctaButtonText}</span>
-
-        <ArrowRight
-          size={22}
-          className="transition-transform duration-300 group-hover:translate-x-1.5"
-        />
-      </Link>
     </motion.div>
   );
 }

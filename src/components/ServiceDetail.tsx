@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import {
   ArrowRight,
+  ArrowLeft,
   Clock3,
   Headphones,
   ShieldCheck,
@@ -36,6 +37,8 @@ export default function ServiceDetail() {
           <Benefits />
 
           <Approach />
+          
+          <ServicePagination />
         </main>
 
         <ServiceSidebar />
@@ -593,5 +596,47 @@ function RelatedServices() {
         ))}
       </div>
     </motion.div>
+  );
+}
+
+function ServicePagination() {
+  const params = useParams();
+  const currentServiceId = params?.id;
+  
+  if (!currentServiceId || !services || services.length === 0) return null;
+
+  const currentIndex = services.findIndex((s: any) => s.link.endsWith(`/${currentServiceId}`));
+  
+  if (currentIndex === -1) return null;
+
+  const prevService = currentIndex > 0 ? services[currentIndex - 1] : null;
+  const nextService = currentIndex < services.length - 1 ? services[currentIndex + 1] : null;
+
+  return (
+    <div className="mt-12 flex items-center justify-between border-t border-[#edf0f3] pt-8 sm:mt-16">
+      {prevService ? (
+        <Link 
+          href={prevService.link}
+          className="group flex flex-col gap-1 transition-all"
+        >
+          <span className="flex items-center gap-2 text-sm font-semibold text-[#687388] transition-colors group-hover:text-[#d8003f]">
+            <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" /> Previous
+          </span>
+          <span className="text-base font-bold text-[#10234a] sm:text-lg">{prevService.title}</span>
+        </Link>
+      ) : <div />}
+
+      {nextService ? (
+        <Link 
+          href={nextService.link}
+          className="group flex flex-col items-end gap-1 transition-all"
+        >
+          <span className="flex items-center gap-2 text-sm font-semibold text-[#687388] transition-colors group-hover:text-[#d8003f]">
+            Next <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+          </span>
+          <span className="text-base font-bold text-[#10234a] sm:text-lg">{nextService.title}</span>
+        </Link>
+      ) : <div />}
+    </div>
   );
 }

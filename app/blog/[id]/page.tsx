@@ -17,7 +17,7 @@ export default async function Blog({ params }: { params: Promise<{ id: string }>
   return (
     <main className="flex flex-1 flex-col">
       <PageBanner title={titleName} breadcrumb={titleName} />
-      <BlogDetailPage/>
+      <BlogDetailPage id={id} />
     </main>
   );
 }

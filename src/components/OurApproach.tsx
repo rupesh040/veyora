@@ -122,7 +122,7 @@ function ContentPanel({
               {tag}</span>
           </div>
 
-          <h2 className="mt-6 text-[clamp(2.45rem,5vw,4.8rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]">
+          <h2 className="mt-6 text-[clamp(2rem,4.3vw,3.8rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]">
             {headingStart}<br />{headingBr}<span className="text-[#d8003f]">{headingHighlight}</span>
           </h2>
         </motion.div>

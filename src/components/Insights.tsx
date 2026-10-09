@@ -127,7 +127,7 @@ export default function Insights() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#faf9f7] px-5 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20 lg:px-12 lg:py-24 xl:px-16 xl:py-28">
+    <section className="relative overflow-hidden bg-[#faf9f7] px-5 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-14 xl:px-16 xl:py-16">
       <BackgroundDecorations />
 
       <div className="relative z-10 mx-auto max-w-[1450px]">
@@ -424,15 +424,6 @@ function Pagination({
             className="transition-transform duration-300 group-hover:translate-x-0.5"
           />
         </button>
-      </div>
-
-      <div className="text-sm font-medium text-[#17191f]/50">
-        Page{" "}
-        <span className="text-[#d8003f]">
-          {String(currentPage).padStart(2, "0")}
-        </span>{" "}
-        of{" "}
-        {String(totalPages).padStart(2, "0")}
       </div>
     </motion.div>
   );

@@ -9,7 +9,7 @@ import content from "../data";
 export default function ProjectCTA() {
   const data = content.projectCTA;
   return (
-    <section className="relative overflow-hidden bg-[#0d0e11] px-4 py-8 sm:px-6 sm:py-10 md:px-8 md:py-12 lg:px-10 xl:px-14">
+    <section className="relative overflow-hidden bg-[#0d0e11] px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8 lg:px-10 xl:px-14">
       <div className="pointer-events-none absolute left-3 top-1/2 h-[78%] w-[3px] -translate-y-1/2 bg-[#e50046] sm:left-5 md:left-6 lg:left-8 xl:left-10" />
 
       <div className="relative mx-auto flex max-w-[1450px] flex-col gap-6 pl-8 sm:pl-10 md:pl-12 lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:pl-14 xl:pl-16">
@@ -45,7 +45,7 @@ export default function ProjectCTA() {
               delay: 0.2,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mt-3 whitespace-nowrap text-[clamp(1.25rem,3.1vw,4.2rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white sm:mt-4"
+            className="mt-3 whitespace-nowrap text-[clamp(1.25rem,3vw,3.6rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white sm:mt-4"
           >
             {data.headingStart}{" "}
             <span className="text-[#e50046]">{data.headingHighlight}</span>?

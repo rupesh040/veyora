@@ -25,8 +25,8 @@ export default function Services() {
 
   return (
     <>
-      <section className="relative w-full overflow-hidden bg-[#faf9f7] px-5 py-2 px-18 lg:px-22">
-        <div className="relative z-10 mx-auto grid max-w-[1500px] grid-cols-1 items-start gap-12 lg:grid-cols-[58%_42%] lg:gap-8 lg:pr-8 xl:gap-12 xl:pr-12">
+      <section className="relative w-full overflow-hidden bg-[#faf9f7] px-5 py-0 lg:px-22">
+        <div className="relative z-10 mx-auto grid max-w-[1500px] grid-cols-1 items-start gap-8 lg:grid-cols-[58%_42%] lg:gap-6 lg:pr-8 xl:gap-8 xl:pr-12">
           <div className="relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 20, scale: 0.95 }}
@@ -58,7 +58,7 @@ export default function Services() {
               <span className="text-[#d8003f]">{data.headingHighlight}</span>
             </motion.h2>
 
-            <div className="mt-9 grid grid-cols-1 gap-x-8 gap-y-6 sm:mt-10 sm:grid-cols-2 sm:gap-y-8 lg:mt-12 lg:gap-y-10">
+            <div className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:mt-8 sm:grid-cols-2 sm:gap-y-6 lg:mt-8 lg:gap-y-8">
               {services.map((service: any, index: number) => {
                 const Icon = (service.icon && iconMap[service.icon]) || Target;
 
@@ -135,7 +135,7 @@ export default function Services() {
                 duration: 0.7,
                 delay: 0.45,
               }}
-              className="mt-9 sm:mt-12"
+              className="mt-6 sm:mt-8"
             >
               <Link
                 href={data.button.link}

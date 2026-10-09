@@ -50,7 +50,7 @@ export default function Testimonials() {
   });
 
   return (
-    <section className="relative overflow-hidden bg-[#faf9f7] px-4 py-14 sm:px-6 sm:py-18 md:px-10 md:py-24 lg:px-12 lg:py-28 xl:px-16 xl:py-32">
+    <section className="relative overflow-hidden bg-[#faf9f7] px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-14 xl:px-16 xl:py-16">
       <BackgroundDecorations />
 
       <div className="relative z-10 mx-auto max-w-[1400px]">

@@ -109,7 +109,7 @@ export default function WhyVeyora() {
     whyData.tabs[activeTab] || whyData.tabs[tabsList[0]];
 
   return (
-    <section className="relative overflow-hidden bg-[#faf8f5] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24 xl:px-16">
+    <section className="relative overflow-hidden bg-[#faf8f5] px-5 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12 xl:px-16">
       <div className="pointer-events-none absolute -bottom-28 right-[34%] h-64 w-40 rotate-[-28deg] border-[28px] border-[#f7d6d9]/60 sm:h-80 sm:w-48" />
 
       <div className="relative mx-auto grid max-w-[1450px] gap-12 lg:grid-cols-[1.3fr_0.9fr] lg:gap-12 xl:grid-cols-[1.35fr_0.9fr] xl:gap-16">

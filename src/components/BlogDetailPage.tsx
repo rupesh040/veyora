@@ -17,19 +17,19 @@ const { categories, recentPosts, sidebarCTA, sidebarHeadings, posts } = content.
 
 const iconMap: Record<string, any> = { CalendarDays, Eye, FolderOpen, Users };
 
-export default function BlogDetailPage() {
+export default function BlogDetailPage({ id }: { id?: string }) {
   const params = useParams();
-  const currentPostId = (params?.id as string) || "stronger-workforce";
+  const currentPostId = id || (params?.id as string) || "stronger-workforce";
   const postData = (posts as Record<string, any>)[currentPostId] || (posts as Record<string, any>)["stronger-workforce"];
 
   return (
     <main className="min-h-screen overflow-hidden bg-white text-[#111827]">
-      <BlogContent postData={postData} />
+      <BlogContent postData={postData} currentPostId={currentPostId} />
     </main>
   );
 }
 
-function BlogContent({ postData }: { postData: any }) {
+function BlogContent({ postData, currentPostId }: { postData: any, currentPostId: string }) {
   const { header, articleSections, quote } = postData;
 
   return (
@@ -177,7 +177,7 @@ function BlogContent({ postData }: { postData: any }) {
           </motion.div>
         </motion.article>
 
-        <BlogSidebar />
+        <BlogSidebar currentPostId={currentPostId} />
       </div>
     </section>
   );
@@ -283,9 +283,7 @@ function ArticleSection({
   );
 }
 
-function BlogSidebar() {
-  const params = useParams();
-  const currentPostId = params?.id;
+function BlogSidebar({ currentPostId }: { currentPostId: string }) {
   
   const filteredRecentPosts = recentPosts.filter(post => post.id !== currentPostId);
 
@@ -420,7 +418,7 @@ function BlogSidebar() {
 
           <Link
             href={sidebarCTA.buttonLink}
-            className="group mt-6 inline-flex items-center gap-3 rounded-md bg-[#e00040] px-5 py-3 text-sm font-semibold transition-all duration-300 hover:bg-white hover:text-[#a9002f]"
+            className="group mt-6 inline-flex items-center gap-3 rounded-md bg-white px-5 py-3 text-sm font-semibold transition-all duration-300 text-black"
           >
             {sidebarCTA.buttonText}
 

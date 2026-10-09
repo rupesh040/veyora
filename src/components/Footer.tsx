@@ -53,23 +53,24 @@ export default function Footer() {
             </p>
             <div className="mt-9 space-y-3.5">
               <a
-                href={`mailto:${footerData.contact.email}`}
+                href={`mailto:${footerData.contact?.email || 'hello@veyora.com'}`}
                 className="group flex items-center gap-3 text-[17px] text-white/85 transition-colors duration-200 hover:text-white sm:text-[18px]"
               >
-              
-                <span>{footerData.contact.email}</span>
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/[0.08] transition-colors duration-200 group-hover:bg-[#d8003f]">
+                  <Mail className="h-5 w-5" />
+                </span>
+                <span>{footerData.contact?.email || 'hello@veyora.com'}</span>
               </a>
 
               <a
-                href={`tel:${footerData.contact.phoneTel}`}
+                href={`tel:${footerData.contact?.phoneTel || '+15551234567'}`}
                 className="group flex items-center gap-3 text-[17px] transition-colors duration-200 sm:text-[18px]"
               >
-               
-                <span
-                  style={{ color: theme.accent }}
-                  className="font-medium transition-opacity duration-200 hover:opacity-85"
-                >
-                  {footerData.contact.phone}
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/[0.08] transition-colors duration-200 group-hover:bg-[#d8003f]">
+                  <Phone className="h-5 w-5" />
+                </span>
+                <span className="font-medium text-white transition-opacity duration-200 hover:opacity-85">
+                  {footerData.contact?.phone || '+1 (555) 123-4567'}
                 </span>
               </a>
             </div>

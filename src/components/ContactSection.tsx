@@ -386,8 +386,8 @@ export default function ContactSection() {
                 >
                   <span>
                     {submitted
-                      ? (data.formButtons?.submitted || "Project Brief Sent")
-                      : (data.formButtons?.submit || "Send Project Brief")}
+                      ? (data.formButtons?.submitted || "Sent")
+                      : (data.formButtons?.submit || "Send")}
                   </span>
 
                   <ArrowRight

@@ -16,8 +16,8 @@ const iconMap: Record<string, any> = {
 
 export default function AboutSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#faf9f7] px-5 py-14 sm:px-8 sm:py-16 md:px-10 md:py-20 lg:px-12 lg:py-24 xl:px-16 xl:py-28">
-      <div className="relative z-10 mx-auto grid max-w-[1500px] grid-cols-1 items-center gap-12 lg:grid-cols-[54%_46%] lg:gap-8 xl:gap-12">
+    <section className="relative w-full overflow-hidden bg-[#faf9f7] px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-8 lg:px-12 lg:py-10 xl:px-16">
+      <div className="relative z-10 mx-auto grid max-w-[1500px] grid-cols-1 items-start gap-12 lg:grid-cols-[54%_46%] lg:gap-8 xl:gap-12">
         <PinterestGallery />
         <AboutContent />
       </div>
@@ -44,7 +44,7 @@ function PinterestGallery() {
         </span>
       </motion.div>
 
-      <div className="relative z-10 grid grid-cols-[1.12fr_1fr] items-start gap-3 sm:gap-5 lg:gap-6">
+      <div className="relative z-10 grid grid-cols-[1.12fr_1fr] items-center gap-3 sm:gap-5 lg:gap-6">
         <div className="relative">
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}

@@ -159,9 +159,9 @@ export default function Hero() {
       style={{
         backgroundColor: BG_COLOR,
       }}
-      className="relative min-h-[calc(100vh-80px)] w-full overflow-hidden"
+      className="relative w-full overflow-hidden"
     >
-      <div className="relative mx-auto min-h-[calc(100vh-80px)] overflow-hidden px-5 sm:px-8 lg:px-12 xl:px-20">
+      <div className="relative mx-auto overflow-hidden px-5 py-8 sm:px-8 sm:py-12 lg:px-12 lg:py-16 xl:px-20">
         <motion.div
           suppressHydrationWarning
           className="pointer-events-none absolute -right-[10%] top-[12%] z-0 h-[500px] w-[500px] rounded-full bg-[#d8003f]/[0.05] blur-[2px] sm:h-[680px] sm:w-[680px] lg:h-[760px] lg:w-[760px]"
@@ -641,12 +641,12 @@ export default function Hero() {
           </svg>
         </motion.div>
 
-        <div className="relative z-10 grid min-h-[calc(100vh-80px)] grid-cols-1 items-center lg:grid-cols-[50%_50%] xl:grid-cols-[52%_48%]">
-          <div className="order-1 relative flex w-full items-end justify-center  sm:pt-10 lg:order-2 lg:h-full lg:pt-0">
-            <div className="relative w-full max-w-[330px] sm:max-w-[420px] md:max-w-[480px] lg:w-full lg:max-w-[680px] xl:max-w-[740px]">
+        <div className="relative z-10 grid grid-cols-1 items-center lg:grid-cols-[50%_50%] xl:grid-cols-[52%_48%]">
+          <div className="order-1 relative flex w-full items-center justify-center pt-6 sm:pt-8 lg:order-2 lg:h-full lg:pt-0">
+            <div className="relative w-full max-w-[300px] sm:max-w-[380px] md:max-w-[440px] lg:w-full lg:max-w-[540px] xl:max-w-[600px]">
               <motion.div
                 suppressHydrationWarning
-                className="relative h-[350px] w-full sm:h-[460px] md:h-[520px] lg:h-[640px] xl:h-[740px]"
+                className="relative h-[300px] w-full sm:h-[400px] md:h-[460px] lg:h-[520px] xl:h-[580px]"
                 initial={{
                   opacity: 0,
                   y: 30,
@@ -668,7 +668,7 @@ export default function Hero() {
                   alt={hero.person.alt}
                   fill
                   priority
-                  className="object-contain object-bottom"
+                  className="object-contain object-center"
                   sizes="(max-width: 640px) 330px, (max-width: 768px) 420px, (max-width: 1024px) 480px, (max-width: 1280px) 50vw, 48vw"
                 />
 
@@ -684,7 +684,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="order-2 flex min-w-0 flex-col justify-center pb-12 pt-2 sm:pb-16 sm:pt-4 lg:order-1 lg:py-16">
+          <div className="order-2 flex min-w-0 flex-col justify-center pb-6 pt-2 sm:pb-8 sm:pt-4 lg:order-1 lg:py-8">
             <motion.div
               suppressHydrationWarning
               initial={{

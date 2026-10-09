@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { ArrowRight } from "lucide-react";
 
 import content from '../data';
 const data = content.servicesOverview;
@@ -132,41 +131,6 @@ function ContentPanel() {
             />
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.7,
-            delay: 0.5,
-          }}
-          className="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:gap-7"
-        >
-          <Link
-            href={data.button1.link}
-            className="group inline-flex items-center justify-center gap-4 rounded-lg bg-[#d8003f] px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_25px_rgba(216,0,63,0.18)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#c00037] sm:px-7 sm:py-3.5 sm:text-base"
-          >
-            <span>{data.button1.text}</span>
-
-            <ArrowRight
-              size={20}
-              className="transition-transform duration-300 group-hover:translate-x-1.5"
-            />
-          </Link>
-
-          <Link
-            href={data.button2.link}
-            className="group inline-flex items-center gap-2 text-sm font-medium text-[#17191f] transition-colors duration-300 hover:text-[#d8003f] sm:text-base"
-          >
-            <span>{data.button2.text}</span>
-
-            <ArrowRight
-              size={18}
-              className="transition-transform duration-300 group-hover:translate-x-1"
-            />
-          </Link>
-        </motion.div>
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ const cardVariants = {
 
 export default function CoreFeatures() {
   return (
-    <section className="relative overflow-hidden bg-[#faf9f7] px-5 py-16 sm:px-8 sm:py-20 md:px-10 md:py-24 lg:px-12 lg:py-28 xl:px-16 xl:py-32">
+    <section className="relative overflow-hidden bg-[#faf9f7] px-5 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-14 xl:px-16 xl:py-16">
       <BackgroundShapes />
 
       <div className="relative z-10 mx-auto max-w-[1450px]">
