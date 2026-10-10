@@ -59,7 +59,7 @@ export default function Services() {
             </motion.h2>
 
             <div className="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 sm:mt-8 sm:grid-cols-2 sm:gap-y-6 lg:mt-8 lg:gap-y-8">
-              {services.map((service: any, index: number) => {
+              {services.slice(0, 4).map((service: any, index: number) => {
                 const Icon = (service.icon && iconMap[service.icon]) || Target;
 
                 return (
@@ -82,41 +82,46 @@ export default function Services() {
                       delay: index * 0.1,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className="group flex gap-3 sm:gap-4"
+                    className="group"
                   >
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center sm:h-14 sm:w-14">
-                      {service.iconSvg ? (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="40"
-                          height="40"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          className="text-[#d8003f] transition-transform duration-300 group-hover:scale-110 sm:h-12 sm:w-12"
-                          dangerouslySetInnerHTML={{ __html: service.iconSvg }}
-                        />
-                      ) : (
-                        <Icon
-                          size={40}
-                          strokeWidth={1.5}
-                          className="text-[#d8003f] transition-transform duration-300 group-hover:scale-110 sm:size-12"
-                        />
-                      )}
-                    </div>
+                    <Link
+                      href={service.link || "/services"}
+                      className="flex gap-3 sm:gap-4 transition-transform duration-300 hover:translate-x-1"
+                    >
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center sm:h-14 sm:w-14">
+                        {service.iconSvg ? (
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="40"
+                            height="40"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="text-[#d8003f] transition-transform duration-300 group-hover:scale-110 sm:h-12 sm:w-12"
+                            dangerouslySetInnerHTML={{ __html: service.iconSvg }}
+                          />
+                        ) : (
+                          <Icon
+                            size={40}
+                            strokeWidth={1.5}
+                            className="text-[#d8003f] transition-transform duration-300 group-hover:scale-110 sm:size-12"
+                          />
+                        )}
+                      </div>
 
-                    <div className="min-w-0">
-                      <h3 className="text-base font-bold leading-tight text-[#111722] sm:text-lg md:text-xl">
-                        {service.title}
-                      </h3>
+                      <div className="min-w-0">
+                        <h3 className="text-base font-bold leading-tight text-[#111722] transition-colors group-hover:text-[#d8003f] sm:text-lg md:text-xl">
+                          {service.title}
+                        </h3>
 
-                      <p className="mt-2 max-w-[290px] text-sm leading-[1.5] text-[#17191f] sm:text-base md:text-lg">
-                        {service.description}
-                      </p>
-                    </div>
+                        <p className="mt-2 max-w-[290px] text-sm leading-[1.5] text-[#17191f] sm:text-base md:text-lg">
+                          {service.description}
+                        </p>
+                      </div>
+                    </Link>
                   </motion.div>
                 );
               })}

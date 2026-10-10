@@ -33,7 +33,7 @@ function BlogContent({ postData, currentPostId }: { postData: any, currentPostId
   const { header, articleSections, quote } = postData;
 
   return (
-    <section className="relative bg-white px-5 py-12 sm:px-8 sm:py-16 md:px-10 md:py-20 lg:px-12 lg:py-24 xl:px-16">
+    <section className="relative bg-white px-5 py-2 sm:px-8 sm:py-4 md:px-10 md:py-8 lg:px-12 lg:py-16 xl:px-16">
       <div className="mx-auto grid max-w-[1350px] gap-10 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,1fr)_370px] xl:gap-14">
         <motion.article
           initial={{

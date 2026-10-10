@@ -127,7 +127,7 @@ export default function Insights() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#faf9f7] px-5 py-8 sm:px-8 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-14 xl:px-16 xl:py-16">
+    <section className="relative overflow-hidden bg-[#faf9f7] px-5 py-2 sm:px-8 sm:py-4 md:px-10 md:py-6 lg:px-12 lg:py-8 xl:px-16 xl:py-10">
       <BackgroundDecorations />
 
       <div className="relative z-10 mx-auto max-w-[1450px]">

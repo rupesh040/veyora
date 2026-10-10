@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import {
   ArrowRight,
-  ArrowLeft,
   Clock3,
   Headphones,
   ShieldCheck,
@@ -13,44 +12,46 @@ import {
   Target,
   Users,
 } from "lucide-react";
-
-const iconMap: Record<string, any> = { Users, Target, Clock3, Star, ShieldCheck, Headphones };
 import { motion } from "motion/react";
 
 import content from '../data';
-const data = content.serviceDetail;
-const { services, benefits, approach, relatedServices } = data;
+const defaultData = content.serviceDetail;
+const { services } = defaultData;
 
+const iconMap: Record<string, any> = { Users, Target, Clock3, Star, ShieldCheck, Headphones };
 
+export default function ServiceDetail({ id }: { id?: string }) {
+  const params = useParams();
+  const currentServiceId = (id || (params?.id as string) || "brand-strategy").toLowerCase();
 
+  const serviceItem = (defaultData.servicesData as Record<string, any>)?.[currentServiceId] || defaultData;
+  const currentData = {
+    ...defaultData,
+    ...serviceItem,
+  };
 
-
-
-
-export default function ServiceDetail() {
   return (
-    <section className="overflow-hidden bg-white px-4 py-10 sm:px-6 sm:py-14 md:px-8 md:py-16 lg:px-10 lg:py-20 xl:px-14 2xl:px-20">
+    <section className="overflow-hidden bg-white px-4 py-2 sm:px-6 sm:py-4 md:px-8 md:py-6 lg:px-10 lg:py-8 xl:px-14 2xl:px-10">
       <div className="mx-auto grid max-w-[1450px] gap-8 lg:grid-cols-[minmax(0,1fr)_315px] xl:grid-cols-[minmax(0,1fr)_335px] xl:gap-10 2xl:grid-cols-[minmax(0,1fr)_350px]">
         <main className="min-w-0">
-          <ServiceIntroduction />
+          <ServiceIntroduction data={currentData} />
 
-          <Benefits />
+          <Benefits data={currentData} />
 
-          <Approach />
-          
-          <ServicePagination />
+          <Approach data={currentData} />
         </main>
 
-        <ServiceSidebar />
+        <ServiceSidebar currentServiceId={currentServiceId} />
       </div>
     </section>
   );
 }
 
-function ServiceIntroduction() {
+function ServiceIntroduction({ data }: { data: any }) {
   return (
     <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(300px,0.85fr)] xl:gap-10">
       <motion.div
+        key={`intro-text-${data.badge}`}
         initial={{
           opacity: 0,
           x: -35,
@@ -114,6 +115,7 @@ function ServiceIntroduction() {
       </motion.div>
 
       <motion.div
+        key={`intro-img-${data.badge}`}
         initial={{
           opacity: 0,
           x: 35,
@@ -144,10 +146,12 @@ function ServiceIntroduction() {
   );
 }
 
-function Benefits() {
+function Benefits({ data }: { data: any }) {
+  const benefits = data.benefits || [];
   return (
     <section className="mt-12 sm:mt-14 lg:mt-16">
       <motion.h2
+        key={`benefits-h2-${data.badge}`}
         initial={{
           opacity: 0,
           y: 25,
@@ -185,10 +189,10 @@ function BenefitCard({
   benefit,
   index,
 }: {
-  benefit: (typeof benefits)[number];
+  benefit: any;
   index: number;
 }) {
-  const Icon = iconMap[benefit.icon as string];
+  const Icon = (benefit.icon && iconMap[benefit.icon as string]) || Star;
 
   return (
     <motion.div
@@ -234,11 +238,13 @@ function BenefitCard({
   );
 }
 
-function Approach() {
+function Approach({ data }: { data: any }) {
+  const approach = data.approach || [];
   return (
     <section className="mt-12 sm:mt-14 lg:mt-16">
       <div className="grid gap-4 lg:grid-cols-[minmax(300px,0.82fr)_minmax(0,1.18fr)] xl:gap-8">
         <motion.div
+          key={`approach-img-${data.badge}`}
           initial={{
             opacity: 0,
             x: -35,
@@ -266,6 +272,7 @@ function Approach() {
         </motion.div>
 
         <motion.div
+          key={`approach-info-${data.badge}`}
           initial={{
             opacity: 0,
             x: 35,
@@ -311,7 +318,7 @@ function ApproachItem({
   item,
   index,
 }: {
-  item: (typeof approach)[number];
+  item: any;
   index: number;
 }) {
   return (
@@ -351,23 +358,19 @@ function ApproachItem({
   );
 }
 
-function ServiceSidebar() {
+function ServiceSidebar({ currentServiceId }: { currentServiceId: string }) {
   return (
     <aside className="space-y-5 lg:sticky lg:top-6 lg:self-start xl:space-y-6">
-      <ServicesCard />
+      <ServicesCard currentServiceId={currentServiceId} />
 
       <HelpCard />
-
-      <OpeningHours />
-
-      <RelatedServices />
     </aside>
   );
 }
 
-function ServicesCard() {
+function ServicesCard({ currentServiceId }: { currentServiceId?: string }) {
   const params = useParams();
-  const currentServiceId = params?.id;
+  const activeId = (currentServiceId || (params?.id as string) || "").toLowerCase();
 
   return (
     <motion.div
@@ -387,20 +390,22 @@ function ServicesCard() {
     >
       <div className="bg-[#d8003f] px-5 py-4 sm:px-6">
         <h2 className="text-lg font-bold text-white sm:text-xl">
-          {data.servicesTitle}
+          {defaultData.servicesTitle || "Our Services"}
         </h2>
       </div>
 
       <div>
         {services.map((service: any) => {
-          const isActive = currentServiceId && service.link.endsWith(`/${currentServiceId}`);
+          const isActive = Boolean(
+            activeId && (service.link.endsWith(`/${activeId}`) || service.link === `/services/${activeId}`)
+          );
           return (
             <Link
-              href={service.link}
+              href="/services"
               key={service.title}
-              className={`group flex min-h-[45px] items-center justify-between gap-3 border-b border-[#edf0f3] px-5 text-sm font-semibold transition-all duration-300 last:border-b-0 sm:px-6 ${
+              className={`group flex min-h-[48px] items-center justify-between gap-3 border-b border-[#edf0f3] px-5 text-sm font-semibold transition-all duration-300 last:border-b-0 sm:px-6 ${
                 isActive
-                  ? "bg-[#fff0f2] text-[#d8003f]"
+                  ? "bg-[#fff0f2] text-[#d8003f]  font-bold"
                   : "text-[#243451] hover:bg-[#fff0f2] hover:text-[#d8003f]"
               }`}
             >
@@ -408,7 +413,9 @@ function ServicesCard() {
 
               <ArrowRight
                 size={18}
-                className="shrink-0 transition-transform duration-300 group-hover:translate-x-1"
+                className={`shrink-0 transition-transform duration-300 ${
+                  isActive ? "translate-x-1 text-[#d8003f]" : "group-hover:translate-x-1"
+                }`}
               />
             </Link>
           );
@@ -441,11 +448,11 @@ function HelpCard() {
       <div className="flex items-start justify-between gap-4">
         <div>
           <h2 className="max-w-[210px] text-xl font-bold leading-[1.2] tracking-[-0.025em] text-[#10234a] sm:text-2xl">
-            {data.helpCardTitle}
+            {defaultData.helpCardTitle}
           </h2>
 
           <p className="mt-3 max-w-[260px] text-sm leading-[1.55] text-[#737d8f]">
-            {data.helpCardDescription}
+            {defaultData.helpCardDescription}
           </p>
         </div>
 
@@ -455,10 +462,10 @@ function HelpCard() {
       </div>
 
       <Link
-        href={data.helpCardButtonLink}
+        href={defaultData.helpCardButtonLink}
         className="group mt-5 inline-flex items-center gap-3 rounded-md bg-[#d8003f] px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#b90036]"
       >
-        {data.helpCardButtonText}
+        {defaultData.helpCardButtonText}
 
         <ArrowRight
           size={18}
@@ -466,177 +473,5 @@ function HelpCard() {
         />
       </Link>
     </motion.div>
-  );
-}
-
-function OpeningHours() {
-  const hours = data.hours;
-
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: 30,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-        amount: 0.15,
-      }}
-      transition={{
-        duration: 0.7,
-      }}
-      className="rounded-[7px] border border-[#e2e5e9] bg-white p-5 shadow-[0_5px_20px_rgba(16,35,74,0.04)] sm:p-6"
-    >
-      <div className="flex items-center gap-3">
-        <Clock3
-          size={21}
-          className="text-[#10234a]"
-        />
-
-        <h2 className="text-xl font-bold text-[#10234a]">
-          {data.openingHoursTitle}
-        </h2>
-      </div>
-
-      <div className="mt-4">
-        {hours.map(([day, time]: any) => (
-          <div
-            key={day}
-            className="flex items-center justify-between gap-4 border-b border-[#edf0f3] py-3 text-sm last:border-b-0"
-          >
-            <span className="text-[#697386]">
-              {day}
-            </span>
-
-            <span
-              className={`font-medium ${
-                time === "Closed"
-                  ? "text-[#697386]"
-                  : "text-[#243451]"
-              }`}
-            >
-              {time}
-            </span>
-          </div>
-        ))}
-      </div>
-    </motion.div>
-  );
-}
-
-function RelatedServices() {
-  const params = useParams();
-  const currentServiceId = params?.id;
-  const filteredServices = relatedServices.filter(
-    (service: any) => !(currentServiceId && service.link.endsWith(`/${currentServiceId}`))
-  );
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.7 }}
-    >
-      <h2 className="text-xl font-bold tracking-[-0.025em] text-[#10234a] sm:text-2xl">
-        {data.relatedServicesTitle}
-      </h2>
-
-      <div className="mt-4 space-y-5">
-        {filteredServices.map((service: any, index: number) => (
-          <Link
-            href={service.link}
-            key={service.title}
-            className="group block"
-          >
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.08,
-              }}
-              className="relative aspect-[1.75/1] overflow-hidden rounded-[6px]"
-            >
-              <Image
-                src={service.image}
-                alt={service.title}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="350px"
-              />
-
-              <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
-            </motion.div>
-
-            <div className="mt-2 flex items-center justify-between gap-4">
-              <h3 className="text-base font-bold text-[#10234a] transition-colors duration-300 group-hover:text-[#d8003f]">
-                {service.title}
-              </h3>
-
-              <ArrowRight
-                size={19}
-                className="shrink-0 text-[#d8003f] transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </div>
-          </Link>
-        ))}
-      </div>
-    </motion.div>
-  );
-}
-
-function ServicePagination() {
-  const params = useParams();
-  const currentServiceId = params?.id;
-  
-  if (!currentServiceId || !services || services.length === 0) return null;
-
-  const currentIndex = services.findIndex((s: any) => s.link.endsWith(`/${currentServiceId}`));
-  
-  if (currentIndex === -1) return null;
-
-  const prevService = currentIndex > 0 ? services[currentIndex - 1] : null;
-  const nextService = currentIndex < services.length - 1 ? services[currentIndex + 1] : null;
-
-  return (
-    <div className="mt-12 flex items-center justify-between border-t border-[#edf0f3] pt-8 sm:mt-16">
-      {prevService ? (
-        <Link 
-          href={prevService.link}
-          className="group flex flex-col gap-1 transition-all"
-        >
-          <span className="flex items-center gap-2 text-sm font-semibold text-[#687388] transition-colors group-hover:text-[#d8003f]">
-            <ArrowLeft size={16} className="transition-transform group-hover:-translate-x-1" /> Previous
-          </span>
-          <span className="text-base font-bold text-[#10234a] sm:text-lg">{prevService.title}</span>
-        </Link>
-      ) : <div />}
-
-      {nextService ? (
-        <Link 
-          href={nextService.link}
-          className="group flex flex-col items-end gap-1 transition-all"
-        >
-          <span className="flex items-center gap-2 text-sm font-semibold text-[#687388] transition-colors group-hover:text-[#d8003f]">
-            Next <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-          </span>
-          <span className="text-base font-bold text-[#10234a] sm:text-lg">{nextService.title}</span>
-        </Link>
-      ) : <div />}
-    </div>
   );
 }

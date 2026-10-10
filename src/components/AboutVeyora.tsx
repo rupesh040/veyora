@@ -9,7 +9,7 @@ const { images, badge, titleStart, titleHighlight, description, points, testimon
 
 export default function AboutVeyora() {
   return (
-    <section className="relative overflow-hidden bg-[#fcfaf8] px-5 py-4 sm:px-8 sm:py-6 md:px-10 md:py-8 lg:px-12 lg:py-10 xl:px-16">
+    <section className="relative overflow-hidden bg-[#fcfaf8] px-5 py-2 sm:px-8 sm:py-4 md:px-10 md:py-6 lg:px-12 lg:py-8 xl:px-16">
       <div className="mx-auto grid max-w-[1450px] items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14 xl:gap-20">
         <ImageCollage />
         <Content />

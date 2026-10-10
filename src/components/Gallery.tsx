@@ -177,7 +177,7 @@ export default function Gallery() {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-[#fcfaf8] px-5 py-16 sm:px-8 sm:py-20 md:px-10 md:py-24 lg:px-12 lg:py-28 xl:px-16">
+      <section className="relative overflow-hidden bg-[#fcfaf8] px-5 py-2 sm:px-8 sm:py-4 md:px-10 md:py-6 lg:px-12 lg:py-8 xl:px-16">
         <div className="mx-auto max-w-[1500px]">
           <GalleryHeader data={data} />
 
