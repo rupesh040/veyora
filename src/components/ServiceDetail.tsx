@@ -65,10 +65,8 @@ function ServiceIntroduction({ data }: { data: any }) {
           ease: [0.22, 1, 0.36, 1],
         }}
       >
-        <div className="flex items-center gap-3">
-          <span className="h-[2px] w-10 bg-[#d8003f] sm:w-12" />
-
-          <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#d8003f] sm:text-sm">
+        <div className="inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7">
+          <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
             {data.badge}
           </span>
         </div>
@@ -87,7 +85,7 @@ function ServiceIntroduction({ data }: { data: any }) {
             delay: 0.12,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mt-5 text-[48px] font-bold leading-[1.05] tracking-[-0.045em] text-[#10234a]"
+          className="mt-5 text-[clamp(2.29rem,5vw,5.14rem)] font-bold leading-[1.05] tracking-[-0.045em] text-[#10234a]"
         >
           {data.headingStart}
           <span className="block text-[#d8003f]">
@@ -108,7 +106,7 @@ function ServiceIntroduction({ data }: { data: any }) {
             duration: 0.7,
             delay: 0.28,
           }}
-          className="mt-6 max-w-[690px] text-sm leading-[1.7] text-[#687388] sm:text-base lg:text-[15px]"
+          className="mt-6 max-w-[690px] text-[13px] leading-[1.7] text-[#687388] sm:text-[15px] lg:text-[14px]"
         >
           {data.description}
         </motion.p>
@@ -289,11 +287,11 @@ function Approach({ data }: { data: any }) {
             duration: 0.75,
           }}
         >
-          <h2 className="text-[clamp(1.7rem,3vw,2.4rem)] font-bold tracking-[-0.035em] text-[#10234a]">
+          <h2 className="text-[clamp(1.64rem,3vw,2.34rem)] font-bold tracking-[-0.035em] text-[#10234a]">
             {data.approachHeading}
           </h2>
 
-          <p className="mt-2 max-w-[650px] text-sm leading-[1.65] text-[#687388] sm:text-base">
+          <p className="mt-2 max-w-[650px] text-[13px] leading-[1.65] text-[#687388] sm:text-[15px]">
             {data.approachDescription}
           </p>
 

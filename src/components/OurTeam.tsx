@@ -11,7 +11,7 @@ export default function OurTeam() {
   if (!teamData) return null;
 
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-12 lg:py-28 xl:px-16">
+    <section className="relative overflow-hidden bg-white px-4 py-2 sm:px-6 sm:py-4 md:px-8 md:py-6 lg:px-12 lg:py-8 xl:px-16">
       <div className="mx-auto max-w-[1450px]">
         <Header
           badge={teamData.badge}
@@ -50,9 +50,9 @@ function Header({
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="inline-flex items-center justify-center rounded-full border border-[#d8003f] px-5 py-1 sm:px-6 sm:py-1.5"
+        className="inline-flex items-center justify-center rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7"
       >
-        <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#d8003f] sm:text-sm">
+        <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
           {badge}
         </span>
       </motion.div>
@@ -65,7 +65,7 @@ function Header({
           delay: 0.1,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="mt-5 text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.08] tracking-[-0.03em] text-[#11151c] sm:mt-6"
+        className="mt-5 text-[clamp(2.29rem,5vw,5.14rem)] font-extrabold leading-[1.08] tracking-[-0.03em] text-[#11151c] sm:mt-6"
       >
         {heading.line1}{" "}
         <span className="text-[#c9003b]">{heading.highlight}</span>
@@ -75,7 +75,7 @@ function Header({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="mx-auto mt-3.5 max-w-[800px] text-base leading-relaxed text-[#374151] sm:mt-4 sm:text-lg md:text-xl"
+        className="mx-auto mt-3.5 max-w-[800px] text-[15px] leading-relaxed text-[#374151] sm:mt-4 sm:text-[17px] md:text-[19px]"
       >
         {description}
       </motion.p>

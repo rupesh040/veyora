@@ -94,7 +94,7 @@ export default function PageBanner({
             delay: 0.4,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="text-[clamp(2rem,3.8vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white"
+          className="text-[clamp(1.94rem,3.8vw,3.44rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white"
         >
           {displayTitle}
         </motion.h1>

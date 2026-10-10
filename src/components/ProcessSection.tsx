@@ -75,9 +75,9 @@ function Header({ data }: { data: any }) {
           duration: 0.6,
           delay: 0.1,
         }}
-        className="inline-flex rounded-full border-2 border-[#20232a] px-6 py-2"
+        className="inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7"
       >
-        <span className="text-sm font-semibold text-[#d8003f] sm:text-base">
+        <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
           {data.badge}
         </span>
       </motion.div>
@@ -96,7 +96,7 @@ function Header({ data }: { data: any }) {
           delay: 0.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="mt-6 text-[clamp(2.35rem,5vw,4.7rem)] font-bold leading-[1.03] tracking-[-0.05em] text-[#101522]"
+        className="mt-6 text-[clamp(2.29rem,5vw,5.14rem)] font-bold leading-[1.03] tracking-[-0.05em] text-[#101522]"
       >
         {data.headingStart}
         <br className="hidden sm:block" />{" "}
@@ -116,7 +116,7 @@ function Header({ data }: { data: any }) {
           duration: 0.7,
           delay: 0.35,
         }}
-        className="mx-auto mt-5 max-w-[850px] text-base leading-[1.5] text-[#17191f] sm:text-lg md:text-xl"
+        className="mx-auto mt-5 max-w-[850px] text-[15px] leading-[1.5] text-[#17191f] sm:text-[17px] md:text-[19px]"
       >
         {data.description}
       </motion.p>

@@ -28,7 +28,7 @@ function ImageCollage() {
         duration: 0.9,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="relative mx-auto h-[520px] w-full max-w-[680px] sm:h-[610px] md:h-[670px] lg:h-[700px] xl:h-[730px]"
+      className="relative mx-auto h-[420px] w-full max-w-[680px] sm:h-[510px] md:h-[570px] lg:h-[600px] xl:h-[630px]"
     >
       <div className="absolute left-0 top-0 z-0">
         <DotPattern />
@@ -193,7 +193,7 @@ function Content() {
           delay: 0.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="mt-6 max-w-[800px] text-[clamp(2rem,4.2vw,3.8rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]"
+        className="mt-6 max-w-[800px] text-[clamp(2.29rem,5vw,5.14rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]"
       >
         <span>{titleStart}</span>
         <span className="text-[#d8003f]">
@@ -209,7 +209,7 @@ function Content() {
           duration: 0.7,
           delay: 0.35,
         }}
-        className="mt-6 max-w-[650px] text-base leading-[1.55] text-[#17191f] sm:text-lg md:text-xl"
+        className="mt-6 max-w-[650px] text-[15px] leading-[1.55] text-[#17191f] sm:text-[17px] md:text-[19px]"
       >
         {description}
 

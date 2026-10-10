@@ -33,7 +33,7 @@ function BlogContent({ postData, currentPostId }: { postData: any, currentPostId
   const { header, articleSections, quote } = postData;
 
   return (
-    <section className="relative bg-white px-5 py-2 sm:px-8 sm:py-4 md:px-10 md:py-8 lg:px-12 lg:py-16 xl:px-16">
+    <section className="relative bg-white px-5 py-2 sm:px-8 md:px-10 lg:px-12 lg:py-12 xl:px-12">
       <div className="mx-auto grid max-w-[1350px] gap-10 lg:grid-cols-[minmax(0,1fr)_340px] xl:grid-cols-[minmax(0,1fr)_370px] xl:gap-14">
         <motion.article
           initial={{
@@ -54,24 +54,7 @@ function BlogContent({ postData, currentPostId }: { postData: any, currentPostId
           }}
           className="min-w-0"
         >
-          <motion.div
-            initial={{
-              opacity: 0,
-              scale: 0.98,
-            }}
-            whileInView={{
-              opacity: 1,
-              scale: 1,
-            }}
-            viewport={{
-              once: true,
-              amount: 0.15,
-            }}
-            transition={{
-              duration: 0.8,
-            }}
-            className="relative aspect-[1.7/1] overflow-hidden rounded-lg"
-          >
+          <div className="relative aspect-[1.7/1] overflow-hidden rounded-lg">
             <Image
               src={header.image}
               alt={header.imageAlt}
@@ -80,7 +63,7 @@ function BlogContent({ postData, currentPostId }: { postData: any, currentPostId
               className="object-cover transition-transform duration-700 hover:scale-[1.02]"
               sizes="(max-width: 1024px) 100vw, 70vw"
             />
-          </motion.div>
+          </div>
 
           <BlogMeta header={header} />
 
@@ -99,7 +82,7 @@ function BlogContent({ postData, currentPostId }: { postData: any, currentPostId
             transition={{
               duration: 0.7,
             }}
-            className="mt-5 max-w-[900px] text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.05] tracking-[-0.045em] text-[#10234a]"
+            className="mt-5 max-w-[900px] text-[clamp(1.94rem,4vw,3.44rem)] font-bold leading-[1.05] tracking-[-0.045em] text-[#10234a]"
           >
             {header.titleStart}{" "}
             <span className="text-[#d8003f]">
@@ -123,7 +106,7 @@ function BlogContent({ postData, currentPostId }: { postData: any, currentPostId
               duration: 0.7,
               delay: 0.1,
             }}
-            className="mt-6 max-w-[900px] text-base leading-[1.7] text-[#536074] sm:text-lg"
+            className="mt-6 max-w-[900px] text-[15px] leading-[1.7] text-[#536074] sm:text-[17px]"
           >
             {header.description}
           </motion.p>
@@ -315,7 +298,7 @@ function BlogSidebar({ currentPostId }: { currentPostId: string }) {
             return (
               <Link
                 key={category.name}
-                href={category.link}
+                href="/blog"
                 className={`group flex items-center justify-between gap-4 border-b border-[#edf0f3] px-2 py-3.5 text-sm font-semibold text-[#243451] transition-all duration-300 last:border-b-0 hover:bg-[#fff0f2] hover:px-3 hover:text-[#d8003f] sm:text-base ${
                   isActive
                     ? "bg-[#fff0f2] text-[#d8003f]"

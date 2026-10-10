@@ -45,7 +45,7 @@ export default function ProjectCTA() {
               delay: 0.2,
               ease: [0.22, 1, 0.36, 1],
             }}
-            className="mt-3 whitespace-nowrap text-[clamp(1.25rem,3vw,3.6rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white sm:mt-4"
+            className="mt-3 whitespace-nowrap text-[clamp(1.19rem,3vw,3.54rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white sm:mt-4"
           >
             {data.headingStart}{" "}
             <span className="text-[#e50046]">{data.headingHighlight}</span>?
@@ -59,7 +59,7 @@ export default function ProjectCTA() {
               duration: 0.7,
               delay: 0.35,
             }}
-            className="mt-3 text-sm leading-relaxed text-white/90 sm:mt-4 sm:text-base md:text-lg"
+            className="mt-3 text-[13px] leading-relaxed text-white/90 sm:mt-4 sm:text-[15px] md:text-[17px]"
           >
             {data.description}
           </motion.p>

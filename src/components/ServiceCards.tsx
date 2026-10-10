@@ -13,24 +13,43 @@ export default function ServiceCards() {
   return (
     <section className="bg-[#fcfaf8] py-2 sm:py-4 lg:py-6 px-5 sm:px-8 lg:px-16 xl:px-20">
       <div className="mx-auto max-w-[1400px]">
-        <div className="mb-10 text-center sm:mb-12">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-bold text-[#101522] sm:text-5xl"
-          >
-            {data.cardHeadingStart} <span className="text-[#d8003f]">{data.cardHeadingHighlight}</span>
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="mx-auto mt-4 max-w-2xl text-lg text-gray-600"
-          >
-            {data.cardDescription}
-          </motion.p>
+        <div className="mb-10 flex flex-col gap-6 lg:mb-12 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7"
+            >
+              <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
+                {data.cardBadge || "Services Detail"}
+              </span>
+            </motion.div>
+
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-5 text-[clamp(2.29rem,5vw,5.14rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]"
+            >
+              {data.cardHeadingStart}{" "}
+              <span className="text-[#d8003f]">{data.cardHeadingHighlight}</span>
+            </motion.h2>
+          </div>
+
+          {data.cardDescription && (
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="max-w-[480px] text-[15px] leading-[1.6] text-gray-600 sm:text-[17px] lg:text-right"
+            >
+              {data.cardDescription}
+            </motion.p>
+          )}
         </div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

@@ -132,13 +132,13 @@ export default function WhyVeyora() {
           }}
           className="min-w-0"
         >
-          <div className="inline-flex rounded-full border-2 border-[#d51b36] px-6 py-1.5 sm:px-7 sm:py-2">
-            <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#c91b35] sm:text-sm">
+          <div className="inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7">
+            <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
               {whyData.badge}
             </span>
           </div>
 
-          <h2 className="mt-6 max-w-[760px] text-[40px] font-bold leading-[1] tracking-[-0.04em] text-[#10151f] sm:text-[54px] md:text-[62px] lg:text-[60px] xl:text-[72px]">
+          <h2 className="mt-6 max-w-[760px] text-[clamp(2.29rem,5vw,5.14rem)] font-bold leading-[1] tracking-[-0.04em] text-[#10151f]">
             {whyData.heading.line1}
             <br />
             {whyData.heading.line2}{" "}
@@ -147,7 +147,7 @@ export default function WhyVeyora() {
             </span>
           </h2>
 
-          <p className="mt-6 max-w-[670px] text-base font-medium leading-[1.5] text-[#171a20] sm:mt-7 sm:text-lg sm:leading-[1.45] xl:text-xl">
+          <p className="mt-6 max-w-[670px] text-[15px] font-medium leading-[1.5] text-[#171a20] sm:mt-7 sm:text-[17px] sm:leading-[1.45] xl:text-[19px]">
             {whyData.description}
           </p>
 

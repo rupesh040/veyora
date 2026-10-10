@@ -13,6 +13,7 @@ const testimonials = testimonialsData.items;
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(1);
   const [direction, setDirection] = useState(1);
+  const [isPaused, setIsPaused] = useState(false);
 
   const total = testimonials.length;
 
@@ -32,13 +33,15 @@ export default function Testimonials() {
   };
 
   useEffect(() => {
+    if (isPaused) return;
+
     const interval = setInterval(() => {
       setDirection(1);
       setActiveIndex((current) => (current + 1) % total);
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [total]);
+  }, [total, isPaused]);
 
   const visibleTestimonials = [-1, 0, 1].map((offset) => {
     const index = (activeIndex + offset + total) % total;
@@ -46,11 +49,16 @@ export default function Testimonials() {
     return {
       ...testimonials[index],
       position: offset,
+      originalIndex: index,
     };
   });
 
   return (
-    <section className="relative overflow-hidden bg-[#faf9f7] px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-14 xl:px-16 xl:py-16">
+    <section
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      className="relative overflow-hidden bg-[#faf9f7] px-4 py-8 sm:px-6 sm:py-10 md:px-10 md:py-12 lg:px-12 lg:py-14 xl:px-16 xl:py-16"
+    >
       <BackgroundDecorations />
 
       <div className="relative z-10 mx-auto max-w-[1400px]">
@@ -64,31 +72,80 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
-          transition={{
-            duration: 0.8,
-            ease: [0.22, 1, 0.36, 1],
-          }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 sm:mt-12 lg:mt-14"
         >
-          <div className="hidden grid-cols-3 gap-6 lg:grid xl:gap-8">
+          {/* Desktop 3D Perspective Carousel */}
+          <div
+            style={{ perspective: 1200 }}
+            className="hidden items-center justify-center gap-5 lg:flex xl:gap-8"
+          >
             {visibleTestimonials.map((testimonial) => (
-              <TestimonialCard
-                key={`${testimonial.id}-${testimonial.position}`}
-                testimonial={testimonial}
-                active={testimonial.position === 0}
-              />
+              <motion.div
+                key={`desktop-slot-${testimonial.position}`}
+                animate={{
+                  opacity: testimonial.position === 0 ? 1 : 0.72,
+                  scale: testimonial.position === 0 ? 1.03 : 0.94,
+                  rotateY:
+                    testimonial.position === 0
+                      ? 0
+                      : testimonial.position === -1
+                        ? 6
+                        : -6,
+                  z: testimonial.position === 0 ? 30 : -20,
+                  y: testimonial.position === 0 ? -6 : 6,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 240,
+                  damping: 24,
+                }}
+                onClick={() => {
+                  if (testimonial.position === -1) previousSlide();
+                  if (testimonial.position === 1) nextSlide();
+                }}
+                className={`w-full max-w-[420px] transition-shadow duration-500 ${
+                  testimonial.position !== 0
+                    ? "cursor-pointer hover:opacity-90"
+                    : ""
+                }`}
+              >
+                <TestimonialCard
+                  testimonial={testimonial}
+                  active={testimonial.position === 0}
+                />
+              </motion.div>
             ))}
           </div>
 
+          {/* Tablet 2-Card View */}
           <div className="hidden gap-6 sm:grid sm:grid-cols-2 lg:hidden">
             {visibleTestimonials.slice(0, 2).map((testimonial) => (
-              <TestimonialCard
-                key={`${testimonial.id}-${testimonial.position}`}
-                testimonial={testimonial}
-                active={testimonial.position === 0}
-              />
+              <motion.div
+                key={`tablet-slot-${testimonial.position}`}
+                animate={{
+                  scale: testimonial.position === 0 ? 1.02 : 0.97,
+                  opacity: testimonial.position === 0 ? 1 : 0.85,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 25,
+                }}
+                onClick={() => {
+                  if (testimonial.position !== 0) nextSlide();
+                }}
+                className={testimonial.position !== 0 ? "cursor-pointer" : ""}
+              >
+                <TestimonialCard
+                  testimonial={testimonial}
+                  active={testimonial.position === 0}
+                />
+              </motion.div>
             ))}
           </div>
+
+          {/* Mobile Swipe View with AnimatePresence */}
           <div className="overflow-hidden sm:hidden">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
@@ -106,18 +163,24 @@ export default function Testimonials() {
                 }}
                 initial={{
                   opacity: 0,
-                  x: direction * 40,
+                  x: direction * 50,
+                  scale: 0.95,
+                  rotate: direction * 2,
                 }}
                 animate={{
                   opacity: 1,
                   x: 0,
+                  scale: 1,
+                  rotate: 0,
                 }}
                 exit={{
                   opacity: 0,
-                  x: direction * -40,
+                  x: direction * -50,
+                  scale: 0.95,
+                  rotate: direction * -2,
                 }}
                 transition={{
-                  duration: 0.35,
+                  duration: 0.4,
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 className="cursor-grab active:cursor-grabbing"
@@ -133,7 +196,8 @@ export default function Testimonials() {
             </AnimatePresence>
           </div>
         </motion.div>
-        <div className="mt-7 flex items-center justify-center gap-3 sm:mt-10 sm:gap-5">
+
+        <div className="mt-8 flex items-center justify-center gap-3 sm:mt-11 sm:gap-5">
           <CarouselButton
             direction="left"
             onClick={previousSlide}
@@ -171,36 +235,27 @@ function Header({
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{
-        duration: 0.8,
-        ease: [0.22, 1, 0.36, 1],
-      }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className="relative text-center"
     >
-      <div className="inline-flex rounded-full border-2 border-[#e8b5bc] bg-white/70 px-6 py-1.5 sm:px-7 sm:py-2">
-        <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#17191f] sm:text-sm">
+      <div className="inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7">
+        <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
           {data.badge}
         </span>
       </div>
 
-      <h2 className="mx-auto mt-4 max-w-[1100px] text-[clamp(2.1rem,5vw,4.5rem)] font-bold leading-[1.04] tracking-[-0.045em] text-[#101522] sm:mt-6">
+      <h2 className="mx-auto mt-4 max-w-[1100px] text-[clamp(2.29rem,5vw,5.14rem)] font-bold leading-[1.04] tracking-[-0.045em] text-[#101522] sm:mt-6">
         {data.heading.line1}{" "}
         <span className="text-[#d8003f]">{data.heading.highlight}</span>
       </h2>
 
-      <p className="mx-auto mt-3.5 max-w-[750px] text-base leading-relaxed text-[#17191f]/85 sm:mt-5 sm:text-lg md:text-xl">
+      <p className="mx-auto mt-3.5 max-w-[750px] text-[15px] leading-relaxed text-[#17191f]/85 sm:mt-5 sm:text-[17px] md:text-[19px]">
         {data.description}
       </p>
-      <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 items-center gap-3 md:flex">
-        <CarouselButton
-          direction="left"
-          onClick={onPrevious}
-        />
 
-        <CarouselButton
-          direction="right"
-          onClick={onNext}
-        />
+      <div className="absolute right-0 top-1/2 hidden -translate-y-1/2 items-center gap-3 md:flex">
+        <CarouselButton direction="left" onClick={onPrevious} />
+        <CarouselButton direction="right" onClick={onNext} />
       </div>
     </motion.div>
   );
@@ -219,7 +274,9 @@ function CarouselButton({
     <button
       type="button"
       onClick={onClick}
-      aria-label={direction === "left" ? "Previous testimonial" : "Next testimonial"}
+      aria-label={
+        direction === "left" ? "Previous testimonial" : "Next testimonial"
+      }
       className={`group flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full border border-[#17191f]/30 bg-white/95 text-[#17191f] shadow-xs transition-all duration-300 hover:border-[#d8003f] hover:bg-[#d8003f] hover:text-white cursor-pointer active:scale-95 ${className}`}
     >
       {direction === "left" ? (
@@ -244,37 +301,34 @@ function TestimonialCard({
   active,
 }: {
   testimonial: TestimonialItem & {
-    position: number;
+    position?: number;
   };
   active: boolean;
 }) {
   return (
-    <motion.article
-      layout
-      whileHover={{
-        y: active ? -6 : -4,
-      }}
-      transition={{
-        duration: 0.3,
-      }}
-      className={`relative flex min-h-[380px] sm:min-h-[430px] flex-col overflow-hidden rounded-[18px] p-6 sm:p-8 md:p-9 shadow-[0_12px_35px_rgba(16,21,34,0.08)] transition-all duration-500 ${
+    <article
+      className={`relative flex min-h-[390px] sm:min-h-[430px] flex-col overflow-hidden rounded-[20px] p-6 sm:p-8 md:p-9 transition-all duration-500 ${
         active
-          ? "bg-[#111318] text-white"
-          : "border border-[#eadbdd] bg-white text-[#11151c]"
+          ? "border border-black bg-[#111318] text-white shadow-[0_12px_35px_rgba(16,21,34,0.16)]"
+          : "border border-[#eadbdd] bg-white text-[#11151c] shadow-[0_10px_30px_rgba(16,21,34,0.06)]"
       }`}
     >
-      <div
-        className={`text-[48px] sm:text-[56px] font-bold leading-[0.7] ${
+      <motion.div
+        key={`quote-icon-${testimonial.id}`}
+        initial={{ scale: 0.7, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 320, damping: 20 }}
+        className={`text-[48px] sm:text-[56px] font-bold leading-[0.7] select-none ${
           active ? "text-[#e00045]" : "text-[#d8003f]"
         }`}
       >
         “
-      </div>
+      </motion.div>
 
       <div className="mt-2 flex items-center gap-1.5 text-[#d8003f]">
         {Array.from({ length: 5 }).map((_, index) => (
           <span
-            key={index}
+            key={`star-${index}`}
             className="text-[20px] sm:text-[23px] leading-none"
           >
             ★
@@ -282,18 +336,24 @@ function TestimonialCard({
         ))}
       </div>
 
-      <p
+      <motion.p
+        key={`quote-text-${testimonial.id}`}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
         className={`mt-6 sm:mt-7 max-w-[390px] text-[15px] sm:text-[17px] font-medium leading-[1.55] sm:leading-[1.5] ${
           active ? "text-white/95" : "text-[#17191f]"
         }`}
       >
         {testimonial.quote}
-      </p>
+      </motion.p>
 
       <div className="mt-auto flex flex-col items-center pt-7 sm:pt-8 text-center">
         <div
-          className={`relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full ring-4 ${
-            active ? "ring-[#e00045]/30 bg-white/20" : "ring-black/[0.06] bg-[#e7e4e1]"
+          className={`relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full ring-4 transition-all duration-300 ${
+            active
+              ? "ring-white/20 bg-white/10"
+              : "ring-black/[0.06] bg-[#e7e4e1]"
           }`}
         >
           <Image
@@ -305,23 +365,30 @@ function TestimonialCard({
           />
         </div>
 
-        <h3
-          className={`mt-3.5 sm:mt-4 text-base sm:text-lg font-bold ${
-            active ? "text-white" : "text-[#11151c]"
-          }`}
+        <motion.div
+          key={`meta-${testimonial.id}`}
+          initial={{ opacity: 0, y: 6 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
         >
-          {testimonial.name}
-        </h3>
+          <h3
+            className={`mt-3.5 sm:mt-4 text-base sm:text-lg font-bold ${
+              active ? "text-white" : "text-[#11151c]"
+            }`}
+          >
+            {testimonial.name}
+          </h3>
 
-        <p
-          className={`mt-0.5 text-xs sm:text-sm ${
-            active ? "text-white/75" : "text-[#17191f]/80"
-          }`}
-        >
-          {testimonial.role}
-        </p>
+          <p
+            className={`mt-0.5 text-xs sm:text-sm ${
+              active ? "text-white/75" : "text-[#17191f]/80"
+            }`}
+          >
+            {testimonial.role}
+          </p>
+        </motion.div>
       </div>
-    </motion.article>
+    </article>
   );
 }
 
@@ -336,19 +403,33 @@ function Pagination({
 }) {
   return (
     <div className="flex items-center justify-center gap-1.5 sm:gap-2.5">
-      {Array.from({ length: total }).map((_, index) => (
-        <button
-          key={index}
-          type="button"
-          onClick={() => onSelect(index)}
-          aria-label={`Go to testimonial ${index + 1}`}
-          className={`h-1.5 rounded-full transition-all duration-500 cursor-pointer ${
-            index === activeIndex
-              ? "w-8 sm:w-16 md:w-22 bg-[#d8003f]"
-              : "w-3 sm:w-8 md:w-12 bg-[#dedbd8] hover:bg-[#bdb9b6]"
-          }`}
-        />
-      ))}
+      {Array.from({ length: total }).map((_, index) => {
+        const isActive = index === activeIndex;
+
+        return (
+          <button
+            key={index}
+            type="button"
+            onClick={() => onSelect(index)}
+            aria-label={`Go to testimonial ${index + 1}`}
+            className="relative h-2 rounded-full cursor-pointer p-0 overflow-hidden"
+          >
+            <motion.div
+              layout
+              animate={{
+                width: isActive ? 48 : 12,
+                backgroundColor: isActive ? "#d8003f" : "#dedbd8",
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                damping: 24,
+              }}
+              className="h-full rounded-full"
+            />
+          </button>
+        );
+      })}
     </div>
   );
 }

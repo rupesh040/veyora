@@ -1042,8 +1042,9 @@
               "text": "Explore All Services",
               "link": "/services"
             },
-            "cardHeadingStart": "Our ",
-            "cardHeadingHighlight": "Services",
+            "cardBadge": "Services Detail",
+            "cardHeadingStart": "Services ",
+            "cardHeadingHighlight": "Detail",
             "cardDescription": "Explore the specialized services we offer to help your brand grow, engage audiences, and build lasting impressions.",
             "cardButtonText": "View Details",
             "images": {

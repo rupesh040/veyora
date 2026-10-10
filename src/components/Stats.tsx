@@ -18,8 +18,8 @@ const { items: stats } = content.stats;
 
 export default function Stats() {
   return (
-    <section className="px-4 py-4 sm:px-6 sm:py-6 md:px-8 lg:px-10 xl:px-12">
-      <div className="relative mx-auto max-w-[1500px] overflow-hidden rounded-[14px] bg-[#101114] px-5 py-10 shadow-[0_15px_50px_rgba(0,0,0,0.15)] sm:px-8 sm:py-12 md:px-10 md:py-14 lg:px-12 lg:py-16">
+    <section className="px-4 py-2 sm:px-6 sm:py-4 md:px-8 lg:px-10 xl:px-12">
+      <div className="relative mx-auto max-w-[1500px] overflow-hidden rounded-[14px] bg-[#101114] px-5 py-4 shadow-[0_15px_50px_rgba(0,0,0,0.15)] sm:px-8 sm:py-4 md:px-10 md:py-6 lg:px-12 lg:py-8">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.025),transparent_65%)]" />
 
         <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
@@ -131,7 +131,7 @@ function StatItem({
         delay: index * 0.12,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className={`relative flex min-h-[220px] flex-col items-center justify-center px-5 py-8 text-center sm:min-h-[240px] lg:min-h-[280px] lg:px-6 lg:py-10 ${
+      className={`relative flex min-h-[120px] flex-col items-center justify-center px-5 py-8 text-center sm:min-h-[120px] lg:min-h-[120px] lg:px-6 lg:py-10 ${
         index < stats.length - 1
           ? "sm:border-r sm:border-white/15 lg:border-r"
           : ""

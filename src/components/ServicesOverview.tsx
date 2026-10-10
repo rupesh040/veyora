@@ -104,20 +104,20 @@ function ContentPanel() {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
-          <div className="inline-flex rounded-full border-2 border-[#d8003f] px-5 py-1.5 sm:px-6 sm:py-2">
+          <div className="inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7">
             <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
               {data.badge}
             </span>
           </div>
 
-          <h2 className="mt-5 max-w-[720px] text-[clamp(2.2rem,4.5vw,4.6rem)] font-bold leading-[1.04] tracking-[-0.045em] text-[#101522]">
+          <h2 className="mt-5 max-w-[720px] text-[clamp(2.14rem,4.5vw,4.54rem)] font-bold leading-[1.04] tracking-[-0.045em] text-[#101522]">
             {data.headingStart}{" "}
             <span className="text-[#c9003b]">
               {data.headingHighlight}
             </span>
           </h2>
 
-          <p className="mt-6 max-w-[690px] text-[15px] leading-[1.6] text-[#17191f] sm:text-base md:text-lg lg:text-xl">
+          <p className="mt-6 max-w-[690px] text-[14px] leading-[1.6] text-[#17191f] sm:text-[15px] md:text-[17px] lg:text-[19px]">
             {data.description}
           </p>
         </motion.div>

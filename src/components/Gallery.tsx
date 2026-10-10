@@ -237,23 +237,17 @@ function GalleryHeader({ data }: { data: any }) {
       className="grid items-end gap-6 lg:grid-cols-[1fr_auto]"
     >
       <div>
-        <motion.span
-          initial={{
-            opacity: 0,
-            y: 15,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.6,
-            delay: 0.1,
-          }}
-          className="block text-sm font-bold uppercase tracking-[0.08em] text-[#c9003b] sm:text-base"
-        >
-          {data.badge}
-        </motion.span>
+               <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                      className="inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7"
+                    >
+                      <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
+                        {data.badge}
+                      </span>
+                    </motion.div>
 
         <motion.h2
           initial={{
@@ -269,7 +263,7 @@ function GalleryHeader({ data }: { data: any }) {
             delay: 0.18,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="mt-3 max-w-[1000px] text-[clamp(2rem,4.5vw,4.2rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]"
+          className="mt-3 max-w-[1000px] text-[clamp(1.94rem,4.5vw,4.14rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#101522]"
         >
           {data.headingStart}{" "}
           <span className="text-[#c9003b]">
@@ -291,7 +285,7 @@ function GalleryHeader({ data }: { data: any }) {
           duration: 0.7,
           delay: 0.3,
         }}
-        className="max-w-[320px] text-base leading-[1.45] text-gray-500 sm:text-lg lg:pb-2 lg:text-right"
+        className="max-w-[320px] text-[15px] leading-[1.45] text-gray-500 sm:text-[17px] lg:pb-2 lg:text-right"
       >
         {data.description}
       </motion.p>

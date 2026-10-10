@@ -80,8 +80,9 @@ export default function ContactSection() {
                 duration: 0.6,
                 delay: 0.2,
               }}
+              className="inline-flex self-start rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7"
             >
-              <span className="text-sm font-bold uppercase tracking-[0.04em] text-[#d8003f] sm:text-base">
+              <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
                 {data.badge}
               </span>
             </motion.div>
@@ -100,7 +101,7 @@ export default function ContactSection() {
                 delay: 0.3,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="mt-12 max-w-[610px] text-[clamp(3rem,6vw,5.2rem)] font-bold leading-[0.98] tracking-[-0.055em]"
+              className="mt-12 max-w-[610px] text-[clamp(2.29rem,5vw,5.14rem)] font-bold leading-[0.98] tracking-[-0.055em]"
             >
               {data.headingStart}
               <span className="block text-[#e00040]">
@@ -121,7 +122,7 @@ export default function ContactSection() {
                 duration: 0.7,
                 delay: 0.45,
               }}
-              className="mt-10 max-w-[560px] text-lg leading-[1.45] text-white/90 sm:text-xl md:text-[22px]"
+              className="mt-10 max-w-[560px] text-[17px] leading-[1.45] text-white/90 sm:text-[19px] md:text-[21px]"
             >
               {data.description}
             </motion.p>
@@ -215,14 +216,14 @@ export default function ContactSection() {
                 delay: 0.2,
               }}
             >
-              <h2 className="text-[clamp(2.4rem,4.8vw,4rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#0d0f13]">
+              <h2 className="text-[clamp(2.29rem,5vw,5.14rem)] font-bold leading-[1.02] tracking-[-0.05em] text-[#0d0f13]">
                 {data.formHeadingStart}
                 <span className="block">
                   {data.formHeadingHighlight}
                 </span>
               </h2>
 
-              <p className="mt-5 text-base leading-[1.45] text-[#17191f]/80 sm:text-lg md:text-xl">
+              <p className="mt-5 text-[15px] leading-[1.45] text-[#17191f]/80 sm:text-[17px] md:text-[19px]">
                 {data.formDescription}
               </p>
             </motion.div>

@@ -151,14 +151,14 @@ function AboutContent() {
         transition={{
           duration: 0.6,
         }}
-        className="mb-6 inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:mb-7 sm:px-7 sm:py-2.5"
+        className="mb-6 inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:mb-7 sm:px-7"
       >
-        <span className="text-xs font-semibold tracking-wide text-[#c9003a] sm:text-sm md:text-base">
+        <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
           {badge}
         </span>
       </motion.div>
 
-      <motion.h2
+      <motion.h1
         initial={{ opacity: 0, y: 25 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -166,12 +166,11 @@ function AboutContent() {
           duration: 0.8,
           delay: 0.1,
         }}
-        className="max-w-[700px] text-[clamp(2.5rem,6vw,4.8rem)] font-bold leading-[1.05] tracking-[-0.045em] text-[#101522]"
+        className="text-[clamp(2.29rem,5vw,5.14rem)] font-bold leading-[1] tracking-[-0.045em]"
       >
-        We Shape Brands
-        <br />
-        That <span className="text-[#d8003f]">Move People</span>
-      </motion.h2>
+        <span>{titleStart}</span>
+        <span className="text-[#d8003f]">{titleHighlight}</span>
+      </motion.h1>
 
       <motion.p
         initial={{ opacity: 0, y: 20 }}
@@ -181,7 +180,7 @@ function AboutContent() {
           duration: 0.7,
           delay: 0.25,
         }}
-        className="mt-6 max-w-[590px] text-base leading-[1.55] text-[#17191f] sm:mt-7 sm:text-lg md:text-xl"
+        className="mt-6 max-w-[590px] text-[15px] leading-[1.55] text-[#17191f] sm:mt-7 sm:text-[17px] md:text-[19px]"
       >
         {description}
       </motion.p>

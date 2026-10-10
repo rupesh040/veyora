@@ -82,9 +82,9 @@ function Header() {
           duration: 0.6,
           delay: 0.1,
         }}
-        className="inline-flex rounded-full border-2 border-[#e8a7b1] bg-white/60 px-7 py-2"
+        className="inline-flex rounded-full border-2 border-[#d8003f] px-6 py-2 sm:px-7"
       >
-        <span className="text-xs font-bold uppercase tracking-[0.12em] text-[#1a1d24] sm:text-sm">
+        <span className="text-xs font-bold uppercase tracking-[0.08em] text-[#d8003f] sm:text-sm">
           {coreData.badge}
         </span>
       </motion.div>
@@ -97,7 +97,7 @@ function Header() {
           delay: 0.2,
           ease: [0.22, 1, 0.36, 1],
         }}
-        className="mt-6 text-[clamp(2.6rem,5vw,4.7rem)] font-bold leading-[1.03] tracking-[-0.05em] text-[#101522]"
+        className="mt-6 text-[clamp(2.29rem,5vw,5.14rem)] font-bold leading-[1.03] tracking-[-0.05em] text-[#101522]"
       >
         {coreData.heading.line1}
         <br />
@@ -111,7 +111,7 @@ function Header() {
           duration: 0.7,
           delay: 0.35,
         }}
-        className="mx-auto mt-5 max-w-[650px] text-base leading-[1.45] text-[#17191f] sm:text-lg md:text-xl"
+        className="mx-auto mt-5 max-w-[650px] text-[15px] leading-[1.45] text-[#17191f] sm:text-[17px] md:text-[19px]"
       >
         {coreData.description}
       </motion.p>
